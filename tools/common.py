@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Shared helpers for benchmark-v2 data tooling.
+"""Shared helpers for benchmark data tooling.
 
 Design rules (see README):
 - Nothing about topics, models, arms, or metric values is hardcoded.

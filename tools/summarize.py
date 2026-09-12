@@ -51,7 +51,7 @@ def main() -> None:
     run("charts.py")
 
     # 4. Summary markdown from whatever derived CSVs exist (one section per file).
-    sections: list[str] = ["# Benchmark v2 Summary", "", "All numbers recomputed from raw data at report time.", ""]
+    sections: list[str] = ["# Benchmark Summary", "", "All numbers recomputed from raw data at report time.", ""]
     import csv
 
     for p in sorted(DERIVED.glob("*.csv")):

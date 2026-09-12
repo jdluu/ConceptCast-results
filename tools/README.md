@@ -1,6 +1,6 @@
-# Data Tooling (scripts/)
+# Data Tooling (tools/)
 
-Generic, schema-driven tools for analyzing benchmark v2 data. Nothing about
+Generic, schema-driven tools for analyzing benchmark data. Nothing about
 topics, models, arms, or metric values is hardcoded — grouping dimensions come
 from `manifest/jobs.csv` and the traces themselves; DB/JSONL schemas are
 introspected at runtime.
@@ -29,17 +29,17 @@ Every analysis joins DB rows to the manifest:
 
 ```bash
 # After (or during) a benchmark run:
-python3 scripts/db_query.py --schema                       # what's queryable
-python3 scripts/db_query.py --by arm --metric status       # outcomes per arm
-python3 scripts/db_query.py --by arm model --metric status --format csv
-python3 scripts/db_query.py --by model --metric total_execution_time --agg mean
+python3 tools/db_query.py --schema                       # what's queryable
+python3 tools/db_query.py --by arm --metric status       # outcomes per arm
+python3 tools/db_query.py --by arm model --metric status --format csv
+python3 tools/db_query.py --by model --metric total_execution_time --agg mean
 
 # Trace measures (tokens, latency, cost per call):
-python3 scripts/traces_agg.py --by arm stage
-python3 scripts/traces_agg.py --by arm model --format csv
+python3 tools/traces_agg.py --by arm stage
+python3 tools/traces_agg.py --by arm model --format csv
 
 # Full pipeline:
-python3 scripts/summarize.py
+python3 tools/summarize.py
 ```
 
 ## Dependencies
