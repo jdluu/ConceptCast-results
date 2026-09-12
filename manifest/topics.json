@@ -1,0 +1,27 @@
+{
+  "version": "benchmark-v1",
+  "frozen": "2026-09-11",
+  "note": "Pinned topic definitions for benchmark v2. Arm A/B generate from topic_prompt verbatim; Arm C (council) receives topic_prompt as its topic. The disambiguation exists so models cannot confuse math vs financial derivatives.",
+  "topics": [
+    {
+      "manifest_topic": "derivative of a function in calculus",
+      "topic_prompt": "derivative of a function in calculus — the instantaneous rate of change of a function with respect to its input, defined as the limit of the difference quotient"
+    },
+    {
+      "manifest_topic": "backpropagation",
+      "topic_prompt": "backpropagation — the gradient-computation algorithm used to train neural networks, propagating error gradients backward through the network's layers via the chain rule"
+    },
+    {
+      "manifest_topic": "Fourier transform",
+      "topic_prompt": "Fourier transform — the mathematical operation that decomposes a signal into its constituent frequencies"
+    },
+    {
+      "manifest_topic": "Doppler effect",
+      "topic_prompt": "Doppler effect — the apparent shift in frequency of a wave for an observer moving relative to the wave's source"
+    },
+    {
+      "manifest_topic": "eigenvectors",
+      "topic_prompt": "eigenvectors — the non-zero vectors that, when a linear transformation is applied, change only by a scalar factor (the eigenvalue)"
+    }
+  ]
+}

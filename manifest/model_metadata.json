@@ -1,0 +1,19 @@
+{
+  "version": "benchmark-v2",
+  "frozen": "2026-09-11",
+  "note": "Model roster for benchmark v2. Open-weight models spanning the capability spectrum available at time of evaluation. Selected to test framework robustness across model scales, not to benchmark model quality. All accessed via Nano GPT subscription API.",
+  "models": [
+    {"id": "openai/gpt-oss-20b", "short": "gpt-oss-20b", "params": "~20B", "family": "OpenAI GPT-OSS", "license": "Apache-2.0", "tier": "small"},
+    {"id": "openai/gpt-oss-120b", "short": "gpt-oss-120b", "params": "~120B", "family": "OpenAI GPT-OSS", "license": "Apache-2.0", "tier": "frontier"},
+    {"id": "google/gemma-4-31b-it:thinking", "short": "gemma-4-31b", "params": "~31B", "family": "Google Gemma", "license": "Gemma", "tier": "mid"},
+    {"id": "deepseek/deepseek-v4-flash:thinking", "short": "deepseek-v4-flash", "params": "unknown", "family": "DeepSeek", "license": "MIT", "tier": "mid"},
+    {"id": "qwen/qwen3.5-122b-a10b:thinking", "short": "qwen3.5-122b", "params": "~122B", "family": "Alibaba Qwen", "license": "Apache-2.0", "tier": "frontier"},
+    {"id": "minimax/minimax-m2.7", "short": "minimax-m2.7", "params": "unknown", "family": "MiniMax", "license": "MIT", "tier": "small"},
+    {"id": "zai-org/glm-5.1:thinking", "short": "glm-5.1", "params": "unknown", "family": "Zhipu AI GLM", "license": "open", "tier": "mid"},
+    {"id": "moonshotai/kimi-k2.6:thinking", "short": "kimi-k2.6", "params": "unknown", "family": "Moonshot AI Kimi", "license": "open", "tier": "mid"},
+    {"id": "deepseek/deepseek-v4-pro:thinking", "short": "deepseek-v4-pro", "params": "unknown", "family": "DeepSeek", "license": "MIT", "tier": "frontier"}
+  ],
+  "provider": "Nano GPT (https://nano-gpt.com)",
+  "api_endpoint": "https://nano-gpt.com/api/v1",
+  "sampling": {"temperature": 0.0, "seed": null}
+}
