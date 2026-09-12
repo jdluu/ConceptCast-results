@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
-"""Generates manifest/jobs.csv — the full 270-job manifest.
+"""Generates manifest/jobs.csv — the benchmark v2 manifest.
 
-Interleaving strategy: round-robin over (topic, arm, rep) cells so that
-consecutive jobs alternate arms and topics; the model dimension is scheduled
-by the runner's bounded-parallelism worker pool. Final run order is the CSV
-row order.
+Roster: the validated 10-model smoke list (see model_metadata.json, all IDs
+verified live against Nano GPT on 2026-09-12). Structure: 5 topics x 10
+models x 3 arms x 2 reps = 300 jobs. Arm C (council) is the framework arm;
+arms A/B are baseline arms used by benchmark_monolithic.py.
 
 Usage: python3 manifest/generate_jobs.py
 """
@@ -23,15 +23,16 @@ TOPICS = [
 ]
 
 MODELS = [
-    "openai/gpt-oss-20b",
+    "z-ai/glm-5.3",
+    "qwen/qwen3.8-flash",
+    "deepseek/deepseek-v4-flash",
+    "moonshotai/kimi-k2.6",
+    "xiaomi/mimo-v2.5-pro",
+    "tencent/hy3",
+    "nvidia/nemotron-3-ultra-550b-a55b",
+    "meta/muse-glimmer-30b",
+    "google/gemma-4-31b-it",
     "openai/gpt-oss-120b",
-    "google/gemma-4-31b-it:thinking",
-    "deepseek/deepseek-v4-flash:thinking",
-    "qwen/qwen3.5-122b-a10b:thinking",
-    "minimax/minimax-m2.7",
-    "zai-org/glm-5.1:thinking",
-    "moonshotai/kimi-k2.6:thinking",
-    "deepseek/deepseek-v4-pro:thinking",
 ]
 
 ARMS = ["A", "B", "C"]
@@ -40,15 +41,8 @@ REPS = [1, 2]
 
 def main() -> None:
     cells = list(product(TOPICS, ARMS, REPS))
-    # Round-robin interleave: stride across topics so consecutive rows
-    # differ in topic and arm where possible.
-    interleaved: list[tuple[str, str, int]] = []
-    for i in range(max(len(TOPICS), len(ARMS) * len(REPS))):
-        for t_idx, (topic, arm, rep) in enumerate(cells):
-            if (t_idx + i) % len(cells) == 0:  # placeholder — simple product order
-                pass
-    # Simpler deterministic interleave: sort by (rep, arm, topic) so each
-    # block of 15 covers all topic×arm pairs for one rep, alternating arms.
+    # Deterministic interleave: sort by (rep, arm, topic) so each block
+    # covers all topic x arm pairs for one rep, arms grouped.
     interleaved = sorted(cells, key=lambda c: (c[2], ARMS.index(c[1]), TOPICS.index(c[0])))
 
     rows = []
@@ -77,7 +71,9 @@ def main() -> None:
         writer.writerows(rows)
 
     print(f"Wrote {len(rows)} jobs to {out}")
-    assert len(rows) == 5 * 9 * 3 * 2 == 270, "job count mismatch"
+    assert len(rows) == len(TOPICS) * len(MODELS) * len(ARMS) * len(REPS) == 300, (
+        "job count mismatch"
+    )
 
 
 if __name__ == "__main__":
