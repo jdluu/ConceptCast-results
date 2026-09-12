@@ -90,12 +90,14 @@ prompts contain no audience field; arms cannot diverge on it.
 
 1. Instrument `streaming.py` (per-call JSONL) + pin temperature/seed.
 2. Smoke test: 1 model × 1 topic × 3 arms.
-3. Full run: 270 jobs from `manifest/jobs.csv`, interleaved, PARALLELISM=4,
-   resumable (completed tuples skipped on restart).
+3. Full run: 300 jobs from `manifest/jobs.csv` (5 topics × 10 models × 3 arms
+   × 2 reps), interleaved, resumable (completed tuples skipped on restart).
+   Execute with `benchmark_council.py` (arm C) and `benchmark_monolithic.py`
+   (arms A/B) at the highest parallelism the host sustains.
 4. Freeze: SQLite snapshot + traces + manifest committed and tagged.
 5. Verification: `verify/` script recomputes every reported number.
 
 ## 8. Declared fallback
 
-If the 270-job budget proves infeasible: n=2 for arms A and B, n=1 for arm C
-(180 jobs). Must be declared here BEFORE run 1, not retroactively.
+If the 300-job budget proves infeasible: n=2 for arms A and B, n=1 for arm C
+(200 jobs). Must be declared here BEFORE run 1, not retroactively.

@@ -1,60 +1,56 @@
-# ConceptCast Thesis Benchmark Results & Dataset
+# ConceptCast Benchmark v2 — Manifest, Traces & Tooling
 
-This repository contains the empirical benchmark dataset, execution logs, model evaluations, and rendered figure graphics supporting the **ConceptCast** thesis.
+This repository holds everything needed to reproduce the ConceptCast
+benchmark: the pre-registered job manifest, per-call execution traces, the
+experiment plan, and schema-driven analysis tooling.
 
 > **Companion repository:** application source lives in
 > [ConceptCast](https://github.com/jdluu/ConceptCast).
 
 ## Repository Contents
 
-* `data/conceptcast.db`: SQLite database containing complete job runs, agent thought streams, execution timings, token/dollar costs, and AST diff repair logs across tested LLM models.
-* `reports/`: Raw execution log text files (`.txt`), evaluation CSVs (`compilation_success.csv`, `latency_cost.csv`, `token_consumption.csv`), and aggregate performance summaries (`.json`) for each evaluation run across models (DeepSeek, Gemma, MiniMax, Kimi, GPT-OSS, Qwen, GLM).
-* `figures/`: Rendered high-resolution chart graphics (`.png` and `.svg`) for thesis figures:
-  * `fig5_1_model_success_progress`: E2E video rendering success progress across 6 iterative runs.
-  * `fig5_2_compilation_repair_rates`: First-pass compilation vs AST diff repair success rates across 9 models.
-  * `fig5_3_token_consumption_savings`: Monolithic vs Layered GCO token window savings across pipeline phases.
-  * `fig5_4_latency_cost_comparison`: Latency and API cost reduction comparing Multimodal Vision vs Programmatic AST verification loops.
+| Path | Contents |
+|---|---|
+| `manifest/jobs.csv` | The pre-registered job grid (topic × model × arm × rep). Single source of truth — the runner writes each row's `job_seq` into the job record for exact joins. |
+| `manifest/model_metadata.json` | The validated model roster (IDs verified live against the Nano GPT API), tiers, params, licenses, sampling pins. |
+| `manifest/generate_jobs.py` | Regenerates `jobs.csv` from `model_metadata.json`. |
+| `manifest/topics.json` | Canonical topic prompt strings (identical across arms). |
+| `plan/EXPERIMENT_PLAN.md` | Hypotheses, arm definitions, controls, outcome taxonomy, metrics, run protocol. |
+| `tools/` | Schema-driven analysis scripts (`db_query.py`, `traces_agg.py`, `charts.py`, `summarize.py`) — see `tools/README.md`. |
+| `traces/` | Per-call JSONL traces (one file per run, `<run_id>.jsonl`). Written during runs; not pre-populated. |
 
-## Dataset Usage
+## Benchmark Design (summary)
 
-The dataset can be queried directly via SQLite (`data/conceptcast.db`), inspected via the structured CSV reports in `reports/evaluation/`, or visualized using the graphic files in `figures/`.
+- **Arm A** — monolithic generation (one call, no validation/repair).
+- **Arm B** — monolithic + the same AST validation/repair loop as the council.
+- **Arm C** — the full agent council (Analyst → Architect → Animator, GCO,
+  per-scene generation, AST validation, diff-repair).
 
-## Reproducing the Thesis Results
+Identical model roster, sampling pins (temperature 0), and topic prompt strings
+across arms. Outcome taxonomy per job: `completed`, `fallback-completed`,
+`failed`, `infrastructure-failed`. See `plan/EXPERIMENT_PLAN.md` for the full
+protocol.
 
-The controlled four-topic benchmark (thesis Tables 5.5 and 5.6) and the historical
-compilation table (Table 5.1) are reproduced directly from `data/conceptcast.db`:
+## Reproducing a Run
 
 ```bash
-# Controlled benchmark tables 5.5 + 5.6 (36 jobs, provenance sub-counts)
-python3 verify_controlled_benchmark.py
+# 1. Regenerate the manifest if the roster changed
+python3 manifest/generate_jobs.py
 
-# Historical Table 5.1 (74.5% / 92.7%) from the FROZEN 136-job snapshot @5f4f7f5
-# NOTE: this must NOT be run against the current data/conceptcast.db, which has
-# grown to ~224 jobs / 525 scenes and would yield different numbers.
-python3 verify_table51_historical.py
+# 2. Run the benchmark (from the application repo, backend running)
+cd apps/backend
+BENCH_TRACE_DIR=<traces-dir> BENCH_RUN_ID=<run-id> BENCH_TEMPERATURE=0 \
+  uv run python src/scripts/benchmark_council.py \
+  --manifest <path-to>/manifest/jobs.csv --arm C --parallelism 8
 
-# Regenerate the controlled-outcome figure (Fig 5.5)
-python3 ../scripts/generate_controlled_benchmark_figure.py
+# 3. Analyze
+python3 tools/summarize.py --db <jobs.db> --traces traces/ --manifest manifest/jobs.csv
 ```
 
-> **Important — historical vs. current database.** `data/conceptcast.db` is the
-> grown, live database (224 jobs / ~525 scenes). Thesis Table 5.1 is pinned to the
-> frozen **136-job historical snapshot at commit `5f4f7f5`** (275 scenes, 74.5% /
-> 92.7%). Querying the current DB directly produces *different* numbers
-> (64.6% / 84.8%) that do **not** match the published thesis. To reproduce the
-> published table, use `verify_table51_historical.py`, which extracts the frozen
-> snapshot from git history.
-
-### Cohort identification
-
-The `jobs` table has no cohort/run column, so the 36 controlled-benchmark jobs are
-isolated by the four sequential topic windows defined in
-`verify_controlled_benchmark.py` and `../scripts/generate_controlled_benchmark_figure.py`.
-These windows must stay in sync with `benchmark-manifest.json` (the authoritative run
-start times); see `benchmark-manifest.README.md` for the exact relationship. Provenance
-sub-counts (fallback usage, architect transport) are read from each job's `validation`
-JSON blob, not from free text.
+The runners are resumable: manifest tuples already recorded as completed are
+skipped on restart.
 
 ## License & Attribution
 
-This dataset is released for academic open data reproducibility and public research verification.
+This repository is released for academic reproducibility and public research
+verification under the MIT License (see [LICENSE](LICENSE)).
