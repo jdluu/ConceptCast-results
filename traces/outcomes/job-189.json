@@ -1,0 +1,11 @@
+{
+  "job_seq": 189,
+  "arm": "A",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

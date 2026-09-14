@@ -1,0 +1,219 @@
+ConceptCast dependencies ready: Redis PONG and backend health OK
+
+=== /home/jdluu/.local/bin/uv run python src/scripts/benchmark_monolithic.py --manifest /home/jdluu/projects/ConceptCast-results/manifest/jobs.csv --arm A --parallelism 5 --trace-dir /home/jdluu/projects/ConceptCast-results/traces ===
+/home/jdluu/projects/ConceptCast-code/apps/backend/.venv/bin/python3: can't open file '/home/jdluu/projects/ConceptCast-code/apps/backend/src/src/scripts/benchmark_monolithic.py': [Errno 2] No such file or directory
+ConceptCast dependencies ready: Redis PONG and backend health OK
+
+=== /home/jdluu/.local/bin/uv run python src/scripts/benchmark_monolithic.py --manifest /home/jdluu/projects/ConceptCast-results/manifest/jobs.csv --arm A --parallelism 5 --trace-dir /home/jdluu/projects/ConceptCast-results/traces ===
+100 pending arm-A jobs
+completed 79/100
+
+=== /home/jdluu/.local/bin/uv run python src/scripts/benchmark_monolithic.py --manifest /home/jdluu/projects/ConceptCast-results/manifest/jobs.csv --arm B --parallelism 5 --trace-dir /home/jdluu/projects/ConceptCast-results/traces ===
+100 pending arm-B jobs
+completed 99/100
+
+=== /home/jdluu/.local/bin/uv run python src/scripts/benchmark_council.py --manifest /home/jdluu/projects/ConceptCast-results/manifest/jobs.csv --arm C --parallelism 8 ===
+100 pending arm-C jobs (0 already completed)
+[seq 101] created 8255d5a0-b23b-46c7-9d3e-6c416fe503a6 (arm C, rep 1, z-ai/glm-5.3)
+[seq 106] created a5100c06-58a8-46b3-8044-2e3c2267bb45 (arm C, rep 1, tencent/hy3)
+[seq 105] created 70e563dc-832a-4483-bda8-66d300ae1343 (arm C, rep 1, xiaomi/mimo-v2.5-pro)
+[seq 102] created aea89663-7f2e-42fc-b150-854a1c2257e1 (arm C, rep 1, qwen/qwen3.8-flash)
+[seq 104] created d7efeabe-9925-4ec3-8c2b-5c81acae967b (arm C, rep 1, moonshotai/kimi-k2.6)
+[seq 107] created ad7c8638-91ca-4623-bd5e-35a143121ea4 (arm C, rep 1, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 108] created ad4b63c9-8e36-413c-a8d1-764588e0339c (arm C, rep 1, meta/muse-glimmer-30b)
+[seq 103] created 10d213dc-42eb-4787-ae81-3552ed9bc165 (arm C, rep 1, deepseek/deepseek-v4-flash)
+[seq 107] → completed
+[seq 109] created be7302a1-bd87-48a9-a400-c9ed20277ffb (arm C, rep 1, google/gemma-4-31b-it)
+[seq 108] → completed
+[seq 110] created bb9c3619-23a4-42f9-af8b-39cd5c715b56 (arm C, rep 1, openai/gpt-oss-120b)
+[seq 110] → failed
+[seq 111] created 75844c4a-67b7-445e-8927-829272ba63f5 (arm C, rep 1, z-ai/glm-5.3)
+[seq 105] → completed
+[seq 112] created 1712eb04-4e66-4c70-b1c7-156c843c5887 (arm C, rep 1, qwen/qwen3.8-flash)
+[seq 104] → completed
+[seq 113] created b8aca25d-2cb9-47af-bbaa-82fc731cc268 (arm C, rep 1, deepseek/deepseek-v4-flash)
+[seq 103] → failed
+[seq 114] created 068cc690-65fa-42bc-bffc-dd3b686a8e9b (arm C, rep 1, moonshotai/kimi-k2.6)
+[seq 106] → completed
+[seq 115] created 9455b4a9-1326-42a8-9f66-408503f4f387 (arm C, rep 1, xiaomi/mimo-v2.5-pro)
+[seq 111] → failed
+[seq 116] created 2243f083-82cd-464f-a0d2-cfca52e6dfc9 (arm C, rep 1, tencent/hy3)
+[seq 113] → failed
+[seq 117] created 24ba9048-e8c6-4861-8895-89e3a1bbb6d4 (arm C, rep 1, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 117] → failed
+[seq 118] created 8dfbde25-c0fc-4d33-a146-6493b8be7b47 (arm C, rep 1, meta/muse-glimmer-30b)
+[seq 101] → completed
+[seq 119] created d21b205c-8fb5-4ea6-be72-b79f1a7dc9e1 (arm C, rep 1, google/gemma-4-31b-it)
+[seq 109] → failed
+[seq 120] created 2431a503-83d2-4378-836b-e4bd366d39d8 (arm C, rep 1, openai/gpt-oss-120b)
+[seq 119] → failed
+[seq 121] created 84b6b2e4-e8c1-410d-93b0-a9d0369a8838 (arm C, rep 1, z-ai/glm-5.3)
+[seq 118] → completed
+[seq 122] created c457a2e7-f306-4696-8971-695cf58144f2 (arm C, rep 1, qwen/qwen3.8-flash)
+[seq 120] → failed
+[seq 123] created 787c6ea9-a279-4e76-b5f5-84bf558dff61 (arm C, rep 1, deepseek/deepseek-v4-flash)
+[seq 116] → completed
+[seq 124] created 231e1f25-5643-457a-b7e2-cdd702bd26dd (arm C, rep 1, moonshotai/kimi-k2.6)
+[seq 115] → completed
+[seq 125] created 6eeb12c4-1073-41f7-8266-23b2f91c6c9d (arm C, rep 1, xiaomi/mimo-v2.5-pro)
+[seq 124] → completed
+[seq 126] created 9ce3589e-34ef-4c94-9718-f6dd1f9950b7 (arm C, rep 1, tencent/hy3)
+[seq 102] → timeout
+[seq 127] created c6351dd3-b74e-4c15-a508-91c485cff518 (arm C, rep 1, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 112] → failed
+[seq 128] created ee8afc74-4895-411e-a609-8d8bd8e14368 (arm C, rep 1, meta/muse-glimmer-30b)
+[seq 114] → completed
+[seq 129] created b89e4d15-00dc-480f-8f9f-64cb2fa364c4 (arm C, rep 1, google/gemma-4-31b-it)
+[seq 127] → failed
+[seq 130] created d7cce18c-b2c7-4c61-ad8a-bcdd71749b54 (arm C, rep 1, openai/gpt-oss-120b)
+[seq 128] → completed
+[seq 131] created 64399a7e-4303-43f6-8152-ae326d83c294 (arm C, rep 1, z-ai/glm-5.3)
+[seq 123] → failed
+[seq 132] created 21f992c4-ff31-4959-8de3-6f5b286d7304 (arm C, rep 1, qwen/qwen3.8-flash)
+[seq 130] → failed
+[seq 133] created 2e00525a-1d8f-4f54-9fce-f3c0cd54fd26 (arm C, rep 1, deepseek/deepseek-v4-flash)
+[seq 131] → failed
+[seq 134] created a6782a2a-c6db-4033-bc4d-10022f54fb04 (arm C, rep 1, moonshotai/kimi-k2.6)
+[seq 125] → completed
+[seq 135] created 1e8f687e-86bf-4648-9d3d-eac3a9dcf66a (arm C, rep 1, xiaomi/mimo-v2.5-pro)
+[seq 126] → completed
+[seq 136] created fd85116c-8f91-4eda-96dd-f76b6d18406d (arm C, rep 1, tencent/hy3)
+[seq 129] → completed
+[seq 137] created c33a8510-cffd-4634-879d-c5cd876bd17a (arm C, rep 1, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 134] → completed
+[seq 138] created 16dda8dd-2d20-49f6-9f51-98f2257c2b4b (arm C, rep 1, meta/muse-glimmer-30b)
+[seq 138] → completed
+[seq 139] created 4e18dff5-c7e8-46dd-b96e-f1ff33f92ed2 (arm C, rep 1, google/gemma-4-31b-it)
+[seq 137] → failed
+[seq 140] created faa707c0-0bdb-4f26-8f43-5f248859c34f (arm C, rep 1, openai/gpt-oss-120b)
+[seq 121] → timeout
+[seq 141] created 64f2b361-c8d7-483f-9835-143275fc7048 (arm C, rep 1, z-ai/glm-5.3)
+[seq 122] → timeout
+[seq 142] created b5a74664-0aca-4ec7-81b0-0c2dc9480bcc (arm C, rep 1, qwen/qwen3.8-flash)
+[seq 140] → failed
+[seq 143] created 507c801a-bd1a-4c6e-af50-5649e1cb102c (arm C, rep 1, deepseek/deepseek-v4-flash)
+[seq 139] → completed
+[seq 144] created 436e1c1a-334d-485a-8c42-f0ec00b12bd5 (arm C, rep 1, moonshotai/kimi-k2.6)
+[seq 135] → completed
+[seq 145] created d6c35592-72bc-4d53-be4e-f37725b83d91 (arm C, rep 1, xiaomi/mimo-v2.5-pro)
+[seq 141] → failed
+[seq 146] created ac770553-6cad-430b-a480-e065e23a122e (arm C, rep 1, tencent/hy3)
+[seq 133] → failed
+[seq 147] created 271b8ea7-ec34-465e-a097-6caeee147b43 (arm C, rep 1, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 144] → completed
+[seq 148] created 26009028-2d34-499f-8a8f-713994f6f302 (arm C, rep 1, meta/muse-glimmer-30b)
+[seq 147] → completed
+[seq 149] created 8cab6d22-71cc-4354-a62c-013d44a6efce (arm C, rep 1, google/gemma-4-31b-it)
+[seq 145] → completed
+[seq 150] created 8e88fd0f-5759-4ceb-b56c-154fab07312d (arm C, rep 1, openai/gpt-oss-120b)
+[seq 148] → failed
+[seq 251] created d074252d-4ef5-40e8-b6a0-0ecd6997b770 (arm C, rep 2, z-ai/glm-5.3)
+[seq 132] → timeout
+[seq 252] created f999102b-848f-4d03-b7b1-ab0f9a19d08e (arm C, rep 2, qwen/qwen3.8-flash)
+[seq 149] → completed
+[seq 253] created 5a0b348a-6e80-4782-aca3-af0dc2794983 (arm C, rep 2, deepseek/deepseek-v4-flash)
+[seq 150] → completed
+[seq 254] created 4fc6e783-18cf-4d1a-990d-8eea83265ce2 (arm C, rep 2, moonshotai/kimi-k2.6)
+[seq 146] → failed
+[seq 255] created 99a5cf26-1d97-4918-b1ab-698985edd58a (arm C, rep 2, xiaomi/mimo-v2.5-pro)
+[seq 136] → timeout
+[seq 256] created 9668642a-a36c-4801-83b8-190a8749f652 (arm C, rep 2, tencent/hy3)
+[seq 143] → failed
+[seq 257] created c0398698-aef7-4ba7-9412-5048b791f770 (arm C, rep 2, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 255] → completed
+[seq 258] created 4fba2f89-59f5-4bad-b544-6e6093afdbef (arm C, rep 2, meta/muse-glimmer-30b)
+[seq 254] → completed
+[seq 259] created 2526c65a-8be7-4fd0-8272-9445d5248582 (arm C, rep 2, google/gemma-4-31b-it)
+[seq 251] → failed
+[seq 260] created 1069b27c-021f-49e9-a41c-3b44b6f0a865 (arm C, rep 2, openai/gpt-oss-120b)
+[seq 258] → completed
+[seq 261] created fcf8fe5a-9ec0-484b-8b98-e873c5173b00 (arm C, rep 2, z-ai/glm-5.3)
+[seq 260] → failed
+[seq 262] created 163de6f8-b77c-47df-ac29-ca4105b28e84 (arm C, rep 2, qwen/qwen3.8-flash)
+[seq 142] → timeout
+[seq 263] created f84b3400-a047-4b4d-87ca-ca2620fbd379 (arm C, rep 2, deepseek/deepseek-v4-flash)
+[seq 253] → failed
+[seq 264] created 09ce4466-a78d-4196-b235-3c5f52b29b74 (arm C, rep 2, moonshotai/kimi-k2.6)
+[seq 259] → completed
+[seq 265] created 2938926e-dee6-4f5c-b3f1-eda94b529ba4 (arm C, rep 2, xiaomi/mimo-v2.5-pro)
+[seq 263] → completed
+[seq 266] created 250e78f0-041d-4c58-b2fa-3ee2f0df83bf (arm C, rep 2, tencent/hy3)
+[seq 261] → completed
+[seq 267] created e2c47320-6532-4d36-863f-ab19e2425781 (arm C, rep 2, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 264] → completed
+[seq 268] created 9b78cd4f-e64e-4df8-84a2-119b846631c8 (arm C, rep 2, meta/muse-glimmer-30b)
+[seq 267] → failed
+[seq 269] created 6bfffb02-9fc4-4a4e-9bae-06b54edfef53 (arm C, rep 2, google/gemma-4-31b-it)
+[seq 265] → completed
+[seq 270] created 7b6858ba-3245-4e78-ab67-29029f9b59c3 (arm C, rep 2, openai/gpt-oss-120b)
+[seq 270] → failed
+[seq 271] created b293226a-085d-4b24-8253-19617a365356 (arm C, rep 2, z-ai/glm-5.3)
+[seq 268] → failed
+[seq 272] created 252692be-195b-47da-81c1-57812a9449b7 (arm C, rep 2, qwen/qwen3.8-flash)
+[seq 252] → failed
+[seq 273] created 149ce25c-8881-4b40-a5aa-7964c8830018 (arm C, rep 2, deepseek/deepseek-v4-flash)
+[seq 266] → failed
+[seq 274] created 7a24456c-fedf-48d9-9fe9-d39134804821 (arm C, rep 2, moonshotai/kimi-k2.6)
+[seq 262] → failed
+[seq 275] created 4973c54e-5c3d-4ed6-9e11-d1f52d0588be (arm C, rep 2, xiaomi/mimo-v2.5-pro)
+[seq 269] → failed
+[seq 276] created ec51647d-7834-4516-97cf-3c522d4e1eb7 (arm C, rep 2, tencent/hy3)
+[seq 256] → failed
+[seq 277] created 3c2efae6-0253-4972-89aa-8f25dc251bec (arm C, rep 2, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 275] → completed
+[seq 278] created 89fd1286-95e5-4c54-8b2b-86954c0f2134 (arm C, rep 2, meta/muse-glimmer-30b)
+[seq 277] → completed
+[seq 279] created 6b63f0ea-9b06-4618-a1d1-68994df11f84 (arm C, rep 2, google/gemma-4-31b-it)
+[seq 257] → timeout
+[seq 280] created edf8254b-35ab-42ed-b50f-cd80bb2029a7 (arm C, rep 2, openai/gpt-oss-120b)
+[seq 280] → failed
+[seq 281] created b741c4f7-8fe6-4434-8f8f-dc790822b28b (arm C, rep 2, z-ai/glm-5.3)
+[seq 276] → completed
+[seq 282] created 41cce28a-946a-474d-bb9f-c4ea9ac2ca32 (arm C, rep 2, qwen/qwen3.8-flash)
+[seq 279] → completed
+[seq 283] created f92b2e69-046d-4e01-9c2a-61cd58ae5f43 (arm C, rep 2, deepseek/deepseek-v4-flash)
+[seq 278] → completed
+[seq 284] created d5214e6d-2d45-4e74-97e5-88ef12d0619c (arm C, rep 2, moonshotai/kimi-k2.6)
+[seq 283] → failed
+[seq 285] created 4a703356-fb8b-4ba0-a4fe-e7772e0d5be1 (arm C, rep 2, xiaomi/mimo-v2.5-pro)
+[seq 272] → failed
+[seq 286] created cb37fddb-ef5f-46bf-add7-2be0191d7805 (arm C, rep 2, tencent/hy3)
+[seq 273] → completed
+[seq 287] created eca78339-0e48-41b4-b436-ebb00248f10f (arm C, rep 2, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 287] → failed
+[seq 288] created 803cfa17-4747-4bf1-9d8a-f15850f11ebb (arm C, rep 2, meta/muse-glimmer-30b)
+[seq 285] → completed
+[seq 289] created 88102b58-b7b5-419d-86bb-ce0f6229448b (arm C, rep 2, google/gemma-4-31b-it)
+[seq 288] → completed
+[seq 290] created 0c9df0b2-a251-4bce-b4ea-0d4fc552de74 (arm C, rep 2, openai/gpt-oss-120b)
+[seq 290] → completed
+[seq 291] created 10d33815-a160-4eaf-a625-ae0ee38d703a (arm C, rep 2, z-ai/glm-5.3)
+[seq 286] → failed
+[seq 292] created 988590c6-8509-4887-8c45-7e2089223756 (arm C, rep 2, qwen/qwen3.8-flash)
+[seq 271] → completed
+[seq 293] created 27cbc9bb-b878-4f5f-9f0e-be692182a800 (arm C, rep 2, deepseek/deepseek-v4-flash)
+[seq 274] → completed
+[seq 294] created b84873e3-ea2e-4837-889a-5eb89114e355 (arm C, rep 2, moonshotai/kimi-k2.6)
+[seq 289] → completed
+[seq 295] created 79d3cd0e-c3e2-4236-ad54-67e10b7fb769 (arm C, rep 2, xiaomi/mimo-v2.5-pro)
+[seq 284] → completed
+[seq 296] created e415f011-057e-4b90-8be7-94ff0d756428 (arm C, rep 2, tencent/hy3)
+[seq 295] → completed
+[seq 297] created 043f0e0a-567a-4bd0-974c-adf69b4b786b (arm C, rep 2, nvidia/nemotron-3-ultra-550b-a55b)
+[seq 293] → completed
+[seq 298] created b15e6af1-d501-4199-8d4a-e025968532b2 (arm C, rep 2, meta/muse-glimmer-30b)
+[seq 297] → failed
+[seq 299] created 2f677261-972d-431d-b71c-e8a90750f647 (arm C, rep 2, google/gemma-4-31b-it)
+[seq 292] → failed
+[seq 300] created 9e633607-bed1-467e-a569-408c947206c5 (arm C, rep 2, openai/gpt-oss-120b)
+[seq 281] → completed
+[seq 298] → completed
+[seq 294] → completed
+[seq 296] → failed
+[seq 299] → completed
+[seq 300] → failed
+[seq 291] → completed
+[seq 282] → timeout
+outcomes → /home/jdluu/projects/ConceptCast-results/manifest/council-outcomes-20260914-123539.json
+
+=== BENCHMARK DONE. failed arms: none ===

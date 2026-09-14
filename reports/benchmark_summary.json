@@ -1,0 +1,75 @@
+{
+ "arms": {
+  "A": {
+   "completed": 79,
+   "failed": 21,
+   "first_pass": 79,
+   "repaired": 0
+  },
+  "B": {
+   "completed": 99,
+   "failed": 1,
+   "first_pass": 83,
+   "repaired": 16
+  },
+  "C": {
+   "completed": 53,
+   "failed": 47,
+   "cost_total": 18.39,
+   "cost_mean": 0.184,
+   "exec_time_mean_completed_min": 0.0
+  }
+ },
+ "by_model": {
+  "deepseek/deepseek-v4-flash": {
+   "A": 10,
+   "B": 10,
+   "C": 3
+  },
+  "google/gemma-4-31b-it": {
+   "A": 9,
+   "B": 10,
+   "C": 7
+  },
+  "meta/muse-glimmer-30b": {
+   "A": 10,
+   "B": 10,
+   "C": 8
+  },
+  "moonshotai/kimi-k2.6": {
+   "A": 10,
+   "B": 10,
+   "C": 10
+  },
+  "nvidia/nemotron-3-ultra-550b-a55b": {
+   "A": 9,
+   "B": 10,
+   "C": 3
+  },
+  "openai/gpt-oss-120b": {
+   "A": 9,
+   "B": 10,
+   "C": 2
+  },
+  "qwen/qwen3.8-flash": {
+   "A": 0,
+   "B": 10,
+   "C": 0
+  },
+  "tencent/hy3": {
+   "A": 10,
+   "B": 10,
+   "C": 4
+  },
+  "xiaomi/mimo-v2.5-pro": {
+   "A": 9,
+   "B": 10,
+   "C": 10
+  },
+  "z-ai/glm-5.3": {
+   "A": 3,
+   "B": 9,
+   "C": 6
+  }
+ }
+}

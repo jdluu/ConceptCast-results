@@ -1,0 +1,11 @@
+{
+  "job_seq": 200,
+  "arm": "A",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "openai/gpt-oss-120b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

@@ -1,0 +1,11 @@
+{
+  "job_seq": 249,
+  "arm": "B",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

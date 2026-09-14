@@ -1,0 +1,11 @@
+{
+  "job_seq": 94,
+  "arm": "B",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "moonshotai/kimi-k2.6",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "attempts": 3
+}

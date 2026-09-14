@@ -1,0 +1,11 @@
+{
+  "job_seq": 77,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Fourier transform",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

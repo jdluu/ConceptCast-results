@@ -1,0 +1,11 @@
+{
+  "job_seq": 203,
+  "arm": "B",
+  "rep": 2,
+  "topic": "derivative of a function in calculus",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

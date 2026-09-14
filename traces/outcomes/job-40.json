@@ -1,0 +1,11 @@
+{
+  "job_seq": 40,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "openai/gpt-oss-120b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}
