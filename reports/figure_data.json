@@ -1,0 +1,54 @@
+{
+ "completion_pct": {
+  "A|moonshotai/kimi-k2.6": 100,
+  "A|xiaomi/mimo-v2.5-pro": 90,
+  "A|meta/muse-glimmer-30b": 100,
+  "A|google/gemma-4-31b-it": 90,
+  "A|tencent/hy3": 100,
+  "A|z-ai/glm-5.3": 30,
+  "A|deepseek/deepseek-v4-flash": 100,
+  "A|nvidia/nemotron-3-ultra-550b-a55b": 90,
+  "A|openai/gpt-oss-120b": 90,
+  "A|qwen/qwen3.8-flash": 0,
+  "B|moonshotai/kimi-k2.6": 100,
+  "B|xiaomi/mimo-v2.5-pro": 100,
+  "B|meta/muse-glimmer-30b": 100,
+  "B|google/gemma-4-31b-it": 100,
+  "B|tencent/hy3": 100,
+  "B|z-ai/glm-5.3": 90,
+  "B|deepseek/deepseek-v4-flash": 100,
+  "B|nvidia/nemotron-3-ultra-550b-a55b": 100,
+  "B|openai/gpt-oss-120b": 100,
+  "B|qwen/qwen3.8-flash": 100,
+  "C|moonshotai/kimi-k2.6": 100,
+  "C|xiaomi/mimo-v2.5-pro": 100,
+  "C|meta/muse-glimmer-30b": 80,
+  "C|google/gemma-4-31b-it": 70,
+  "C|tencent/hy3": 40,
+  "C|z-ai/glm-5.3": 60,
+  "C|deepseek/deepseek-v4-flash": 30,
+  "C|nvidia/nemotron-3-ultra-550b-a55b": 30,
+  "C|openai/gpt-oss-120b": 20,
+  "C|qwen/qwen3.8-flash": 0
+ },
+ "latency": {
+  "A": {
+   "n": 100,
+   "median": 47.966449999999995,
+   "mean": 104.331116,
+   "p90": 340.0568
+  },
+  "B": {
+   "n": 152,
+   "median": 56.957899999999995,
+   "mean": 106.38905394736842,
+   "p90": 340.0505
+  },
+  "C": {
+   "n": 53,
+   "median": 1462.852338,
+   "mean": 1819.3793187735848,
+   "p90": 3724.599569
+  }
+ }
+}
