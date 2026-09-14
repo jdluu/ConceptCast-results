@@ -1,26 +1,21 @@
 {
- "arms": {
-  "A": {
-   "completed": 79,
-   "failed": 21,
-   "first_pass": 79,
-   "repaired": 0
-  },
-  "B": {
-   "completed": 99,
-   "failed": 1,
-   "first_pass": 83,
-   "repaired": 16
-  },
-  "C": {
-   "completed": 53,
-   "failed": 47,
-   "cost_total": 18.39,
-   "cost_mean": 0.184,
-   "exec_time_mean_completed_min": 0.0
-  }
+ "run_id": "bench-20260913",
+ "framework_commit": "9ef77a9",
+ "arm_A": {
+  "completed": 79,
+  "failed": 21
  },
- "by_model": {
+ "arm_B": {
+  "completed": 99,
+  "failed": 1,
+  "first_pass": 83,
+  "repaired_from_failure": 16
+ },
+ "arm_C": {
+  "completed": 53,
+  "failed": 47
+ },
+ "by_model_completed": {
   "deepseek/deepseek-v4-flash": {
    "A": 10,
    "B": 10,
@@ -71,5 +66,21 @@
    "B": 9,
    "C": 6
   }
+ },
+ "latency": {
+  "A_median_s": 48.0,
+  "B_median_s": 57.0,
+  "C_completed_mean_min": 30.3,
+  "C_completed_median_min": 24.4
+ },
+ "tokens": {
+  "A_input_total": 7214,
+  "B_input_total": 17764,
+  "C_input_total": 45784902,
+  "C_output_total": 11462625
+ },
+ "cost": {
+  "C_total_usd_est": 18.39,
+  "C_mean_usd_est": 0.184
  }
 }
