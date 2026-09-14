@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Generates manifest/jobs.csv — the benchmark v2 manifest.
+"""Generates manifest/jobs.csv — the benchmark manifest.
 
 Roster: the validated 10-model smoke list (see model_metadata.json, all IDs
 verified live against Nano GPT on 2026-09-12). Structure: 5 topics x 10
