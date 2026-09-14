@@ -10,3 +10,6 @@ Thumbs.db
 __pycache__/
 *.py[cod]
 .pytest_cache/
+
+# Live run logs (audit trail stays local; data lives in traces/ + data/)
+benchmark_run.log
