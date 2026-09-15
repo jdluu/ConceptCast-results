@@ -23,6 +23,7 @@ the completed run (`bench-20260913`).
 | `reports/` | Machine-readable result summaries (`benchmark_summary.json`, `figure_data.json`). |
 | `figures/` | Thesis figures rendered by `tools/figures.py` (300 DPI PNG). |
 | `tools/` | Schema-driven analysis scripts — see `tools/README.md`. |
+| `artifacts/arm_C/` | Frozen Arm C outputs: rendered videos (`videos.tar.gz`, 53 files), generated Manim code (`seq*.py`), and a `manifest.json` mapping job_seq → model/topic/files. |
 
 ## Benchmark Design (summary)
 
@@ -57,6 +58,16 @@ OpenAI-style usage (`prompt_tokens` / `completion_tokens` are the real
 totals; `input_tokens` there is only the cached subset). Arm C's emitter
 records normalized `input_tokens` / `output_tokens`. `tools/figures.py`
 handles both; check the emitter before aggregating raw fields.
+
+## Arm A/B v2 re-run (multi-scene, must-render)
+
+The original Arms A/B measured single-scene script validity only (no render),
+which is not comparable to Arm C's rendered multi-scene videos. Their data is
+archived under `archive/ab_v1_single_scene/`. A v2 re-run uses the same task as
+Arm C: one `SceneGen` class with 5-10 sequential scenes, rendered with the same
+sandboxed engine; `completed` requires a produced video. Artifacts collected:
+generated code, rendered video, tokens, latency, validation/render errors.
+Runner: `benchmark_monolithic_v2.py` in the application repo.
 
 ## Reproducing the Analysis
 
