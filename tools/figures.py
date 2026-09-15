@@ -144,7 +144,7 @@ def fig1(comp, models) -> None:
     ax.set_ylabel("Completed jobs (%)")
     ax.set_ylim(0, 105)
     ax.set_title("End-to-end completion rate by model and arm (10 jobs per cell)")
-    ax.legend(frameon=False, ncols=3, loc="upper right")
+    ax.legend(frameon=False, ncols=3, loc="lower center", bbox_to_anchor=(0.5, 1.02))
     ax.yaxis.grid(True, lw=0.4, color="#e2e8f0")
     ax.set_axisbelow(True)
     fig.tight_layout()
