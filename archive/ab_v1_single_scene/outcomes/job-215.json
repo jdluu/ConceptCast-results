@@ -1,0 +1,11 @@
+{
+  "job_seq": 215,
+  "arm": "B",
+  "rep": 2,
+  "topic": "backpropagation",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

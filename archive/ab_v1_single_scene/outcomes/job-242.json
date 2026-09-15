@@ -1,0 +1,11 @@
+{
+  "job_seq": 242,
+  "arm": "B",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "qwen/qwen3.8-flash",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "attempts": 3
+}

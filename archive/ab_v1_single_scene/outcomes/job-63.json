@@ -1,0 +1,11 @@
+{
+  "job_seq": 63,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

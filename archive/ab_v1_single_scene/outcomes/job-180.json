@@ -1,0 +1,11 @@
+{
+  "job_seq": 180,
+  "arm": "A",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "openai/gpt-oss-120b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

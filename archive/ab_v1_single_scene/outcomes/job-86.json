@@ -1,0 +1,11 @@
+{
+  "job_seq": 86,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "tencent/hy3",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

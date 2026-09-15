@@ -1,0 +1,13 @@
+{
+  "job_seq": 151,
+  "arm": "A",
+  "rep": 2,
+  "topic": "derivative of a function in calculus",
+  "model": "z-ai/glm-5.3",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "no code returned"
+  ],
+  "attempts": 1
+}

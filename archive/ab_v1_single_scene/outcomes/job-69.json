@@ -1,0 +1,11 @@
+{
+  "job_seq": 69,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

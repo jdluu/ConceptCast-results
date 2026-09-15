@@ -1,0 +1,13 @@
+{
+  "job_seq": 2,
+  "arm": "A",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "qwen/qwen3.8-flash",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "no code returned"
+  ],
+  "attempts": 1
+}

@@ -1,0 +1,13 @@
+{
+  "job_seq": 179,
+  "arm": "A",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "google/gemma-4-31b-it",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: (unicode error) 'unicodeescape' codec can't decode bytes in position 1-2: truncated \\xXX escape (<unknown>, line 48)"
+  ],
+  "attempts": 1
+}

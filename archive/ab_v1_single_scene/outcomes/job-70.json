@@ -1,0 +1,11 @@
+{
+  "job_seq": 70,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "openai/gpt-oss-120b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

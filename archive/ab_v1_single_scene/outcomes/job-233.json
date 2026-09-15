@@ -1,0 +1,11 @@
+{
+  "job_seq": 233,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

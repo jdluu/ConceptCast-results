@@ -1,0 +1,11 @@
+{
+  "job_seq": 29,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Fourier transform",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}

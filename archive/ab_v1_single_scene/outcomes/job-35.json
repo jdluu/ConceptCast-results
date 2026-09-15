@@ -1,0 +1,11 @@
+{
+  "job_seq": 35,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "attempts": 1
+}
