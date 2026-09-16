@@ -1,0 +1,97 @@
+from manim import *
+
+class SceneGen(Scene):
+    def construct(self):
+        # Scene 1: Title
+        title = Text("Eigenvectors", font_size=72)
+        subtitle = Text("Vectors that only stretch, not turn", font_size=36).next_to(title, DOWN)
+        self.play(Write(title), Write(subtitle))
+        self.wait(1.5)
+        self.play(FadeOut(title), FadeOut(subtitle))
+        self.clear()
+
+        # Scene 2: Vector space
+        axes = Axes(x_range=[-3,3], y_range=[-3,3], axis_config={"color": GREY})
+        grid = NumberPlane().set_opacity(0.3)
+        vec = Arrow(ORIGIN, RIGHT*2 + UP*1, buff=0, color=BLUE)
+        vec_label = Text("v", color=BLUE).next_to(vec.get_end(), RIGHT)
+        self.play(Create(grid), Create(axes))
+        self.play(GrowArrow(vec), Write(vec_label))
+        self.wait(1)
+        self.play(vec.animate.scale(0.8).set_color(RED), vec_label.animate.set_color(RED))
+        self.wait(1)
+        self.clear()
+
+        # Scene 3: Linear transformation
+        axes2 = Axes(x_range=[-3,3], y_range=[-3,3], axis_config={"color": GREY})
+        grid2 = NumberPlane().set_opacity(0.3)
+        v1 = Arrow(ORIGIN, RIGHT*2 + UP*1, color=BLUE)
+        v1_label = Text("v", color=BLUE).next_to(v1.get_end(), RIGHT)
+        T_label = Text("T").scale(1.5).shift(LEFT*3)
+        arrow = Arrow(LEFT*2.5, RIGHT*2.5, buff=0.2, color=YELLOW)
+        v2 = Arrow(ORIGIN, RIGHT*3 + UP*0.5, color=GREEN)
+        v2_label = Text("T(v)", color=GREEN).next_to(v2.get_end(), RIGHT)
+        self.play(Create(grid2), Create(axes2), Write(T_label))
+        self.play(GrowArrow(v1), Write(v1_label))
+        self.play(Create(arrow))
+        self.play(Transform(v1, v2), Transform(v1_label, v2_label))
+        self.wait(1)
+        self.clear()
+
+        # Scene 4: Direction change
+        axes3 = Axes(x_range=[-3,3], y_range=[-3,3], axis_config={"color": GREY})
+        v_a = Arrow(ORIGIN, RIGHT*2, color=BLUE)
+        v_b = Arrow(ORIGIN, UP*2, color=BLUE)
+        v_a_t = Arrow(ORIGIN, RIGHT*3 + UP*1, color=RED)
+        v_b_t = Arrow(ORIGIN, RIGHT*1 + UP*2.5, color=RED)
+        lab1 = Text("v1", color=BLUE).next_to(v_a.get_end(), RIGHT)
+        lab2 = Text("v2", color=BLUE).next_to(v_b.get_end(), UP)
+        lab1t = Text("T(v1)", color=RED).next_to(v_a_t.get_end(), RIGHT)
+        lab2t = Text("T(v2)", color=RED).next_to(v_b_t.get_end(), UP)
+        self.play(Create(axes3))
+        self.play(GrowArrow(v_a), GrowArrow(v_b), Write(lab1), Write(lab2))
+        self.wait(0.5)
+        self.play(Transform(v_a, v_a_t), Transform(v_b, v_b_t),
+                  Transform(lab1, lab1t), Transform(lab2, lab2t))
+        note = Text("Direction changes", color=WHITE).to_edge(DOWN)
+        self.play(Write(note))
+        self.wait(1)
+        self.clear()
+
+        # Scene 5: Special vector
+        axes4 = Axes(x_range=[-3,3], y_range=[-3,3], axis_config={"color": GREY})
+        e_vec = Arrow(ORIGIN, RIGHT*2, color=GREEN)
+        e_label = Text("v", color=GREEN).next_to(e_vec.get_end(), RIGHT)
+        e_t = Arrow(ORIGIN, RIGHT*4, color=YELLOW)
+        e_t_label = Text("T(v)", color=YELLOW).next_to(e_t.get_end(), RIGHT)
+        line = Line(ORIGIN, RIGHT*4, color=GREEN, stroke_width=4)
+        self.play(Create(axes4))
+        self.play(GrowArrow(e_vec), Write(e_label), Create(line))
+        self.wait(0.5)
+        self.play(Transform(e_vec, e_t), Transform(e_label, e_t_label))
+        note2 = Text("Same line!", color=YELLOW).to_edge(DOWN)
+        self.play(Write(note2))
+        self.wait(1)
+        self.clear()
+
+        # Scene 6: Eigenvalue scalar
+        axes5 = Axes(x_range=[-3,3], y_range=[-3,3], axis_config={"color": GREY})
+        v0 = Arrow(ORIGIN, UP*2, color=BLUE)
+        v0_label = Text("v", color=BLUE).next_to(v0.get_end(), UP)
+        lam = MathTex(r"\lambda = 2.5", color=YELLOW).to_edge(UP)
+        v_scaled = Arrow(ORIGIN, UP*5, color=RED)
+        v_scaled_label = Text("T(v)=\\lambda v", color=RED).next_to(v_scaled.get_end(), UP)
+        self.play(Create(axes5), GrowArrow(v0), Write(v0_label))
+        self.play(Write(lam))
+        self.play(Transform(v0, v_scaled), Transform(v0_label, v_scaled_label))
+        self.wait(1.5)
+        self.clear()
+
+        # Scene 7: Definition
+        defn = MathTex(r"A\mathbf{v} = \lambda \mathbf{v}", font_size=80)
+        desc = Text("v is an eigenvector of A if T(v) is parallel to v", font_size=32).next_to(defn, DOWN)
+        key = Text("Only stretch, no rotation", font_size=28, color=GOLD).next_to(desc, DOWN)
+        self.play(Write(defn))
+        self.play(Write(desc))
+        self.play(Write(key))
+        self.wait(2)

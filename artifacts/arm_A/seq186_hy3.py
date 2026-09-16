@@ -1,0 +1,125 @@
+from manim import *
+
+class SceneGen(Scene):
+    def construct(self):
+        title = Text("1. Waves: periodic emission", color=WHITE).to_edge(UP)
+        self.play(Write(title))
+        src = Dot(ORIGIN, color=BLUE)
+        self.play(Create(src))
+        for i in range(3):
+            c = Circle(radius=0.2, color=WHITE).move_to(src.get_center())
+            self.play(Create(c), run_time=0.3)
+            self.play(c.animate.scale(10).set_stroke(opacity=0.2), run_time=1.2)
+            self.remove(c)
+        eq = MathTex("f = \\frac{1}{T}", color=YELLOW).to_edge(DOWN)
+        self.play(Write(eq))
+        self.wait(1)
+        self.clear()
+
+        title2 = Text("2. Stationary source & observer", color=WHITE).to_edge(UP)
+        self.play(Write(title2))
+        src2 = Dot(LEFT*3, color=BLUE)
+        obs2 = Dot(RIGHT*3, color=YELLOW)
+        self.play(Create(src2), Create(obs2))
+        self.play(Write(Text("Source", color=BLUE).next_to(src2, DOWN)))
+        self.play(Write(Text("Observer", color=YELLOW).next_to(obs2, DOWN)))
+        for i in range(4):
+            c = Circle(radius=0.2, color=WHITE).move_to(src2.get_center())
+            self.add(c)
+            self.play(c.animate.scale(30).set_stroke(opacity=0.1), run_time=2.5)
+            self.play(obs2.animate.set_color(WHITE), run_time=0.1)
+            self.play(obs2.animate.set_color(YELLOW), run_time=0.1)
+            self.remove(c)
+        self.play(Write(Text("Observer detects original frequency f", color=WHITE).to_edge(DOWN)))
+        self.wait(1)
+        self.clear()
+
+        title3 = Text("3. Moving source: wavefronts bunch ahead", color=WHITE).to_edge(UP)
+        self.play(Write(title3))
+        src3 = Dot(LEFT*5, color=BLUE)
+        self.play(Create(src3))
+        circles = []
+        for i in range(6):
+            self.play(src3.animate.shift(RIGHT*1.5), run_time=0.4)
+            c = Circle(radius=0.2, color=WHITE).move_to(src3.get_center())
+            circles.append(c)
+            self.add(c)
+            self.play(*[circ.animate.scale(1.6).set_stroke(opacity=0.4) for circ in circles], run_time=0.4)
+        self.play(Write(Text("Front: compressed. Back: stretched.", color=WHITE).to_edge(DOWN)))
+        self.wait(1)
+        self.clear()
+
+        title4 = Text("4. Observer ahead: higher frequency", color=BLUE).to_edge(UP)
+        self.play(Write(title4))
+        src4 = Dot(LEFT*5, color=BLUE)
+        obs4 = Dot(RIGHT*4, color=YELLOW)
+        self.play(Create(src4), Create(obs4))
+        self.play(Write(Text("Observer", color=YELLOW).next_to(obs4, DOWN)))
+        circles = []
+        for i in range(9):
+            self.play(src4.animate.shift(RIGHT*1), run_time=0.3)
+            c = Circle(radius=0.2, color=WHITE).move_to(src4.get_center())
+            circles.append(c)
+            self.add(c)
+            self.play(*[circ.animate.scale(1.5).set_stroke(opacity=0.3) for circ in circles], run_time=0.3)
+            if src4.get_center()[0] > 0:
+                self.play(obs4.animate.set_color(WHITE), run_time=0.05)
+                self.play(obs4.animate.set_color(BLUE), run_time=0.05)
+        self.play(Write(Text("Waves arrive faster -> higher pitch (blue shift)", color=BLUE).to_edge(DOWN)))
+        self.wait(1)
+        self.clear()
+
+        title5 = Text("5. Observer behind: lower frequency", color=RED).to_edge(UP)
+        self.play(Write(title5))
+        obs5 = Dot(LEFT*4, color=YELLOW)
+        src5 = Dot(RIGHT*4, color=BLUE)
+        self.play(Create(obs5), Create(src5))
+        self.play(Write(Text("Observer", color=YELLOW).next_to(obs5, DOWN)))
+        circles = []
+        for i in range(9):
+            self.play(src5.animate.shift(RIGHT*1), run_time=0.3)
+            c = Circle(radius=0.2, color=WHITE).move_to(src5.get_center())
+            circles.append(c)
+            self.add(c)
+            self.play(*[circ.animate.scale(1.5).set_stroke(opacity=0.3) for circ in circles], run_time=0.3)
+            if i % 3 == 0:
+                self.play(obs5.animate.set_color(WHITE), run_time=0.05)
+                self.play(obs5.animate.set_color(RED), run_time=0.05)
+        self.play(Write(Text("Waves arrive slower -> lower pitch (red shift)", color=RED).to_edge(DOWN)))
+        self.wait(1)
+        self.clear()
+
+        title6 = Text("6. Moving observer towards source", color=WHITE).to_edge(UP)
+        self.play(Write(title6))
+        src6 = Dot(LEFT*5, color=BLUE)
+        obs6 = Dot(RIGHT*5, color=YELLOW)
+        self.play(Create(src6), Create(obs6))
+        circles = []
+        for i in range(7):
+            c = Circle(radius=0.2, color=WHITE).move_to(src6.get_center())
+            circles.append(c)
+            self.add(c)
+            self.play(*[circ.animate.scale(1.6).set_stroke(opacity=0.3) for circ in circles],
+                      obs6.animate.shift(LEFT*0.9), run_time=0.4)
+            if i % 2 == 0:
+                self.play(obs6.animate.set_color(WHITE), run_time=0.05)
+                self.play(obs6.animate.set_color(YELLOW), run_time=0.05)
+        self.play(Write(Text("Observer meets wavefronts sooner -> higher f", color=WHITE).to_edge(DOWN)))
+        self.wait(1)
+        self.clear()
+
+        title7 = Text("7. Doppler Effect Summary", color=WHITE).to_edge(UP)
+        self.play(Write(title7))
+        formula = MathTex("f' = f \\frac{v \\pm v_o}{v \\mp v_s}", color=YELLOW)
+        self.play(Write(formula))
+        self.wait(1)
+        amb = Rectangle(color=RED, width=1.2, height=0.6).shift(LEFT*5)
+        obs = Dot(RIGHT*3, color=YELLOW)
+        self.play(Create(amb), Create(obs))
+        self.play(Write(Text("Observer", color=YELLOW).next_to(obs, DOWN)))
+        self.play(amb.animate.shift(RIGHT*9), run_time=3)
+        self.play(obs.animate.set_color(WHITE), run_time=0.1)
+        self.play(obs.animate.set_color(YELLOW), run_time=0.1)
+        summary = Text("Towards: higher freq. Away: lower freq.", color=WHITE).to_edge(DOWN)
+        self.play(Write(summary))
+        self.wait(1)

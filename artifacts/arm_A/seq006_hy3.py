@@ -1,0 +1,100 @@
+from manim import *
+
+class SceneGen(Scene):
+    def construct(self):
+        # Scene 1: The Function
+        title1 = Text("1. The Function f(x) = x²").to_edge(UP)
+        axes1 = Axes(x_range=[-0.5, 5, 1], y_range=[-0.5, 10, 1], x_length=6, y_length=5).shift(LEFT * 2)
+        graph1 = axes1.plot(lambda x: x ** 2, color=BLUE)
+        label1 = MathTex("f(x)=x^2").move_to(axes1.coords_to_point(3.5, 9)).set_color(BLUE)
+        self.play(FadeIn(title1))
+        self.play(Create(axes1), Create(graph1))
+        self.play(Write(label1))
+        self.wait()
+        self.clear()
+
+        # Scene 2: Points and differences
+        title2 = Text("2. Changes in x and y (Δx, Δy)").to_edge(UP)
+        axes2 = Axes(x_range=[0, 5, 1], y_range=[0, 10, 1], x_length=6, y_length=5).shift(LEFT * 2)
+        graph2 = axes2.plot(lambda x: x ** 2, color=BLUE)
+        xv = 1.5
+        hv = 1.5
+        p2a = Dot(axes2.coords_to_point(xv, xv ** 2), color=RED)
+        p2b = Dot(axes2.coords_to_point(xv + hv, (xv + hv) ** 2), color=RED)
+        dx = Line(axes2.coords_to_point(xv, xv ** 2), axes2.coords_to_point(xv + hv, xv ** 2), color=GREEN)
+        dy = Line(axes2.coords_to_point(xv + hv, xv ** 2), axes2.coords_to_point(xv + hv, (xv + hv) ** 2), color=YELLOW)
+        dx_lab = MathTex(r"\Delta x = h").next_to(dx, DOWN, buff=0.1).set_color(GREEN)
+        dy_lab = MathTex(r"\Delta y").next_to(dy, RIGHT, buff=0.1).set_color(YELLOW)
+        self.play(FadeIn(title2), Create(axes2), Create(graph2))
+        self.play(FadeIn(p2a), FadeIn(p2b))
+        self.play(Create(dx), Create(dy))
+        self.play(Write(dx_lab), Write(dy_lab))
+        self.wait()
+        self.clear()
+
+        # Scene 3: Secant line and slope
+        title3 = Text("3. Secant Line: Average Rate of Change").to_edge(UP)
+        axes3 = Axes(x_range=[0, 5, 1], y_range=[0, 10, 1], x_length=6, y_length=5).shift(LEFT * 2)
+        graph3 = axes3.plot(lambda x: x ** 2, color=BLUE)
+        p3a = Dot(axes3.coords_to_point(xv, xv ** 2), color=RED)
+        p3b = Dot(axes3.coords_to_point(xv + hv, (xv + hv) ** 2), color=RED)
+        secant = Line(p3a.get_center(), p3b.get_center(), color=GREEN)
+        eq3 = MathTex(r"m_{sec} = \frac{f(x+h)-f(x)}{h}").scale(0.9).to_edge(RIGHT)
+        self.play(FadeIn(title3), Create(axes3), Create(graph3))
+        self.play(FadeIn(p3a), FadeIn(p3b))
+        self.play(Create(secant))
+        self.play(Write(eq3))
+        self.wait()
+        self.clear()
+
+        # Scene 4: h -> 0
+        title4 = Text("4. Let h → 0: Secant Becomes Tangent").to_edge(UP)
+        axes4 = Axes(x_range=[0, 5, 1], y_range=[0, 10, 1], x_length=6, y_length=5).shift(LEFT * 2)
+        graph4 = axes4.plot(lambda x: x ** 2, color=BLUE)
+        p4a = Dot(axes4.coords_to_point(xv, xv ** 2), color=RED)
+        h_track = ValueTracker(hv)
+        p4b = Dot(color=RED).add_updater(lambda m: m.move_to(axes4.coords_to_point(xv + h_track.get_value(), (xv + h_track.get_value()) ** 2)))
+        sec = Line(color=GREEN).add_updater(lambda m: m.put_start_and_end_on(p4a.get_center(), p4b.get_center()))
+        self.play(FadeIn(title4), Create(axes4), Create(graph4), FadeIn(p4a))
+        self.add(p4b, sec)
+        self.play(h_track.animate.set_value(0.001), run_time=3)
+        self.play(sec.animate.set_color(YELLOW))
+        tan_lab = MathTex(r"m_{tan} = f'(x)").scale(0.9).to_edge(RIGHT).set_color(YELLOW)
+        self.play(Write(tan_lab))
+        self.wait()
+        self.clear()
+
+        # Scene 5: Limit definition
+        title5 = Text("5. The Derivative: Limit of Difference Quotient").to_edge(UP)
+        formula = MathTex(r"f'(x) = \lim_{h \to 0} \frac{f(x+h)-f(x)}{h}").scale(1.2)
+        self.play(FadeIn(title5))
+        self.play(Write(formula))
+        self.play(formula.animate.set_color(BLUE), run_time=1)
+        self.play(formula.animate.set_color(WHITE), run_time=1)
+        self.wait()
+        self.clear()
+
+        # Scene 6: Derivative at a point
+        title6 = Text("6. Instantaneous Rate at x = 2").to_edge(UP)
+        axes6 = Axes(x_range=[0, 5, 1], y_range=[0, 10, 1], x_length=6, y_length=5).shift(LEFT * 2)
+        graph6 = axes6.plot(lambda x: x ** 2, color=BLUE)
+        dot6 = Dot(axes6.coords_to_point(2, 4), color=RED)
+        tangent6 = axes6.plot(lambda x: 4 * x - 4, x_range=[0.5, 3.5], color=YELLOW)
+        eq6 = MathTex(r"f'(2) = 2(2) = 4").scale(1).to_edge(RIGHT).set_color(YELLOW)
+        self.play(FadeIn(title6), Create(axes6), Create(graph6))
+        self.play(FadeIn(dot6), Create(tangent6))
+        self.play(Write(eq6))
+        self.wait()
+        self.clear()
+
+        # Scene 7: Derivative function
+        title7 = Text("7. The Derivative Function f'(x) = 2x").to_edge(UP)
+        axes7 = Axes(x_range=[0, 5, 1], y_range=[0, 10, 1], x_length=6, y_length=5).shift(LEFT * 2)
+        graph7 = axes7.plot(lambda x: x ** 2, color=BLUE)
+        deriv7 = axes7.plot(lambda x: 2 * x, x_range=[0, 5], color=GREEN)
+        lab_f = MathTex("f(x)=x^2").move_to(axes7.coords_to_point(3.5, 9)).set_color(BLUE)
+        lab_df = MathTex("f'(x)=2x").move_to(axes7.coords_to_point(4.2, 6)).set_color(GREEN)
+        self.play(FadeIn(title7), Create(axes7), Create(graph7))
+        self.play(Write(lab_f))
+        self.play(Create(deriv7), Write(lab_df))
+        self.wait()

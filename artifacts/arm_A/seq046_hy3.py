@@ -1,0 +1,101 @@
+from manim import *
+import numpy as np
+
+class SceneGen(Scene):
+    def construct(self):
+        # Scene 1: Vectors
+        axes = Axes(x_range=[-3,3], y_range=[-3,3], x_length=6, y_length=6, axis_config={"color": WHITE})
+        text1 = Text("Vectors are arrows from the origin", font_size=24).to_edge(UP)
+        v = Arrow(ORIGIN, [2,1,0], color=BLUE, buff=0)
+        w = Arrow(ORIGIN, [-1,2,0], color=YELLOW, buff=0)
+        label_v = MathTex(r"\vec{v}").next_to(v.get_end(), UR)
+        label_w = MathTex(r"\vec{w}").next_to(w.get_end(), UL)
+        self.play(Create(axes), Write(text1))
+        self.play(GrowArrow(v), GrowArrow(w))
+        self.play(Write(label_v), Write(label_w))
+        self.wait(1)
+        self.clear()
+
+        # Scene 2: Linear Transformation
+        text2 = Text("A linear transformation maps space to a new space", font_size=24).to_edge(UP)
+        plane = NumberPlane(x_range=[-4,4], y_range=[-4,4], x_length=8, y_length=8, background_line_style={"stroke_color": BLUE_E, "stroke_width":1})
+        matrix = [[2, 0], [0, 0.5]]
+        self.play(Write(text2))
+        self.play(Create(plane))
+        self.wait(0.5)
+        self.play(plane.animate.apply_matrix(matrix), run_time=2)
+        self.wait(1)
+        self.clear()
+
+        # Scene 3: General vector changes direction
+        text3 = Text("Most vectors change direction and length", font_size=24).to_edge(UP)
+        axes3 = Axes(x_range=[-3,3], y_range=[-3,3], x_length=6, y_length=6)
+        vec = Arrow(ORIGIN, [1,1,0], color=BLUE, buff=0)
+        vec_label = MathTex(r"\vec{v}").next_to(vec.get_end(), UR)
+        self.play(Write(text3), Create(axes3))
+        self.play(GrowArrow(vec), Write(vec_label))
+        self.wait(0.5)
+        vec_target = Arrow(ORIGIN, [2, 0.5, 0], color=RED, buff=0)
+        vec_label_target = MathTex(r"M\vec{v}").next_to(vec_target.get_end(), UR).set_color(RED)
+        self.play(Transform(vec, vec_target), Transform(vec_label, vec_label_target))
+        self.wait(1)
+        self.clear()
+
+        # Scene 4: Special vectors (eigenvectors)
+        text4 = Text("Some vectors only scale: they stay on their span", font_size=24).to_edge(UP)
+        axes4 = Axes(x_range=[-4,4], y_range=[-4,4], x_length=8, y_length=8)
+        e1 = Arrow(ORIGIN, [2,0,0], color=GREEN, buff=0)
+        e2 = Arrow(ORIGIN, [0,2,0], color=YELLOW, buff=0)
+        l1 = MathTex(r"\vec{e}_1").next_to(e1.get_end(), RIGHT).set_color(GREEN)
+        l2 = MathTex(r"\vec{e}_2").next_to(e2.get_end(), UP).set_color(YELLOW)
+        self.play(Write(text4), Create(axes4))
+        self.play(GrowArrow(e1), GrowArrow(e2), Write(l1), Write(l2))
+        self.wait(0.5)
+        e1_target = Arrow(ORIGIN, [4,0,0], color=RED, buff=0)
+        e2_target = Arrow(ORIGIN, [0,1,0], color=RED, buff=0)
+        self.play(Transform(e1, e1_target), Transform(e2, e2_target))
+        self.wait(0.5)
+        line1 = Line([-4,0,0],[4,0,0], color=GREEN, stroke_opacity=0.5)
+        line2 = Line([0,-4,0],[0,4,0], color=YELLOW, stroke_opacity=0.5)
+        self.play(Create(line1), Create(line2))
+        self.wait(1)
+        self.clear()
+
+        # Scene 5: Definition
+        text5 = Text("Eigenvectors satisfy: A v = λ v", font_size=28).to_edge(UP)
+        eq = MathTex(r"A\vec{v} = \lambda\vec{v}").scale(1.2)
+        self.play(Write(text5), Write(eq))
+        self.wait(1)
+        eq1 = MathTex(r"M\vec{e}_1 = 2\vec{e}_1 \quad (\lambda=2)").next_to(eq, DOWN)
+        eq2 = MathTex(r"M\vec{e}_2 = 0.5\vec{e}_2 \quad (\lambda=0.5)").next_to(eq1, DOWN)
+        self.play(Write(eq1))
+        self.play(Write(eq2))
+        self.wait(1)
+        self.clear()
+
+        # Scene 6: Many vectors
+        text6 = Text("Only vectors on these lines keep their direction", font_size=24).to_edge(UP)
+        axes6 = Axes(x_range=[-3,3], y_range=[-3,3], x_length=6, y_length=6)
+        vectors = VGroup()
+        targets = VGroup()
+        for angle in np.linspace(0, 2*np.pi, 12, endpoint=False):
+            x, y = np.cos(angle), np.sin(angle)
+            vectors.add(Arrow(ORIGIN, [x, y, 0], color=BLUE, buff=0, stroke_width=2))
+            targets.add(Arrow(ORIGIN, [2*x, 0.5*y, 0], color=RED, buff=0, stroke_width=2))
+        self.play(Write(text6), Create(axes6))
+        self.play(*[GrowArrow(vi) for vi in vectors], run_time=1.5)
+        self.wait(0.5)
+        self.play(Transform(vectors, targets), run_time=2)
+        e_x = Arrow(ORIGIN, [1,0,0], color=GREEN, buff=0)
+        e_y = Arrow(ORIGIN, [0,1,0], color=YELLOW, buff=0)
+        self.play(GrowArrow(e_x), GrowArrow(e_y))
+        self.wait(1)
+        self.clear()
+
+        # Scene 7: Conclusion
+        text7 = Text("Eigenvectors: non-zero vectors that change only by a scalar factor (eigenvalue) under a linear transformation.", font_size=22).to_edge(UP)
+        final_eq = MathTex(r"A\vec{v} = \lambda\vec{v}, \quad \vec{v}\neq\vec{0}").scale(1.2)
+        self.play(Write(text7))
+        self.play(Write(final_eq))
+        self.wait(2)
+        self.clear()

@@ -1,0 +1,113 @@
+from manim import *
+import numpy as np
+
+class SceneGen(Scene):
+    def construct(self):
+        title = Text("1. A Signal in the Time Domain").to_edge(UP)
+        axes = Axes(x_range=[-PI, PI, PI/2], y_range=[-1.5, 1.5, 0.5], x_length=7, y_length=3).shift(DOWN*0.5)
+        graph = axes.plot(lambda x: np.sin(x), color=BLUE)
+        label = MathTex("f(t) = \\sin(t)").next_to(axes, RIGHT)
+        self.play(Write(title))
+        self.play(Create(axes))
+        self.play(Create(graph))
+        self.play(Write(label))
+        self.wait(0.5)
+        self.clear()
+
+        title2 = Text("2. Complex Signals = Sum of Sines").to_edge(UP)
+        axes2 = Axes(x_range=[-PI, PI, PI/2], y_range=[-2, 2, 1], x_length=7, y_length=3).shift(DOWN*0.5)
+        s1 = axes2.plot(lambda x: np.sin(x), color=RED)
+        s2 = axes2.plot(lambda x: 0.5*np.sin(3*x), color=GREEN)
+        ssum = axes2.plot(lambda x: np.sin(x) + 0.5*np.sin(3*x), color=BLUE)
+        self.play(Write(title2))
+        self.play(Create(axes2))
+        self.play(Create(s1))
+        self.play(Create(s2))
+        self.play(Create(ssum))
+        self.wait(0.5)
+        self.clear()
+
+        title3 = Text("3. Sum of Odd Harmonics -> Square Wave").to_edge(UP)
+        axes3 = Axes(x_range=[-PI, PI, PI/2], y_range=[-1.5, 1.5, 0.5], x_length=7, y_length=3).shift(DOWN*0.5)
+        approx = axes3.plot(lambda x: np.sin(x), color=YELLOW)
+        self.play(Write(title3))
+        self.play(Create(axes3))
+        self.play(Create(approx))
+        for n in [3, 5, 7, 9]:
+            new_approx = axes3.plot(
+                lambda x, n=n: sum(np.sin((2*k-1)*x)/(2*k-1) for k in range(1, (n+3)//2)),
+                color=YELLOW
+            )
+            self.play(Transform(approx, new_approx))
+        self.wait(0.5)
+        self.clear()
+
+        title4 = Text("4. Fourier Basis: Sines and Cosines").to_edge(UP)
+        axes4 = Axes(x_range=[-PI, PI], y_range=[-1.5, 1.5], x_length=5, y_length=2.5).shift(LEFT*3)
+        axes5 = Axes(x_range=[-PI, PI], y_range=[-1.5, 1.5], x_length=5, y_length=2.5).shift(RIGHT*3)
+        sin_g = axes4.plot(lambda x: np.sin(2*x), color=BLUE)
+        cos_g = axes5.plot(lambda x: np.cos(2*x), color=RED)
+        self.play(Write(title4))
+        self.play(Create(axes4), Create(axes5))
+        self.play(Create(sin_g))
+        self.play(Create(cos_g))
+        self.play(sin_g.animate.set_stroke(width=4), cos_g.animate.set_stroke(width=4))
+        self.wait(0.5)
+        self.clear()
+
+        title5 = Text("5. Correlate Signal with Basis").to_edge(UP)
+        axesL = Axes(x_range=[-PI, PI], y_range=[-2, 2], x_length=5, y_length=3).shift(LEFT*3)
+        axesR = Axes(x_range=[-PI, PI], y_range=[-2, 2], x_length=5, y_length=3).shift(RIGHT*3)
+        sig = axesL.plot(lambda x: np.sin(x) + 0.5*np.sin(3*x), color=BLUE)
+        basis = axesL.plot(lambda x: np.sin(x), color=GREEN)
+        prod = axesR.plot(lambda x: (np.sin(x) + 0.5*np.sin(3*x)) * np.sin(x), color=YELLOW)
+        area = axesR.get_area(prod, x_range=[-PI, PI], color=YELLOW, opacity=0.4)
+        self.play(Write(title5))
+        self.play(Create(axesL), Create(axesR))
+        self.play(Create(sig), Create(basis))
+        self.play(Create(prod))
+        self.play(FadeIn(area))
+        self.wait(0.5)
+        self.clear()
+
+        title6 = Text("6. Fourier Transform: Spectrum").to_edge(UP)
+        axes6 = Axes(x_range=[0, 10, 1], y_range=[0, 1.2, 0.2], x_length=8, y_length=4).shift(DOWN*0.5)
+        labels6 = axes6.get_axis_labels(x_label="frequency", y_label="magnitude")
+        freqs = [1, 3, 5, 7]
+        amps = [1.0, 0.5, 0.33, 0.25]
+        lines = VGroup()
+        dots = VGroup()
+        for f, a in zip(freqs, amps):
+            lines.add(Line(axes6.c2p(f, 0), axes6.c2p(f, a), color=RED))
+            dots.add(Dot(axes6.c2p(f, a), color=RED))
+        self.play(Write(title6))
+        self.play(Create(axes6), Write(labels6))
+        for i in range(len(freqs)):
+            self.play(Create(lines[i]), Create(dots[i]))
+        self.wait(0.5)
+        self.clear()
+
+        title7 = Text("7. Inverse FT: Rebuild the Signal").to_edge(UP)
+        axes7 = Axes(x_range=[-PI, PI], y_range=[-2, 2], x_length=8, y_length=4).shift(DOWN*0.5)
+        recon = axes7.plot(lambda x: sum(a*np.sin(f*x) for f, a in zip(freqs, amps)), color=BLUE)
+        self.play(Write(title7))
+        self.play(Create(axes7))
+        self.play(Create(recon))
+        self.wait(0.5)
+        self.clear()
+
+        title8 = Text("Fourier Transform Decomposes Signals into Frequencies").to_edge(UP)
+        axesL8 = Axes(x_range=[-PI, PI], y_range=[-2, 2], x_length=5, y_length=3).shift(LEFT*3)
+        sig8 = axesL8.plot(lambda x: np.sin(x) + 0.5*np.sin(3*x), color=BLUE)
+        axesR8 = Axes(x_range=[0, 10, 1], y_range=[0, 1.2, 0.2], x_length=5, y_length=3).shift(RIGHT*3)
+        spec8 = VGroup()
+        for f, a in zip(freqs, amps):
+            spec8.add(Line(axesR8.c2p(f, 0), axesR8.c2p(f, a), color=RED))
+            spec8.add(Dot(axesR8.c2p(f, a), color=RED))
+        arrow = Arrow(axesL8.get_right(), axesR8.get_left(), color=WHITE)
+        ft_label = MathTex("\\mathcal{F}").next_to(arrow, UP)
+        self.play(Write(title8))
+        self.play(Create(axesL8), Create(sig8))
+        self.play(Create(axesR8), Create(spec8))
+        self.play(Create(arrow), Write(ft_label))
+        self.wait(1)
