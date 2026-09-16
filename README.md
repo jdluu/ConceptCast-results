@@ -23,7 +23,7 @@ the completed run (`bench-20260913`).
 | `reports/` | Machine-readable result summaries (`benchmark_summary.json`, `figure_data.json`). |
 | `figures/` | Thesis figures rendered by `tools/figures.py` (300 DPI PNG). |
 | `tools/` | Schema-driven analysis scripts — see `tools/README.md`. |
-| `artifacts/arm_C/` | Frozen Arm C outputs: rendered videos (`videos.tar.gz`, 53 files), generated Manim code (`seq*.py`), and a `manifest.json` mapping job_seq → model/topic/files. |
+| `artifacts/` | Frozen per-arm outputs: generated Manim code (`seq*.py`), rendered videos (`videos.tar.gz`), and a `manifest.json` mapping job_seq → model/topic/files. Subdirs: `arm_A/` (36 videos), `arm_B/` (68 videos), `arm_C/` (53 videos). |
 
 ## Benchmark Design (summary)
 
