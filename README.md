@@ -18,8 +18,8 @@ the completed run (`bench-20260913`).
 | `manifest/topics.json` | Canonical topic prompt strings (identical across arms). |
 | `plan/EXPERIMENT_PLAN.md` | Hypotheses, arm definitions, controls, outcome taxonomy, metrics, run protocol. |
 | `data/conceptcast.db` | SQLite snapshot of the benchmark run (Arm C jobs; written by `snapshot_sqlite.py` from the application repo after a run). |
-| `traces/` | Per-call JSONL traces. Arms A/B in `bench-20260913.jsonl` (monolithic runner emitter); Arm C in `bench-v2-20260912.jsonl` (backend emitter; the run ID in the filename reflects the backend's configured `BENCH_RUN_ID`). |
-| `traces/outcomes/` | Per-job outcome records for Arms A/B (`job-<seq>.json`), used for resumability and reconciliation. |
+| `traces/` | Per-call JSONL traces: `bench-v2-20260915.jsonl` (Arms A/B, monolithic runner emitter) and `bench-v2-20260912.jsonl` (Arm C, backend emitter; the run ID in the filename reflects the backend's configured `BENCH_RUN_ID`). |
+| `traces/outcomes_v2/` | Per-job outcome records for Arms A/B (`job-<seq>.json`), used for resumability and reconciliation. |
 | `reports/` | Machine-readable result summaries (`benchmark_summary.json`, `figure_data.json`). |
 | `figures/` | Thesis figures rendered by `tools/figures.py` (300 DPI PNG). |
 | `tools/` | Schema-driven analysis scripts — see `tools/README.md`. |
@@ -27,10 +27,16 @@ the completed run (`bench-20260913`).
 
 ## Benchmark Design (summary)
 
-- **Arm A** — monolithic generation (one call, no validation/repair).
-- **Arm B** — monolithic + the same AST validation/repair loop as the council.
+- **Arm A** — monolithic generation: one call produces the full multi-scene
+  script (no validation, repair, or rendering feedback).
+- **Arm B** — monolithic + repair: the same single-call generation, followed by
+  the AST validation suite, render check, and search-and-replace repair loop.
 - **Arm C** — the full agent council (Analyst → Architect → Animator, GCO,
   per-scene generation, AST validation, diff-repair).
+
+All arms share the same success criterion: the script must render to video
+through the same sandboxed Manim engine. `completed` requires a produced
+video artifact.
 
 Identical model roster (10 models), topic set (5 topics), sampling pins
 (temperature 0), and topic prompt strings across arms; 2 repetitions per
@@ -38,10 +44,11 @@ cell (300 jobs total). Outcome taxonomy per job: `completed`,
 `fallback-completed`, `failed`, `infrastructure-failed`. See
 `plan/EXPERIMENT_PLAN.md` for the full protocol.
 
-## Results (bench-20260913)
+## Results
 
-All 300 jobs attempted. Completed: Arm A 79/100, Arm B 99/100, Arm C 53/100.
-Headline numbers, per-model breakdowns, latency statistics, and derived costs
+All 300 jobs attempted; every arm used the same task: generate a multi-scene
+Manim script and render it to video. Completed: Arm A 36/100, Arm B 68/100,
+Arm C 53/100. Headline numbers, per-model breakdowns, and latency statistics
 live in `reports/benchmark_summary.json` and `reports/figure_data.json`;
 thesis figures in `figures/` are rendered from the same frozen artifacts.
 
@@ -58,16 +65,6 @@ OpenAI-style usage (`prompt_tokens` / `completion_tokens` are the real
 totals; `input_tokens` there is only the cached subset). Arm C's emitter
 records normalized `input_tokens` / `output_tokens`. `tools/figures.py`
 handles both; check the emitter before aggregating raw fields.
-
-## Arm A/B v2 re-run (multi-scene, must-render)
-
-The original Arms A/B measured single-scene script validity only (no render),
-which is not comparable to Arm C's rendered multi-scene videos. Their data is
-archived under `archive/ab_v1_single_scene/`. A v2 re-run uses the same task as
-Arm C: one `SceneGen` class with 5-10 sequential scenes, rendered with the same
-sandboxed engine; `completed` requires a produced video. Artifacts collected:
-generated code, rendered video, tokens, latency, validation/render errors.
-Runner: `benchmark_monolithic_v2.py` in the application repo.
 
 ## Reproducing the Analysis
 
@@ -101,7 +98,7 @@ BENCH_TRACE_DIR=<traces-dir> BENCH_RUN_ID=<run-id> BENCH_TEMPERATURE=0 \
 # or per-arm:
 uv run python src/scripts/benchmark_council.py \
   --manifest <path-to>/manifest/jobs.csv --arm C --parallelism 8
-uv run python src/scripts/benchmark_monolithic.py \
+uv run python src/scripts/benchmark_monolithic_v2.py \
   --manifest <path-to>/manifest/jobs.csv --arm A --trace-dir <traces-dir>
 
 # 3. Snapshot the database into this repo
@@ -110,8 +107,8 @@ python3 <app-repo>/scripts/snapshot_sqlite.py \
 ```
 
 The runners are resumable: Arms A/B skip jobs with an existing
-`traces/outcomes/job-<seq>.json`; Arm C skips manifest tuples already recorded
-as completed in the database.
+`traces/outcomes_v2/job-<seq>.json`; Arm C skips manifest tuples already
+recorded as completed in the database.
 
 ## License & Attribution
 
