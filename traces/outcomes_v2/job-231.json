@@ -1,0 +1,14 @@
+{
+  "job_seq": 231,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "z-ai/glm-5.3",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 4,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-231/videos/scene_231/480p15/SceneGen.mp4",
+  "code_chars": 1446
+}

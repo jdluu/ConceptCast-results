@@ -1,0 +1,14 @@
+{
+  "job_seq": 235,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-235/videos/scene_235/480p15/SceneGen.mp4",
+  "code_chars": 14328
+}

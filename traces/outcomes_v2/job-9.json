@@ -1,0 +1,14 @@
+{
+  "job_seq": 9,
+  "arm": "A",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "google/gemma-4-31b-it",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Derivative: Instantaneous Rate of Change')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('The Derivative: Instantaneous Rate of Change')):  37%|\u2588\u2588\u2588\u258b      | 11/30 [00:00<00:00, 109.56it/s]\rAnimation 0: Write(Text('The Derivative: Instantaneous Rate of Change')):  73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [00:00<00:00, 92.94it/s] \r                      ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 6293
+}

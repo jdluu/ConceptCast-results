@@ -1,0 +1,16 @@
+{
+  "job_seq": 246,
+  "arm": "B",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "tencent/hy3",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: invalid syntax (<unknown>, line 1)"
+  ],
+  "render_error": "Rendering failed: \rAnimation 0: _MethodAnimation(Arrow):   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                            \r\rAnimation 2: _MethodAnimation(Arrow):   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                            \r\rAnimation 4: Write(Text('General vector changes direction')):   0%|    ",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 9878
+}

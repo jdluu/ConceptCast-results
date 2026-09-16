@@ -1,0 +1,14 @@
+{
+  "job_seq": 84,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "moonshotai/kimi-k2.6",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Doppler Effect')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                     \r\rAnimation 1: FadeIn(Text('Understanding Wave Emission')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                               \r\rAnimation 3: _M",
+  "attempts": 5,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-84/videos/scene_84/480p15/SceneGen.mp4",
+  "code_chars": 10525
+}

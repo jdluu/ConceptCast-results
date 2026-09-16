@@ -1,0 +1,16 @@
+{
+  "job_seq": 206,
+  "arm": "B",
+  "rep": 2,
+  "topic": "derivative of a function in calculus",
+  "model": "tencent/hy3",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "expected exactly 1 Scene class named SceneGen, found 4"
+  ],
+  "render_error": "Rendering failed: \u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Traceback (most recent call last) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 /opt/venv/lib/python3.14/site-packages/manim/cli/render/commands.py:125 in   \u2502\n\u2502 render                                                                       \u2502\n\u2502                                                                              \u2502\n\u2502   122 \u2502   \u2502   \u2502   try:                                  ",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 2552
+}

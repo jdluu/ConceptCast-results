@@ -1,0 +1,14 @@
+{
+  "job_seq": 37,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-37/videos/scene_37/480p15/SceneGen.mp4",
+  "code_chars": 9749
+}

@@ -29,7 +29,8 @@ FIG = REPO / "figures"
 OUT = REPO / "reports"
 MANIFEST = REPO / "manifest" / "jobs.csv"
 METADATA = REPO / "manifest" / "model_metadata.json"
-TRACE_FILE = REPO / "traces" / "bench-20260913.jsonl"  # arms A/B (backend wrote C separately)
+TRACE_FILE_AB = REPO / "traces" / "bench-v2-20260915.jsonl"  # arms A/B v2
+TRACE_FILE_C = REPO / "traces" / "bench-v2-20260912.jsonl"   # arm C (backend emitter)
 
 # Backend pricing rates (infra/settings.py) — the same flat rates jobs.cost used.
 PRICING_INPUT_PER_1K = 0.005
@@ -65,7 +66,7 @@ def load_completion(models: list[dict]) -> dict[str, dict[str, int]]:
         for row in csv.DictReader(f):
             if row["arm"] in ("A", "B"):
                 seq_model[int(row["job_seq"])] = (row["arm"], row["model"])
-    for p in (REPO / "traces" / "outcomes").glob("job-*.json"):
+    for p in (REPO / "traces" / "outcomes_v2").glob("job-*.json"):
         o = json.load(p.open())
         key = seq_model.get(o["job_seq"])
         if key and o["status"] == "completed" and o["arm"] == key[0] and key[1] in ids:
@@ -85,7 +86,7 @@ def load_latency(models: list[dict]) -> dict[str, list[float]]:
     """Latency in SECONDS. A/B: per-call latency_ms from traces. C: job wall-clock
     total_execution_time (verified seconds against created->updated deltas)."""
     lat: dict[str, list[float]] = {"A": [], "B": [], "C": []}
-    for line in TRACE_FILE.open():
+    for line in TRACE_FILE_AB.open():
         r = json.loads(line)
         if r.get("arm") in ("A", "B") and r.get("latency_ms"):
             lat[r["arm"]].append(r["latency_ms"] / 1000.0)
@@ -104,16 +105,15 @@ def load_tokens() -> dict[str, dict[str, int]]:
     prompt_tokens/completion_tokens (input_tokens there is only the cached subset);
     Arm C (pydantic-ai emitter) records normalized input_tokens/output_tokens."""
     tok = {a: {"input": 0, "output": 0} for a in "ABC"}
-    for line in TRACE_FILE.open():
+    for line in TRACE_FILE_AB.open():
         r = json.loads(line)
         a = r.get("arm")
         if a in ("A", "B"):
             tok[a]["input"] += r.get("prompt_tokens") or 0
             tok[a]["output"] += r.get("completion_tokens") or 0
-    for p in (REPO / "traces").glob("bench-v2-*.jsonl"):
-        for line in p.open():
-            r = json.loads(line)
-            if r.get("arm") == "C":
+    for line in TRACE_FILE_C.open():
+        r = json.loads(line)
+        if r.get("arm") == "C":
                 tok["C"]["input"] += r.get("input_tokens") or 0
                 tok["C"]["output"] += r.get("output_tokens") or 0
     return tok
@@ -143,8 +143,8 @@ def fig1(comp, models) -> None:
     ax.set_xticks(x, labels, rotation=35, ha="right")
     ax.set_ylabel("Completed jobs (%)")
     ax.set_ylim(0, 105)
-    ax.set_title("End-to-end completion rate by model and arm (10 jobs per cell)")
-    ax.legend(frameon=False, ncols=3, loc="lower center", bbox_to_anchor=(0.5, 1.02))
+    ax.set_title("End-to-end completion rate by model and arm (10 jobs per cell)", pad=28)
+    ax.legend(frameon=False, ncols=3, loc="lower center", bbox_to_anchor=(0.5, 1.00))
     ax.yaxis.grid(True, lw=0.4, color="#e2e8f0")
     ax.set_axisbelow(True)
     fig.tight_layout()

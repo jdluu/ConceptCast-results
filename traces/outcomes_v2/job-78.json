@@ -1,0 +1,14 @@
+{
+  "job_seq": 78,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Fourier transform",
+  "model": "meta/muse-glimmer-30b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-78/videos/scene_78/480p15/SceneGen.mp4",
+  "code_chars": 5618
+}

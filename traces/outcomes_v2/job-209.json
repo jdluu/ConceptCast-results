@@ -1,0 +1,14 @@
+{
+  "job_seq": 209,
+  "arm": "B",
+  "rep": 2,
+  "topic": "derivative of a function in calculus",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Derivative: Instantaneous Rate of Change')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                                               \r\rAnimation 1: Create(Axes of 2 submobjects), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                    ",
+  "attempts": 4,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-209/videos/scene_209/480p15/SceneGen.mp4",
+  "code_chars": 6887
+}

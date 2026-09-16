@@ -1,0 +1,16 @@
+{
+  "job_seq": 247,
+  "arm": "B",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: invalid syntax (<unknown>, line 1)"
+  ],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Eigenvectors & Eigenvalues')):   0%|          | 0/23 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Eigenvectors & Eigenvalues')):  61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 14/23 [00:00<00:00, 132.43it/s]\r                                                                                                        \r\rAnimation 1: FadeIn(Text('The DNA of Linear Transformations')):   0%|      ",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 1845
+}

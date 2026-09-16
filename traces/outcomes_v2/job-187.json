@@ -1,0 +1,14 @@
+{
+  "job_seq": 187,
+  "arm": "A",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('1. Stationary Source')), etc.:   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('1. Stationary Source')), etc.:  43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [00:00<00:00, 119.38it/s]\rAnimation 0: Write(Text('1. Stationary Source')), etc.:  83%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e | 25/30 [00:00<00:00, 106.28it/s]\r                                                                            ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 9924
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 168,
+  "arm": "A",
+  "rep": 2,
+  "topic": "backpropagation",
+  "model": "meta/muse-glimmer-30b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-168/videos/scene_168/480p15/SceneGen.mp4",
+  "code_chars": 6216
+}

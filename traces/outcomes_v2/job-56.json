@@ -1,0 +1,16 @@
+{
+  "job_seq": 56,
+  "arm": "B",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "tencent/hy3",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: invalid syntax (<unknown>, line 1)"
+  ],
+  "render_error": "Rendering failed: \rAnimation 0: Create(Axes of 2 submobjects), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                       \r\rAnimation 1: Write(MathTex('f(x) = x^2')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                \r\rAnimation 3: Create(Axes of 2 submobjects",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 8769
+}

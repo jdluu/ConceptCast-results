@@ -1,0 +1,14 @@
+{
+  "job_seq": 24,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Fourier transform",
+  "model": "moonshotai/kimi-k2.6",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Signals in the Time Domain')):   0%|          | 0/15 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Signals in the Time Domain')):  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 14/15 [00:00<00:00, 130.06it/s]\r                                                                                                        \r\rAnimation 1: Create(Axes of 2 submobjects), etc.:   0%|          | 0/23 [00",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 37864
+}

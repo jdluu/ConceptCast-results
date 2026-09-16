@@ -1,0 +1,16 @@
+{
+  "job_seq": 214,
+  "arm": "B",
+  "rep": 2,
+  "topic": "backpropagation",
+  "model": "moonshotai/kimi-k2.6",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: unterminated string literal (detected at line 6) (<unknown>, line 6)"
+  ],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Backpropagation')):   0%|          | 0/23 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Backpropagation')):  74%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258d  | 17/23 [00:00<00:00, 158.62it/s]\r                                                                                             \r\rAnimation 1: FadeIn(Text('Learning by Propagating Errors Backward')):   0%|          | 0/15 [00:00<?, ?it/s]",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 9958
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 88,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "meta/muse-glimmer-30b",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Doppler Effect')), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                           \r\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Traceback (most recent call last) \u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u256e\n\u2502 /opt/venv/lib/python3.14/site-packages/manim/cli/render/commands.py:125 in   \u2502\n\u2502 render                           ",
+  "attempts": 5,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-88/videos/scene_88/480p15/SceneGen.mp4",
+  "code_chars": 1745
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 64,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "moonshotai/kimi-k2.6",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-64/videos/scene_64/480p15/SceneGen.mp4",
+  "code_chars": 28106
+}

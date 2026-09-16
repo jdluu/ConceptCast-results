@@ -1,0 +1,14 @@
+{
+  "job_seq": 62,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "qwen/qwen3.8-flash",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 5,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-62/videos/scene_62/480p15/PlaceholderScene.mp4",
+  "code_chars": 98
+}

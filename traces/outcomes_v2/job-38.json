@@ -1,0 +1,14 @@
+{
+  "job_seq": 38,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "meta/muse-glimmer-30b",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-38/videos/scene_38/480p15/SceneGen.mp4",
+  "code_chars": 5007
+}

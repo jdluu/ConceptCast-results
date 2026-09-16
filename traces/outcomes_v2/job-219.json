@@ -1,0 +1,14 @@
+{
+  "job_seq": 219,
+  "arm": "B",
+  "rep": 2,
+  "topic": "backpropagation",
+  "model": "google/gemma-4-31b-it",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Backpropagation: How Networks Learn')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                                      \r\rAnimation 1: Create(VGroup of 2 submobjects), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                    ",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 9420
+}

@@ -1,0 +1,74 @@
+{
+ "completion_pct": {
+  "A|deepseek/deepseek-v4-flash": 50,
+  "A|google/gemma-4-31b-it": 30,
+  "A|meta/muse-glimmer-30b": 50,
+  "A|moonshotai/kimi-k2.6": 50,
+  "A|nvidia/nemotron-3-ultra-550b-a55b": 30,
+  "A|openai/gpt-oss-120b": 0,
+  "A|qwen/qwen3.8-flash": 0,
+  "A|tencent/hy3": 90,
+  "A|xiaomi/mimo-v2.5-pro": 30,
+  "A|z-ai/glm-5.3": 30,
+  "B|deepseek/deepseek-v4-flash": 80,
+  "B|google/gemma-4-31b-it": 90,
+  "B|meta/muse-glimmer-30b": 90,
+  "B|moonshotai/kimi-k2.6": 90,
+  "B|nvidia/nemotron-3-ultra-550b-a55b": 30,
+  "B|openai/gpt-oss-120b": 30,
+  "B|qwen/qwen3.8-flash": 40,
+  "B|tencent/hy3": 60,
+  "B|xiaomi/mimo-v2.5-pro": 100,
+  "B|z-ai/glm-5.3": 70,
+  "C|deepseek/deepseek-v4-flash": 30,
+  "C|google/gemma-4-31b-it": 70,
+  "C|meta/muse-glimmer-30b": 80,
+  "C|moonshotai/kimi-k2.6": 100,
+  "C|nvidia/nemotron-3-ultra-550b-a55b": 30,
+  "C|openai/gpt-oss-120b": 20,
+  "C|qwen/qwen3.8-flash": 0,
+  "C|tencent/hy3": 40,
+  "C|xiaomi/mimo-v2.5-pro": 100,
+  "C|z-ai/glm-5.3": 60
+ },
+ "latency_seconds": {
+  "A": {
+   "n": 100,
+   "median": 47.1161,
+   "mean": 107.567511,
+   "p90": 340.0303
+  },
+  "B": {
+   "n": 518,
+   "median": 39.795,
+   "mean": 76.21082567567568,
+   "p90": 190.9017
+  },
+  "C": {
+   "n": 53,
+   "median": 1462.852338,
+   "mean": 1819.3793187735848,
+   "p90": 3724.599569
+  }
+ },
+ "tokens_true": {
+  "A": {
+   "input": 21827,
+   "output": 405753
+  },
+  "B": {
+   "input": 678125,
+   "output": 1899371
+  },
+  "C": {
+   "input": 45784902,
+   "output": 11462625
+  }
+ },
+ "derived_cost_usd_flat_rates": {
+  "A": 6.2,
+  "B": 31.88,
+  "C": 400.86
+ },
+ "pricing_note": "Flat backend rates ($0.005/1k in, $0.015/1k out) applied to true token totals; provider does not report per-call cost. jobs.cost undercounts (orchestrator usage accumulation misses streaming tool-iteration calls) \u2014 trace-derived figures are authoritative."
+}

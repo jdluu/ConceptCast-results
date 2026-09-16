@@ -1,0 +1,16 @@
+{
+  "job_seq": 61,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "z-ai/glm-5.3",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "expected exactly 1 Scene class named SceneGen, found 0"
+  ],
+  "render_error": "Rendering timed out after 900s",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 1456
+}

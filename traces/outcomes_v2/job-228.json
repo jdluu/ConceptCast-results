@@ -1,0 +1,14 @@
+{
+  "job_seq": 228,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "meta/muse-glimmer-30b",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Fourier Transform')), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                          \r\rAnimation 2: FadeOut(Text('Fourier Transform')), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                            \r\rAnimation 3",
+  "attempts": 5,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-228/videos/scene_228/480p15/partial_movie_files/SceneGen/1584795214_4194241154_223132457.mp4",
+  "code_chars": 339
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 63,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Backpropagation: Chain Rule Foundation')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Backpropagation: Chain Rule Foundation')):  33%|\u2588\u2588\u2588\u258e      | 10/30 [00:00<00:00, 93.15it/s]\rAnimation 0: Write(Text('Backpropagation: Chain Rule Foundation')):  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [00:00<00:00, 82.95it/s]\rAnimation 0: Write(Text('Backpropagation: ",
+  "attempts": 5,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-63/videos/scene_63/480p15/FullBackpropAnimation.mp4",
+  "code_chars": 10554
+}

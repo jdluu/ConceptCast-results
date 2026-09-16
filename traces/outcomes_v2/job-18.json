@@ -1,0 +1,14 @@
+{
+  "job_seq": 18,
+  "arm": "A",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "meta/muse-glimmer-30b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: FadeIn(Text('Backpropagation: Forward Pass')):   0%|          | 0/15 [00:00<?, ?it/s]\rAnimation 0: FadeIn(Text('Backpropagation: Forward Pass')):  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 10/15 [00:00<00:00, 93.82it/s]\r                                                                                                           \r\rAnimation 1: FadeIn(VGroup of 3 submobjects), etc.:   0%|        ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 5110
+}

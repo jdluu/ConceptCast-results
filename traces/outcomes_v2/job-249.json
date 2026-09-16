@@ -1,0 +1,14 @@
+{
+  "job_seq": 249,
+  "arm": "B",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Linear Transformations')), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                               \r\rAnimation 1: Create(Arrow), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                        \r\u256d\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500\u2500 Traceback (most rec",
+  "attempts": 4,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-249/videos/scene_249/480p15/SceneGen.mp4",
+  "code_chars": 6399
+}

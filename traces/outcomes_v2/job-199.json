@@ -1,0 +1,14 @@
+{
+  "job_seq": 199,
+  "arm": "A",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "google/gemma-4-31b-it",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('1. The Vector')):   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                 \r\rAnimation 1: Create(NumberPlane of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                         \r\rAnimation 2: GrowFromCenter(Vector)",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 6383
+}

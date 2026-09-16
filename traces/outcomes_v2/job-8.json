@@ -1,0 +1,14 @@
+{
+  "job_seq": 8,
+  "arm": "A",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "meta/muse-glimmer-30b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Derivative')), etc.:   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('The Derivative')), etc.:  33%|\u2588\u2588\u2588\u258e      | 10/30 [00:00<00:00, 98.60it/s]\rAnimation 0: Write(Text('The Derivative')), etc.:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [00:00<00:00, 86.97it/s]\rAnimation 0: Write(Text('The Derivative')), etc.:  97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [00:00<00:00, 81.87it/s",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 4720
+}

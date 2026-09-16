@@ -1,0 +1,14 @@
+{
+  "job_seq": 208,
+  "arm": "B",
+  "rep": 2,
+  "topic": "derivative of a function in calculus",
+  "model": "meta/muse-glimmer-30b",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: FadeIn(Text('Derivative: Instantaneous Rate of Change')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\rAnimation 0: FadeIn(Text('Derivative: Instantaneous Rate of Change')), etc.:  47%|\u2588\u2588\u2588\u2588\u258b     | 7/15 [00:00<00:00, 66.60it/s]\rAnimation 0: FadeIn(Text('Derivative: Instantaneous Rate of Change')), etc.:  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 14/15 [00:00<00:00, 62.34it/s]\r                ",
+  "attempts": 2,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-208/videos/scene_208/480p15/SceneGen.mp4",
+  "code_chars": 6093
+}

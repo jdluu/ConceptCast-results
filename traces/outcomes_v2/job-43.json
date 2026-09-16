@@ -1,0 +1,14 @@
+{
+  "job_seq": 43,
+  "arm": "A",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-43/videos/scene_43/480p15/SceneGen.mp4",
+  "code_chars": 12006
+}

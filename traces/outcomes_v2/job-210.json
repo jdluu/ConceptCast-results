@@ -1,0 +1,16 @@
+{
+  "job_seq": 210,
+  "arm": "B",
+  "rep": 2,
+  "topic": "derivative of a function in calculus",
+  "model": "openai/gpt-oss-120b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: invalid syntax (<unknown>, line 31)"
+  ],
+  "render_error": "Rendering failed: \rAnimation 0: Create(Axes of 2 submobjects), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                       \r\rAnimation 1: Create(ParametricFunction), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                    \r\rAnimation 3: Create(Axes of 2 sub",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 1833
+}

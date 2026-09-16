@@ -1,0 +1,16 @@
+{
+  "job_seq": 87,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: invalid syntax (<unknown>, line 1)"
+  ],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('1. Stationary Source Emitting Waves')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('1. Stationary Source Emitting Waves')):  47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [00:00<00:00, 129.54it/s]\rAnimation 0: Write(Text('1. Stationary Source Emitting Waves')):  90%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588 | 27/30 [00:00<00:00, 108.67it/s]\r                                                 ",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 2913
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 241,
+  "arm": "B",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "z-ai/glm-5.3",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering timed out after 900s",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 5839
+}

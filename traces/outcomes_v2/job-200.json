@@ -1,0 +1,14 @@
+{
+  "job_seq": 200,
+  "arm": "A",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "openai/gpt-oss-120b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Create(NumberPlane of 4 submobjects), etc.:   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Create(NumberPlane of 4 submobjects), etc.:  40%|\u2588\u2588\u2588\u2588      | 12/30 [00:00<00:00, 112.53it/s]\rAnimation 0: Create(NumberPlane of 4 submobjects), etc.:  80%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588  | 24/30 [00:00<00:00, 98.48it/s] \r                                                                         ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 5450
+}

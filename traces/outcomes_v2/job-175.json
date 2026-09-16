@@ -1,0 +1,14 @@
+{
+  "job_seq": 175,
+  "arm": "A",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Axes of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                       \r\rAnimation 1: Create(ParametricFunction), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                     \r\rAnimation 3: GrowFromCenter(Bra",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 15868
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 189,
+  "arm": "A",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-189/videos/scene_189/480p15/SceneGen.mp4",
+  "code_chars": 6645
+}

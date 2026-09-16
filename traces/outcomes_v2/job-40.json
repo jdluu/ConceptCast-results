@@ -1,0 +1,14 @@
+{
+  "job_seq": 40,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "openai/gpt-oss-120b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: FadeIn(NumberLine), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                             \r\rAnimation 1: Create(FunctionGraph):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 1: Create(FunctionGraph):  63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [00:00<00:00, 189.58it/s]\r                                                                ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 8241
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 47,
+  "arm": "A",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Linear Transformations')), etc.:   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Linear Transformations')), etc.:  37%|\u2588\u2588\u2588\u258b      | 11/30 [00:00<00:00, 108.84it/s]\rAnimation 0: Write(Text('Linear Transformations')), etc.:  73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [00:00<00:00, 95.22it/s] \r                                                                      ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 11677
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 7,
+  "arm": "A",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Concept of Slope')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('The Concept of Slope')):  53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [00:00<00:00, 153.91it/s]\r                                                                                                  \r\rAnimation 1: Create(Axes of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\rAnim",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 8293
+}

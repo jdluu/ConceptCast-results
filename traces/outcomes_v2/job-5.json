@@ -1,0 +1,14 @@
+{
+  "job_seq": 5,
+  "arm": "A",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Understanding Derivatives')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Understanding Derivatives')):  43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [00:00<00:00, 124.05it/s]\rAnimation 0: Write(Text('Understanding Derivatives')):  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [00:00<00:00, 114.73it/s]\r                                                                               ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 10087
+}

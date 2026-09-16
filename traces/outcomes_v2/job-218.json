@@ -1,0 +1,14 @@
+{
+  "job_seq": 218,
+  "arm": "B",
+  "rep": 2,
+  "topic": "backpropagation",
+  "model": "meta/muse-glimmer-30b",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Backpropagation')), etc.:   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Backpropagation')), etc.:  33%|\u2588\u2588\u2588\u258e      | 10/30 [00:00<00:00, 91.33it/s]\rAnimation 0: Write(Text('Backpropagation')), etc.:  67%|\u2588\u2588\u2588\u2588\u2588\u2588\u258b   | 20/30 [00:00<00:00, 75.05it/s]\rAnimation 0: Write(Text('Backpropagation')), etc.:  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [00:00<00:00, 66.09",
+  "attempts": 3,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-218/videos/scene_218/480p15/BackpropScene.mp4",
+  "code_chars": 873
+}

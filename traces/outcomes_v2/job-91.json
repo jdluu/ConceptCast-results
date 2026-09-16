@@ -1,0 +1,14 @@
+{
+  "job_seq": 91,
+  "arm": "B",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "z-ai/glm-5.3",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 4,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-91/videos/scene_91/480p15/SceneGen.mp4",
+  "code_chars": 808
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 164,
+  "arm": "A",
+  "rep": 2,
+  "topic": "backpropagation",
+  "model": "moonshotai/kimi-k2.6",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering timed out after 900s",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 26365
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 13,
+  "arm": "A",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering timed out after 900s",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 15441
+}

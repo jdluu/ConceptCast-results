@@ -1,0 +1,14 @@
+{
+  "job_seq": 69,
+  "arm": "B",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Backpropagation: How Neural Networks Learn')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Backpropagation: How Neural Networks Learn')):  37%|\u2588\u2588\u2588\u258b      | 11/30 [00:00<00:00, 102.58it/s]\rAnimation 0: Write(Text('Backpropagation: How Neural Networks Learn')):  73%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e  | 22/30 [00:00<00:00, 90.08it/s] \r                            ",
+  "attempts": 2,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-69/videos/scene_69/480p15/SceneGen.mp4",
+  "code_chars": 8380
+}

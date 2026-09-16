@@ -1,0 +1,14 @@
+{
+  "job_seq": 222,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "qwen/qwen3.8-flash",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 7,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-222/videos/scene_222/480p15/MainScene.mp4",
+  "code_chars": 1061
+}

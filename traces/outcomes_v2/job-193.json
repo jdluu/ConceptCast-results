@@ -1,0 +1,14 @@
+{
+  "job_seq": 193,
+  "arm": "A",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('1. What is a vector?')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('1. What is a vector?')):  57%|\u2588\u2588\u2588\u2588\u2588\u258b    | 17/30 [00:00<00:00, 162.42it/s]\r                                                                                                  \r\rAnimation 1: GrowArrow(Vector), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 8504
+}

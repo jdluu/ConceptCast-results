@@ -1,0 +1,14 @@
+{
+  "job_seq": 233,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-233/videos/scene_233/480p15/SceneGen.mp4",
+  "code_chars": 14148
+}

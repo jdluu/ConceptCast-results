@@ -1,0 +1,14 @@
+{
+  "job_seq": 50,
+  "arm": "A",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "openai/gpt-oss-120b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Tex('Vectors in $\\\\mathbb{R}^2$')):   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                             \r\rAnimation 1: FadeIn(VGroup of 4 submobjects):   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                    \r\rAnimation 3: FadeIn(A",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 7318
+}

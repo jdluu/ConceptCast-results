@@ -1,0 +1,14 @@
+{
+  "job_seq": 52,
+  "arm": "B",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "qwen/qwen3.8-flash",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 3,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-52/videos/scene_52/480p15/MainScene.mp4",
+  "code_chars": 733
+}

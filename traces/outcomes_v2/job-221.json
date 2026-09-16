@@ -1,0 +1,14 @@
+{
+  "job_seq": 221,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "z-ai/glm-5.3",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Fourier Transform')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                        \r\rAnimation 1: FadeIn(Text('What frequencies hide inside a signal?')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                               ",
+  "attempts": 8,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-221/videos/scene_221/480p15/OriginalScriptMissing.mp4",
+  "code_chars": 598
+}

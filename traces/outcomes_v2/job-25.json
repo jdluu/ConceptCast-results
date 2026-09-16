@@ -1,0 +1,14 @@
+{
+  "job_seq": 25,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Fourier transform",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('What is a Fourier Transform?')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('What is a Fourier Transform?')):  47%|\u2588\u2588\u2588\u2588\u258b     | 14/30 [00:00<00:00, 139.90it/s]\rAnimation 0: Write(Text('What is a Fourier Transform?')):  93%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258e| 28/30 [00:00<00:00, 108.23it/s]\r                                                                      ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 17700
+}

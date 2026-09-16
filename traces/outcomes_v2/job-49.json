@@ -1,0 +1,14 @@
+{
+  "job_seq": 49,
+  "arm": "A",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "google/gemma-4-31b-it",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Linear Transformations')), etc.:   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Linear Transformations')), etc.:  43%|\u2588\u2588\u2588\u2588\u258e     | 13/30 [00:00<00:00, 129.57it/s]\rAnimation 0: Write(Text('Linear Transformations')), etc.:  87%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b | 26/30 [00:00<00:00, 113.35it/s]\r                                                                      ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 6955
+}

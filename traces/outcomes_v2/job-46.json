@@ -1,0 +1,14 @@
+{
+  "job_seq": 46,
+  "arm": "A",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "tencent/hy3",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-46/videos/scene_46/480p15/SceneGen.mp4",
+  "code_chars": 4978
+}

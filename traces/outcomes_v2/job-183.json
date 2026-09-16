@@ -1,0 +1,14 @@
+{
+  "job_seq": 183,
+  "arm": "A",
+  "rep": 2,
+  "topic": "Doppler effect",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('The Doppler Effect')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('The Doppler Effect')):  63%|\u2588\u2588\u2588\u2588\u2588\u2588\u258e   | 19/30 [00:00<00:00, 178.52it/s]\r                                                                                                \r\rAnimation 2: _MethodAnimation(Text('The Doppler Effect')):   0%|          | 0/15 [00:00<?, ?it/s]\rA",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 15633
+}

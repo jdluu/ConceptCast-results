@@ -1,0 +1,14 @@
+{
+  "job_seq": 90,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "openai/gpt-oss-120b",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: FadeIn(Dot), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                      \r\rAnimation 1: Write(Text('Source')), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                \r\rAnimation 2: Create(Circle):   0%|          | 0/15 [00:00<?, ?it/s]\r       ",
+  "attempts": 4,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-90/videos/scene_90/480p15/SceneGen.mp4",
+  "code_chars": 6955
+}

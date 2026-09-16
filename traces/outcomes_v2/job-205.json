@@ -1,0 +1,14 @@
+{
+  "job_seq": 205,
+  "arm": "B",
+  "rep": 2,
+  "topic": "derivative of a function in calculus",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Calculus: The Derivative')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Calculus: The Derivative')):  50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [00:00<00:00, 141.11it/s]\rAnimation 0: Write(Text('Calculus: The Derivative')): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [00:00<00:00, 109.37it/s]\r                                                                                  ",
+  "attempts": 5,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-205/videos/scene_205/480p15/SecantLineScene.mp4",
+  "code_chars": 2686
+}

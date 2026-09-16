@@ -1,0 +1,14 @@
+{
+  "job_seq": 94,
+  "arm": "B",
+  "rep": 1,
+  "topic": "eigenvectors",
+  "model": "moonshotai/kimi-k2.6",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Linear Transformations')):   0%|          | 0/23 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Linear Transformations')):  61%|\u2588\u2588\u2588\u2588\u2588\u2588    | 14/23 [00:00<00:00, 131.74it/s]\r                                                                                                    \r\rAnimation 1: FadeIn(Text('What happens to vectors?')):   0%|          | 0/15 [00:00<?, ",
+  "attempts": 4,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-94/videos/scene_94/480p15/SceneGen.mp4",
+  "code_chars": 4855
+}

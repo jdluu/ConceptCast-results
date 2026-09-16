@@ -1,0 +1,14 @@
+{
+  "job_seq": 36,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Doppler effect",
+  "model": "tencent/hy3",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-36/videos/scene_36/480p15/SceneGen.mp4",
+  "code_chars": 6647
+}

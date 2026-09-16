@@ -1,0 +1,16 @@
+{
+  "job_seq": 197,
+  "arm": "A",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: invalid syntax (<unknown>, line 282)"
+  ],
+  "render_error": null,
+  "attempts": 1,
+  "video": null,
+  "code_chars": 12325
+}

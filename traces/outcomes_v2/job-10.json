@@ -1,0 +1,14 @@
+{
+  "job_seq": 10,
+  "arm": "A",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "openai/gpt-oss-120b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Create(Axes of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                        \r\rAnimation 2: Create(Axes of 2 submobjects), etc.:   0%|          | 0/15 [00:00<?, ?it/s]\r                                                                                        \r\rAnimation 3: FadeIn(Dot",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 7195
+}

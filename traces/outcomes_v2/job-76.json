@@ -1,0 +1,14 @@
+{
+  "job_seq": 76,
+  "arm": "B",
+  "rep": 1,
+  "topic": "Fourier transform",
+  "model": "tencent/hy3",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-76/videos/scene_76/480p15/SceneGen.mp4",
+  "code_chars": 5341
+}

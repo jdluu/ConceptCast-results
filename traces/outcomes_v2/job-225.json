@@ -1,0 +1,14 @@
+{
+  "job_seq": 225,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "xiaomi/mimo-v2.5-pro",
+  "status": "completed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Fourier Series Approximation')):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                               \r\rAnimation 2: Create(Axes of 2 submobjects):   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                 \r\rAnimation 3: Create(Par",
+  "attempts": 10,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-225/videos/scene_225/480p15/SineWaveScene.mp4",
+  "code_chars": 1105
+}

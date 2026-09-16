@@ -1,0 +1,16 @@
+{
+  "job_seq": 248,
+  "arm": "B",
+  "rep": 2,
+  "topic": "eigenvectors",
+  "model": "meta/muse-glimmer-30b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [
+    "SyntaxError: invalid syntax (<unknown>, line 1)"
+  ],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Eigenvectors: Direction Invariance')), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                                                                           \r\rAnimation 2: FadeOut(Text('Eigenvectors: Direction Invariance')), etc.:   0%|          | 0/1 [00:00<?, ?it/s]\r                                                      ",
+  "attempts": 10,
+  "video": null,
+  "code_chars": 2710
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 59,
+  "arm": "B",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-59/videos/scene_59/480p15/SceneGen.mp4",
+  "code_chars": 6089
+}

@@ -1,0 +1,14 @@
+{
+  "job_seq": 19,
+  "arm": "A",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "google/gemma-4-31b-it",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: /manim/scene_19.py:48: SyntaxWarning: \"\\h\" is an invalid escape sequence. Such sequences will not work in the future. Did you mean \"\\\\h\"? A raw string is also an option.\n  loss_text = MathTex(\"L = (y - \\hat{y})^2\", color=RED).next_to(output_node, RIGHT, buff=1)\n\rAnimation 0: Write(Text('Backpropagation: The Intuition')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(T",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 9511
+}

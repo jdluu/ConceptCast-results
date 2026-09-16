@@ -1,0 +1,14 @@
+{
+  "job_seq": 17,
+  "arm": "A",
+  "rep": 1,
+  "topic": "backpropagation",
+  "model": "nvidia/nemotron-3-ultra-550b-a55b",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('1. Forward Pass: Single Neuron')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('1. Forward Pass: Single Neuron')):  50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [00:00<00:00, 140.41it/s]\rAnimation 0: Write(Text('1. Forward Pass: Single Neuron')): 100%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588| 30/30 [00:00<00:00, 117.78it/s]\r                                                                ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 11259
+}

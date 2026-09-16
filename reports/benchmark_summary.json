@@ -1,0 +1,146 @@
+{
+ "arms": {
+  "A": {
+   "completed": 36,
+   "failed": 64,
+   "first_pass": 36,
+   "recovered": 0
+  },
+  "B": {
+   "completed": 68,
+   "failed": 32,
+   "first_pass": 37,
+   "recovered": 31
+  },
+  "C": {
+   "completed": 53,
+   "failed": 47,
+   "first_pass": null,
+   "recovered": null
+  }
+ },
+ "per_model": {
+  "deepseek/deepseek-v4-flash": {
+   "A": 5,
+   "B": 8,
+   "C": 3
+  },
+  "google/gemma-4-31b-it": {
+   "A": 3,
+   "B": 9,
+   "C": 7
+  },
+  "meta/muse-glimmer-30b": {
+   "A": 5,
+   "B": 9,
+   "C": 8
+  },
+  "moonshotai/kimi-k2.6": {
+   "A": 5,
+   "B": 9,
+   "C": 10
+  },
+  "nvidia/nemotron-3-ultra-550b-a55b": {
+   "A": 3,
+   "B": 3,
+   "C": 3
+  },
+  "openai/gpt-oss-120b": {
+   "A": 0,
+   "B": 3,
+   "C": 2
+  },
+  "qwen/qwen3.8-flash": {
+   "A": 0,
+   "B": 4,
+   "C": 0
+  },
+  "tencent/hy3": {
+   "A": 9,
+   "B": 6,
+   "C": 4
+  },
+  "xiaomi/mimo-v2.5-pro": {
+   "A": 3,
+   "B": 10,
+   "C": 10
+  },
+  "z-ai/glm-5.3": {
+   "A": 3,
+   "B": 7,
+   "C": 6
+  }
+ },
+ "per_topic": {
+  "derivative of a function in calculus": {
+   "A": {
+    "completed": 7,
+    "failed": 13
+   },
+   "B": {
+    "completed": 13,
+    "failed": 7
+   },
+   "C": {
+    "completed": 10,
+    "failed": 10
+   }
+  },
+  "backpropagation": {
+   "A": {
+    "completed": 7,
+    "failed": 13
+   },
+   "B": {
+    "completed": 13,
+    "failed": 7
+   },
+   "C": {
+    "completed": 8,
+    "failed": 12
+   }
+  },
+  "Fourier transform": {
+   "A": {
+    "completed": 5,
+    "failed": 15
+   },
+   "B": {
+    "completed": 15,
+    "failed": 5
+   },
+   "C": {
+    "completed": 14,
+    "failed": 6
+   }
+  },
+  "Doppler effect": {
+   "A": {
+    "completed": 11,
+    "failed": 9
+   },
+   "B": {
+    "completed": 15,
+    "failed": 5
+   },
+   "C": {
+    "completed": 10,
+    "failed": 10
+   }
+  },
+  "eigenvectors": {
+   "A": {
+    "completed": 6,
+    "failed": 14
+   },
+   "B": {
+    "completed": 12,
+    "failed": 8
+   },
+   "C": {
+    "completed": 11,
+    "failed": 9
+   }
+  }
+ }
+}

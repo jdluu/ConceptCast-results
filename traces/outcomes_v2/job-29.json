@@ -1,0 +1,14 @@
+{
+  "job_seq": 29,
+  "arm": "A",
+  "rep": 1,
+  "topic": "Fourier transform",
+  "model": "google/gemma-4-31b-it",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('1. The Building Block: Sine Waves')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('1. The Building Block: Sine Waves')):  50%|\u2588\u2588\u2588\u2588\u2588     | 15/30 [00:00<00:00, 138.67it/s]\rAnimation 0: Write(Text('1. The Building Block: Sine Waves')):  97%|\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u2588\u258b| 29/30 [00:00<00:00, 114.06it/s]\r                                                       ",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 7831
+}

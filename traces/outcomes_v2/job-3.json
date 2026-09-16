@@ -1,0 +1,14 @@
+{
+  "job_seq": 3,
+  "arm": "A",
+  "rep": 1,
+  "topic": "derivative of a function in calculus",
+  "model": "deepseek/deepseek-v4-flash",
+  "status": "failed",
+  "first_pass": false,
+  "validation_errors": [],
+  "render_error": "Rendering failed: \rAnimation 0: Write(Text('Average Rate of Change')):   0%|          | 0/30 [00:00<?, ?it/s]\rAnimation 0: Write(Text('Average Rate of Change')):  53%|\u2588\u2588\u2588\u2588\u2588\u258e    | 16/30 [00:00<00:00, 154.21it/s]\r                                                                                                    \r\rAnimation 1: Create(Axes of 2 submobjects):   0%|          | 0/23 [00:00<?, ?it/s]\rAnim",
+  "attempts": 1,
+  "video": null,
+  "code_chars": 11481
+}

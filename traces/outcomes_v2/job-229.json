@@ -1,0 +1,14 @@
+{
+  "job_seq": 229,
+  "arm": "B",
+  "rep": 2,
+  "topic": "Fourier transform",
+  "model": "google/gemma-4-31b-it",
+  "status": "completed",
+  "first_pass": true,
+  "validation_errors": [],
+  "render_error": null,
+  "attempts": 1,
+  "video": "/home/jdluu/projects/ConceptCast-results/traces/renders/job-229/videos/scene_229/480p15/SceneGen.mp4",
+  "code_chars": 6425
+}
