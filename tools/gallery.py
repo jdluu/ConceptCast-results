@@ -199,7 +199,7 @@ PAGE = r"""<!doctype html>
 @font-face{font-family:"Geist Mono";src:url(gallery/fonts/geist-mono-latin.woff2)format("woff2");font-weight:100 900;font-display:swap}
 :root{
   --bg:#0c0f13; --panel:#141920; --panel-2:#1a2029; --line:#2a323d; --frame:#333d4a;
-  --fg:#e7eaee; --muted:#98a2b0; --accent:#3fa796; --accent-fg:#04120f;
+  --fg:#e7eaee; --muted:#98a2b0; --accent:#3fa796;
   /* radius scale: 10px for every control and container, 14px for the dialog panel,
      6px for focus outlines. One documented rule, applied everywhere. */
   --radius:10px; --shadow:0 1px 2px rgba(0,0,0,.4), 0 8px 24px rgba(0,0,0,.28);
@@ -209,7 +209,7 @@ PAGE = r"""<!doctype html>
 @media (prefers-color-scheme:light){
   :root{
     --bg:#f6f7f8; --panel:#ffffff; --panel-2:#f0f2f4; --line:#dfe3e8; --frame:#ccd3db;
-    --fg:#14181d; --muted:#5c6673; --accent:#0f766e; --accent-fg:#ffffff;
+    --fg:#14181d; --muted:#5c6673; --accent:#0f766e;
     --shadow:0 1px 2px rgba(16,24,32,.06), 0 8px 24px rgba(16,24,32,.08);
   }
 }
@@ -679,7 +679,7 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
             search=html.escape(j["search"], quote=True), still=j["still"],
             topic_label=html.escape(j["topic_label"]), model=html.escape(j["model"]),
             rep=j["rep"], duration=human_duration(j["duration"]),
-            code=j["code"], video=j["video"], gh_script=j["github_script"],
+            video=j["video"], gh_script=j["github_script"],
         ) for j in arm_jobs)
         sections.append(SECTION.format(
             arm=arm, title=ARM_TITLES[arm], note=ARM_NOTES[arm], made=len(arm_jobs),
