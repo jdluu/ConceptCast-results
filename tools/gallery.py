@@ -20,9 +20,12 @@ builds a scene up over its runtime, so an early frame is often an empty canvas.
 from __future__ import annotations
 
 import argparse
+import base64
 import csv
+import hashlib
 import html
 import json
+import re
 import pathlib
 import subprocess
 import sys
@@ -192,7 +195,7 @@ PAGE = r"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ConceptCast benchmark artifacts</title>
 <meta name="description" content="Rendered videos from the ConceptCast ablation benchmark, each beside the Manim script that generated it.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' __CSP_SCRIPT_HASH__; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233fa796'/%3E%3Cpath d='M13 10l9 6-9 6z' fill='%230c0f13'/%3E%3C/svg%3E">
 <link rel="preload" href="gallery/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="gallery/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -707,7 +710,7 @@ __SECTIONS__
 """
 
 ITEM = """      <article class="item" data-job="{job}" data-arm="arm_{arm}" data-topic="{topic}" data-model="{model_plain}" data-search="{search}">
-        <a class="shot" href="#{job}" aria-label="Open {job}, {topic_label} from {model}">
+        <a class="shot" href="#{job}" aria-label="{topic_label} &middot; {model}, job {job}">
           <img src="{still}" alt="" width="480" height="270" {loading}>
           <span class="play" aria-hidden="true"></span>
           <span class="title">{topic_label} &middot; {model}</span>
@@ -778,6 +781,15 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
             .replace("__TOTAL_DUR__", f"{total_dur / 60:.0f}")
             .replace("__RELEASE__", RELEASE)
             .replace("__REPO__", f"https://github.com/{REPO}"))
+    # The page carries one executable inline script and no inline styles, so the policy can
+    # name that script by hash and keep 'unsafe-inline' out of the page entirely.
+    # frame-ancestors stays out too: a meta element cannot carry it and the browser logs a
+    # console warning, which Lighthouse counts against the page.
+    script = re.search(r"<script>(.*?)</script>", page, re.S)
+    if not script:
+        raise SystemExit("inline script not found, cannot compute the CSP hash")
+    digest = hashlib.sha256(script.group(1).encode("utf-8")).digest()
+    page = page.replace("__CSP_SCRIPT_HASH__", "'sha256-" + base64.b64encode(digest).decode("ascii") + "'")
     leftover = [tok for tok in page.split() if tok.startswith("__") and tok.endswith("__")]
     if leftover:
         raise SystemExit(f"unreplaced placeholder: {leftover[:3]}")
