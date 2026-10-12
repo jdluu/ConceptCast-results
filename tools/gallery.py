@@ -309,6 +309,14 @@ h2{font-size:19px;letter-spacing:-.01em;margin:0 0 6px;font-weight:600}
 .reset:hover{border-color:var(--accent);color:var(--accent)}
 .reset:active{transform:translateY(1px)}
 
+.totop{position:fixed;right:18px;bottom:18px;width:44px;height:44px;padding:0;border-radius:50%;
+       background:var(--panel);border:1px solid var(--line);color:var(--fg);cursor:pointer;
+       display:grid;place-items:center;box-shadow:var(--shadow);z-index:4;opacity:.92}
+.totop[hidden]{display:none}
+.totop:hover,.totop:focus-visible{opacity:1;color:var(--accent);border-color:var(--accent)}
+.totop svg{width:20px;height:20px;display:block}
+@media (max-width:760px){.totop{right:14px;bottom:14px}}
+
 .empty{display:none;padding:56px 0;text-align:center;color:var(--muted)}
 .empty.on{display:block}
 .empty p{margin:0 0 14px}
@@ -513,6 +521,11 @@ __SECTIONS__
   </div>
 </dialog>
 
+<button class="totop" id="totop" type="button" aria-label="Back to top" hidden>
+  <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2"
+       stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+</button>
+
 <script id="jobs" type="application/json">__JOBS__</script>
 <script>
 (function () {
@@ -642,6 +655,23 @@ __SECTIONS__
   document.getElementById('clear').addEventListener('click', clearAll);
   reset.addEventListener('click', clearAll);
 
+  // A floating way back up, for the long-scroll case. It appears only after a screen and a
+  // bit of scrolling, hides whenever the detail view is open, and stays visible while it
+  // itself has focus so it cannot vanish from under a keyboard user.
+  var toTop = document.getElementById('totop');
+  function syncTop() {
+    var deep = window.scrollY > window.innerHeight * 1.2;
+    toTop.hidden = !((deep || document.activeElement === toTop) && !dlg.open);
+  }
+  window.addEventListener('scroll', syncTop, {passive: true});
+  window.addEventListener('resize', syncTop);
+  toTop.addEventListener('focus', syncTop);
+  toTop.addEventListener('blur', syncTop);
+  toTop.addEventListener('click', function () {
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+  });
+
   var dlg = document.getElementById('detail');
   var dvideo = document.getElementById('dvideo');
   var dname = document.getElementById('dname');
@@ -723,7 +753,7 @@ __SECTIONS__
     var job = JOBS[name];
     if (!job) return false;
     fill(job);
-    if (!dlg.open) dlg.showModal();
+    if (!dlg.open) { dlg.showModal(); syncTop(); }
     if (location.hash.slice(1) !== name) history.replaceState(null, '', '#' + name);
     return true;
   }
@@ -761,7 +791,7 @@ __SECTIONS__
     }
     if (location.hash) history.replaceState(null, '', location.pathname + location.search);
   }
-  dlg.addEventListener('close', cleanup);
+  dlg.addEventListener('close', function () { cleanup(); syncTop(); });
   new MutationObserver(function () { if (!dlg.open) cleanup(); })
     .observe(dlg, { attributes: true, attributeFilter: ['open'] });
   dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
@@ -792,6 +822,7 @@ __SECTIONS__
 
   readURL();
   apply();
+  syncTop();
   var start = location.hash.slice(1);
   if (start && JOBS[start]) openJob(start);
 })();
