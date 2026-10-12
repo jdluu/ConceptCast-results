@@ -192,6 +192,8 @@ PAGE = r"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ConceptCast benchmark artifacts</title>
 <meta name="description" content="Rendered videos from the ConceptCast ablation benchmark, each beside the Manim script that generated it.">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self' 'unsafe-inline'; script-src 'self' 'unsafe-inline'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233fa796'/%3E%3Cpath d='M13 10l9 6-9 6z' fill='%230c0f13'/%3E%3C/svg%3E">
 <link rel="preload" href="gallery/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="gallery/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
 <style>
@@ -257,28 +259,38 @@ h2{font-size:19px;letter-spacing:-.01em;margin:0 0 6px;font-weight:600}
 .grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fill,minmax(250px,1fr))}
 .item{display:flex;flex-direction:column;gap:8px;height:100%}
 .item[hidden]{display:none}
-.shot{position:relative;display:block;border-radius:var(--radius);overflow:hidden;
-      background:var(--panel-2);border:1px solid var(--frame)}
-.shot img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover}
-.play{position:absolute;inset:0;display:grid;place-items:center;opacity:.5}
-.play i{width:0;height:0;border-style:solid;border-width:11px 0 11px 18px;
-        border-color:transparent transparent transparent #fff;filter:drop-shadow(0 1px 3px rgba(0,0,0,.7))}
+/* one link per card: the still and the title share it, so the tap target is the whole top
+   of the card and a keyboard user gets a single stop per job */
+.shot{position:relative;display:block}
+.shot img{display:block;width:100%;height:auto;aspect-ratio:16/9;object-fit:cover;
+      background:var(--panel-2);border:1px solid var(--frame);border-radius:var(--radius)}
+.play{position:absolute;top:0;left:0;right:0;aspect-ratio:16/9;display:grid;place-items:center;opacity:.75}
+/* a scrim disc, so the affordance stays visible on bright thumbnails as well as dark ones */
+.play::before{content:"";position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+        width:54px;height:54px;border-radius:50%;background:rgba(6,8,11,.6);
+        border:1px solid rgba(255,255,255,.22)}
+.play::after{content:"";width:0;height:0;border-style:solid;border-width:11px 0 11px 18px;
+        border-color:transparent transparent transparent #fff;margin-left:4px;
+        filter:drop-shadow(0 1px 3px rgba(0,0,0,.6))}
 .shot:hover .play,.shot:focus-visible .play{opacity:1}
 @media (prefers-reduced-motion:no-preference){
   .play{transition:opacity .14s ease}
   .shot img{transition:transform .18s ease}
   .shot:hover img{transform:scale(1.025)}
 }
-.title{font-size:14.5px;font-weight:500;letter-spacing:-.005em;line-height:1.35}
-.title .sep{color:var(--muted);font-weight:400}
+.title{display:block;margin-top:9px;font-size:14.5px;font-weight:500;letter-spacing:-.005em;line-height:1.35}
 .facts2{color:var(--muted);font-size:12.5px}
 .jobid{font-family:var(--mono);font-size:11.5px;color:var(--muted);line-height:1.35;
        overflow-wrap:anywhere;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;
        overflow:hidden}
-.actions{display:flex;gap:8px;font-size:12.5px;margin-top:auto;padding-top:2px}
-.actions a{color:var(--muted);border:1px solid var(--line);border-radius:var(--radius);
-           padding:4px 10px;line-height:1.3}
-.actions a:hover{color:var(--accent);border-color:var(--accent)}
+.actions{display:flex;gap:8px;margin-top:auto;padding-top:2px}
+.chip{align-self:flex-start;color:var(--muted);border:1px solid var(--line);border-radius:var(--radius);
+      padding:6px 12px;line-height:1.3;font-size:12.5px}
+.chip:hover{color:var(--accent);border-color:var(--accent)}
+.reset{font:inherit;font-size:13px;color:var(--fg);background:var(--panel-2);
+       border:1px solid var(--line);border-radius:var(--radius);padding:0 12px;height:38px;cursor:pointer}
+.reset:hover{border-color:var(--accent);color:var(--accent)}
+.reset:active{transform:translateY(1px)}
 
 .empty{display:none;padding:56px 0;text-align:center;color:var(--muted)}
 .empty.on{display:block}
@@ -337,11 +349,27 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
   .tools{gap:8px}
   .count{margin-left:0;text-align:left;min-width:0;flex:0 0 auto}
   .seg{width:auto}
-  .seg button{padding:0 10px}
+  .seg button{padding:0 12px}
   .seg button .wide{display:none}
   .seg button .narrow{display:inline}
-  #topic,#model{flex:1 1 0;width:auto;min-width:0}
+  #topic,#model{flex:1 1 0;width:auto;min-width:96px}
   .brand span{display:none}
+  /* iOS zooms the whole page when a focused control renders under 16px, and 44px is the
+     smallest comfortable thumb target */
+  input[type=search],select{font-size:16px;height:44px}
+  .seg{height:44px}
+  .reset{height:44px;padding:0 14px}
+  /* the per-card chips are redundant here: the whole card opens the detail view, which
+     carries the same actions at a comfortable size */
+  .chip{display:none}
+  /* a solid bar: the backdrop blur costs frames and battery on a phone */
+  .bar{background:var(--bg);backdrop-filter:none}
+  .dclose{font-size:26px;padding:9px 12px;min-width:44px;min-height:44px}
+  .dlinks{gap:10px 18px}
+  .dlinks a,.dlinks button{display:inline-block;padding:10px 0;min-height:44px}
+  .dnav button{padding:12px 16px}
+  .cmp a{padding:9px 11px}
+  .dcode summary{padding:14px 18px}
   .intro{padding-top:26px}
   h1{font-size:24px}
   .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
@@ -378,6 +406,7 @@ __TOPIC_OPTIONS__
 __MODEL_OPTIONS__
       </select>
       <span class="count" id="count" aria-live="polite"></span>
+      <button type="button" class="reset" id="reset" hidden>Clear filters</button>
     </div>
   </div>
 </header>
@@ -463,6 +492,7 @@ __SECTIONS__
   var topicSel = document.getElementById('topic');
   var modelSel = document.getElementById('model');
   var count = document.getElementById('count');
+  var reset = document.getElementById('reset');
   var empty = document.getElementById('empty');
   var arm = 'all';
   var visible = items.slice();
@@ -488,6 +518,11 @@ __SECTIONS__
     var n = visible.length, total = items.length;
     count.textContent = n === total ? total + ' videos' : n + ' of ' + total;
     empty.classList.toggle('on', n === 0);
+    // one Clear filters control is visible at a time: in the bar while results remain,
+    // and in the empty state when nothing matches
+    var filtered = filter.value.trim() !== '' || arm !== 'all'
+                || topicSel.value !== 'all' || modelSel.value !== 'all';
+    reset.hidden = !filtered || n === 0;
   }
   function clearAll() {
     filter.value = '';
@@ -513,6 +548,7 @@ __SECTIONS__
     });
   });
   document.getElementById('clear').addEventListener('click', clearAll);
+  reset.addEventListener('click', clearAll);
 
   var dlg = document.getElementById('detail');
   var dvideo = document.getElementById('dvideo');
@@ -671,14 +707,14 @@ __SECTIONS__
 """
 
 ITEM = """      <article class="item" data-job="{job}" data-arm="arm_{arm}" data-topic="{topic}" data-model="{model_plain}" data-search="{search}">
-        <a class="shot" href="#{job}" aria-label="Open {job}">
-          <img src="{still}" alt="" width="480" height="270" loading="lazy" decoding="async">
-          <span class="play" aria-hidden="true"><i></i></span>
+        <a class="shot" href="#{job}" aria-label="Open {job}, {topic_label} from {model}">
+          <img src="{still}" alt="" width="480" height="270" {loading}>
+          <span class="play" aria-hidden="true"></span>
+          <span class="title">{topic_label} &middot; {model}</span>
         </a>
-        <div class="title"><a href="#{job}">{topic_label} <span class="sep">&middot;</span> {model}</a></div>
         <div class="facts2">arm {arm} &middot; rep {rep} &middot; {duration}</div>
         <div class="jobid" title="{job}">{job}</div>
-        <div class="actions"><a href="{gh_script}" target="_blank" rel="noopener">script</a><a href="{video}">video</a></div>
+        <div class="actions"><a class="chip" href="{gh_script}" target="_blank" rel="noopener">script</a><a class="chip" href="{video}">video</a></div>
       </article>
 """
 
@@ -698,19 +734,27 @@ def human_duration(seconds: float) -> str:
 
 def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
     sections = []
+    first_card = True
     for arm in ARM_ORDER:
         arm_jobs = [j for j in jobs if j["arm"] == arm]
-        items = "\n".join(ITEM.format(
-            job=j["job"], arm=arm, topic=j["topic"],
-            search=html.escape(j["search"], quote=True), still=j["still"],
-            topic_label=html.escape(j["topic_label"]), model=html.escape(j["model"]),
-            model_plain=html.escape(j["model"], quote=True),
-            rep=j["rep"], duration=human_duration(j["duration"]),
-            video=j["video"], gh_script=j["github_script"],
-        ) for j in arm_jobs)
+        chunks = []
+        for j in arm_jobs:
+            # the first still is the likely LCP element, so it must not be deferred;
+            # every other still waits until it is near the viewport
+            loading = ('loading="eager" fetchpriority="high"' if first_card
+                       else 'loading="lazy" decoding="async"')
+            first_card = False
+            chunks.append(ITEM.format(
+                job=j["job"], arm=arm, topic=j["topic"],
+                search=html.escape(j["search"], quote=True), still=j["still"],
+                topic_label=html.escape(j["topic_label"]), model=html.escape(j["model"]),
+                model_plain=html.escape(j["model"], quote=True),
+                rep=j["rep"], duration=human_duration(j["duration"]),
+                video=j["video"], gh_script=j["github_script"], loading=loading,
+            ))
         sections.append(SECTION.format(
             arm=arm, title=ARM_TITLES[arm], note=ARM_NOTES[arm], made=len(arm_jobs),
-            attempted=attempted.get(arm, len(arm_jobs)), items=items,
+            attempted=attempted.get(arm, len(arm_jobs)), items="\n".join(chunks),
         ))
 
     total_bytes = sum(j["video_bytes"] for j in jobs)
