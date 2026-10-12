@@ -76,9 +76,18 @@ matched back to its job, and from there to the script inside that folder.
 
 GitHub renders images, PDFs, and 3D models in the browser, but not video, so opening a
 `video.mp4` on GitHub offers a download rather than a player. The gallery page at the
-repository root plays them instead, one card per job, generated from `index.csv` by
-`tools/gallery.py`. The videos are served straight from this repository by GitHub Pages,
-which sends the correct media type and honours range requests, so seeking works.
+repository root plays them instead. It is generated from `index.csv` plus
+`gallery/manifest.json` by `tools/gallery.py`, and its assets live under `gallery/`.
+
+Each card shows a still cut from the video, and opening one gives the player, the Manim
+script fetched on demand, links to the job folder, and the same topic and model in the
+other arms. Every job has a stable link of the form
+`https://jdluu.github.io/ConceptCast-results/#<jobname>`, so a section of the thesis can
+point at one run. The stills are picked by content rather than a fixed timestamp: 24 frames
+are sampled, scored against each video's own background, and the busiest is cut at 480x270.
+
+The videos and the stills are served straight from this repository by GitHub Pages, which
+sends the correct media type and honours range requests, so seeking works.
 
 ## What is not here
 

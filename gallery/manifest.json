@@ -1,0 +1,1415 @@
+{
+ "armA_backpropagation_deepseek-v4-flash_rep2_seq163": {
+  "bg_luma": 0,
+  "content": 0.51,
+  "duration": 105.0,
+  "frame_at": 26.0,
+  "still": "gallery/stills/armA_backpropagation_deepseek-v4-flash_rep2_seq163.jpg",
+  "still_bytes": 3530,
+  "video_bytes": 1365597
+ },
+ "armA_backpropagation_gemma-4-31b-it_rep2_seq169": {
+  "bg_luma": 0,
+  "content": 0.624,
+  "duration": 68.0,
+  "frame_at": 33.6,
+  "still": "gallery/stills/armA_backpropagation_gemma-4-31b-it_rep2_seq169.jpg",
+  "still_bytes": 6791,
+  "video_bytes": 827392
+ },
+ "armA_backpropagation_hy3_rep1_seq016": {
+  "bg_luma": 0,
+  "content": 0.628,
+  "duration": 53.0,
+  "frame_at": 39.6,
+  "still": "gallery/stills/armA_backpropagation_hy3_rep1_seq016.jpg",
+  "still_bytes": 6113,
+  "video_bytes": 753777
+ },
+ "armA_backpropagation_hy3_rep2_seq166": {
+  "bg_luma": 0,
+  "content": 0.912,
+  "duration": 61.07,
+  "frame_at": 45.6,
+  "still": "gallery/stills/armA_backpropagation_hy3_rep2_seq166.jpg",
+  "still_bytes": 7223,
+  "video_bytes": 757202
+ },
+ "armA_backpropagation_kimi-k2.6_rep1_seq014": {
+  "bg_luma": 0,
+  "content": 0.923,
+  "duration": 120.53,
+  "frame_at": 105.0,
+  "still": "gallery/stills/armA_backpropagation_kimi-k2.6_rep1_seq014.jpg",
+  "still_bytes": 7895,
+  "video_bytes": 2833965
+ },
+ "armA_backpropagation_muse-glimmer-30b_rep2_seq168": {
+  "bg_luma": 0,
+  "content": 0.603,
+  "duration": 58.6,
+  "frame_at": 50.4,
+  "still": "gallery/stills/armA_backpropagation_muse-glimmer-30b_rep2_seq168.jpg",
+  "still_bytes": 972,
+  "video_bytes": 736710
+ },
+ "armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167": {
+  "bg_luma": 0,
+  "content": 0.822,
+  "duration": 117.4,
+  "frame_at": 87.6,
+  "still": "gallery/stills/armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167.jpg",
+  "still_bytes": 6450,
+  "video_bytes": 1889751
+ },
+ "armA_derivative_glm-5.3_rep2_seq151": {
+  "bg_luma": 0,
+  "content": 0.477,
+  "duration": 110.53,
+  "frame_at": 55.2,
+  "still": "gallery/stills/armA_derivative_glm-5.3_rep2_seq151.jpg",
+  "still_bytes": 10445,
+  "video_bytes": 1280686
+ },
+ "armA_derivative_hy3_rep1_seq006": {
+  "bg_luma": 0,
+  "content": 0.922,
+  "duration": 36.0,
+  "frame_at": 8.8,
+  "still": "gallery/stills/armA_derivative_hy3_rep1_seq006.jpg",
+  "still_bytes": 7873,
+  "video_bytes": 500689
+ },
+ "armA_derivative_hy3_rep2_seq156": {
+  "bg_luma": 0,
+  "content": 0.486,
+  "duration": 42.73,
+  "frame_at": 31.2,
+  "still": "gallery/stills/armA_derivative_hy3_rep2_seq156.jpg",
+  "still_bytes": 6256,
+  "video_bytes": 456059
+ },
+ "armA_derivative_kimi-k2.6_rep1_seq004": {
+  "bg_luma": 28,
+  "content": 0.457,
+  "duration": 186.93,
+  "frame_at": 123.73,
+  "still": "gallery/stills/armA_derivative_kimi-k2.6_rep1_seq004.jpg",
+  "still_bytes": 11162,
+  "video_bytes": 2801056
+ },
+ "armA_derivative_kimi-k2.6_rep2_seq154": {
+  "bg_luma": 0,
+  "content": 0.601,
+  "duration": 123.8,
+  "frame_at": 61.6,
+  "still": "gallery/stills/armA_derivative_kimi-k2.6_rep2_seq154.jpg",
+  "still_bytes": 4218,
+  "video_bytes": 1826820
+ },
+ "armA_derivative_mimo-v2.5-pro_rep2_seq155": {
+  "bg_luma": 0,
+  "content": 0.79,
+  "duration": 107.47,
+  "frame_at": 26.8,
+  "still": "gallery/stills/armA_derivative_mimo-v2.5-pro_rep2_seq155.jpg",
+  "still_bytes": 3306,
+  "video_bytes": 1379842
+ },
+ "armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157": {
+  "bg_luma": 0,
+  "content": 0.794,
+  "duration": 82.2,
+  "frame_at": 40.8,
+  "still": "gallery/stills/armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157.jpg",
+  "still_bytes": 7874,
+  "video_bytes": 1203886
+ },
+ "armA_doppler_deepseek-v4-flash_rep1_seq033": {
+  "bg_luma": 0,
+  "content": 0.883,
+  "duration": 117.47,
+  "frame_at": 97.33,
+  "still": "gallery/stills/armA_doppler_deepseek-v4-flash_rep1_seq033.jpg",
+  "still_bytes": 9899,
+  "video_bytes": 1810514
+ },
+ "armA_doppler_gemma-4-31b-it_rep1_seq039": {
+  "bg_luma": 0,
+  "content": 0.713,
+  "duration": 68.39,
+  "frame_at": 58.8,
+  "still": "gallery/stills/armA_doppler_gemma-4-31b-it_rep1_seq039.jpg",
+  "still_bytes": 10515,
+  "video_bytes": 1226817
+ },
+ "armA_doppler_gemma-4-31b-it_rep2_seq189": {
+  "bg_luma": 0,
+  "content": 0.799,
+  "duration": 48.67,
+  "frame_at": 12.0,
+  "still": "gallery/stills/armA_doppler_gemma-4-31b-it_rep2_seq189.jpg",
+  "still_bytes": 3281,
+  "video_bytes": 517273
+ },
+ "armA_doppler_glm-5.3_rep1_seq031": {
+  "bg_luma": 0,
+  "content": 0.527,
+  "duration": 147.87,
+  "frame_at": 73.6,
+  "still": "gallery/stills/armA_doppler_glm-5.3_rep1_seq031.jpg",
+  "still_bytes": 5154,
+  "video_bytes": 4275068
+ },
+ "armA_doppler_hy3_rep1_seq036": {
+  "bg_luma": 0,
+  "content": 0.898,
+  "duration": 72.13,
+  "frame_at": 36.0,
+  "still": "gallery/stills/armA_doppler_hy3_rep1_seq036.jpg",
+  "still_bytes": 6116,
+  "video_bytes": 1557356
+ },
+ "armA_doppler_hy3_rep2_seq186": {
+  "bg_luma": 0,
+  "content": 0.823,
+  "duration": 88.13,
+  "frame_at": 22.0,
+  "still": "gallery/stills/armA_doppler_hy3_rep2_seq186.jpg",
+  "still_bytes": 7643,
+  "video_bytes": 2108420
+ },
+ "armA_doppler_kimi-k2.6_rep2_seq184": {
+  "bg_luma": 0,
+  "content": 0.452,
+  "duration": 132.26,
+  "frame_at": 16.4,
+  "still": "gallery/stills/armA_doppler_kimi-k2.6_rep2_seq184.jpg",
+  "still_bytes": 6863,
+  "video_bytes": 2241394
+ },
+ "armA_doppler_mimo-v2.5-pro_rep1_seq035": {
+  "bg_luma": 0,
+  "content": 0.869,
+  "duration": 179.73,
+  "frame_at": 149.33,
+  "still": "gallery/stills/armA_doppler_mimo-v2.5-pro_rep1_seq035.jpg",
+  "still_bytes": 10539,
+  "video_bytes": 2700763
+ },
+ "armA_doppler_muse-glimmer-30b_rep1_seq038": {
+  "bg_luma": 0,
+  "content": 0.718,
+  "duration": 41.27,
+  "frame_at": 35.0,
+  "still": "gallery/stills/armA_doppler_muse-glimmer-30b_rep1_seq038.jpg",
+  "still_bytes": 7322,
+  "video_bytes": 531470
+ },
+ "armA_doppler_muse-glimmer-30b_rep2_seq188": {
+  "bg_luma": 0,
+  "content": 0.362,
+  "duration": 46.33,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armA_doppler_muse-glimmer-30b_rep2_seq188.jpg",
+  "still_bytes": 970,
+  "video_bytes": 520602
+ },
+ "armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037": {
+  "bg_luma": 0,
+  "content": 0.822,
+  "duration": 82.66,
+  "frame_at": 61.2,
+  "still": "gallery/stills/armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037.jpg",
+  "still_bytes": 7364,
+  "video_bytes": 1703197
+ },
+ "armA_eigenvectors_deepseek-v4-flash_rep1_seq043": {
+  "bg_luma": 0,
+  "content": 0.356,
+  "duration": 106.27,
+  "frame_at": 8.8,
+  "still": "gallery/stills/armA_eigenvectors_deepseek-v4-flash_rep1_seq043.jpg",
+  "still_bytes": 7080,
+  "video_bytes": 855768
+ },
+ "armA_eigenvectors_hy3_rep1_seq046": {
+  "bg_luma": 0,
+  "content": 0.613,
+  "duration": 43.87,
+  "frame_at": 10.8,
+  "still": "gallery/stills/armA_eigenvectors_hy3_rep1_seq046.jpg",
+  "still_bytes": 7021,
+  "video_bytes": 475757
+ },
+ "armA_eigenvectors_hy3_rep2_seq196": {
+  "bg_luma": 0,
+  "content": 0.846,
+  "duration": 55.0,
+  "frame_at": 13.6,
+  "still": "gallery/stills/armA_eigenvectors_hy3_rep2_seq196.jpg",
+  "still_bytes": 16351,
+  "video_bytes": 910749
+ },
+ "armA_eigenvectors_kimi-k2.6_rep1_seq044": {
+  "bg_luma": 0,
+  "content": 0.458,
+  "duration": 152.93,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armA_eigenvectors_kimi-k2.6_rep1_seq044.jpg",
+  "still_bytes": 970,
+  "video_bytes": 2529042
+ },
+ "armA_eigenvectors_mimo-v2.5-pro_rep1_seq045": {
+  "bg_luma": 0,
+  "content": 0.402,
+  "duration": 132.73,
+  "frame_at": 32.8,
+  "still": "gallery/stills/armA_eigenvectors_mimo-v2.5-pro_rep1_seq045.jpg",
+  "still_bytes": 3964,
+  "video_bytes": 2109236
+ },
+ "armA_eigenvectors_muse-glimmer-30b_rep1_seq048": {
+  "bg_luma": 0,
+  "content": 0.433,
+  "duration": 37.87,
+  "frame_at": 32.2,
+  "still": "gallery/stills/armA_eigenvectors_muse-glimmer-30b_rep1_seq048.jpg",
+  "still_bytes": 2597,
+  "video_bytes": 341601
+ },
+ "armA_fourier_deepseek-v4-flash_rep1_seq023": {
+  "bg_luma": 0,
+  "content": 0.623,
+  "duration": 113.4,
+  "frame_at": 65.33,
+  "still": "gallery/stills/armA_fourier_deepseek-v4-flash_rep1_seq023.jpg",
+  "still_bytes": 2435,
+  "video_bytes": 2128519
+ },
+ "armA_fourier_deepseek-v4-flash_rep2_seq173": {
+  "bg_luma": 0,
+  "content": 0.774,
+  "duration": 100.07,
+  "frame_at": 24.8,
+  "still": "gallery/stills/armA_fourier_deepseek-v4-flash_rep2_seq173.jpg",
+  "still_bytes": 11102,
+  "video_bytes": 1292275
+ },
+ "armA_fourier_glm-5.3_rep1_seq021": {
+  "bg_luma": 0,
+  "content": 0.876,
+  "duration": 149.6,
+  "frame_at": 55.8,
+  "still": "gallery/stills/armA_fourier_glm-5.3_rep1_seq021.jpg",
+  "still_bytes": 13226,
+  "video_bytes": 2998863
+ },
+ "armA_fourier_hy3_rep2_seq176": {
+  "bg_luma": 0,
+  "content": 0.936,
+  "duration": 53.67,
+  "frame_at": 13.2,
+  "still": "gallery/stills/armA_fourier_hy3_rep2_seq176.jpg",
+  "still_bytes": 4412,
+  "video_bytes": 943798
+ },
+ "armA_fourier_muse-glimmer-30b_rep2_seq178": {
+  "bg_luma": 0,
+  "content": 0.746,
+  "duration": 47.87,
+  "frame_at": 40.6,
+  "still": "gallery/stills/armA_fourier_muse-glimmer-30b_rep2_seq178.jpg",
+  "still_bytes": 5728,
+  "video_bytes": 631635
+ },
+ "armB_backpropagation_deepseek-v4-flash_rep1_seq063": {
+  "bg_luma": 0,
+  "content": 0.651,
+  "duration": 43.4,
+  "frame_at": 21.6,
+  "still": "gallery/stills/armB_backpropagation_deepseek-v4-flash_rep1_seq063.jpg",
+  "still_bytes": 9528,
+  "video_bytes": 840321
+ },
+ "armB_backpropagation_gemma-4-31b-it_rep1_seq069": {
+  "bg_luma": 0,
+  "content": 0.713,
+  "duration": 69.07,
+  "frame_at": 25.8,
+  "still": "gallery/stills/armB_backpropagation_gemma-4-31b-it_rep1_seq069.jpg",
+  "still_bytes": 8838,
+  "video_bytes": 835442
+ },
+ "armB_backpropagation_glm-5.3_rep2_seq211": {
+  "bg_luma": 0,
+  "content": 0.36,
+  "duration": 26.8,
+  "frame_at": 20.27,
+  "still": "gallery/stills/armB_backpropagation_glm-5.3_rep2_seq211.jpg",
+  "still_bytes": 4523,
+  "video_bytes": 285361
+ },
+ "armB_backpropagation_gpt-oss-120b_rep1_seq070": {
+  "bg_luma": 0,
+  "content": 0.978,
+  "duration": 53.33,
+  "frame_at": 39.6,
+  "still": "gallery/stills/armB_backpropagation_gpt-oss-120b_rep1_seq070.jpg",
+  "still_bytes": 10203,
+  "video_bytes": 581903
+ },
+ "armB_backpropagation_hy3_rep1_seq066": {
+  "bg_luma": 0,
+  "content": 0.654,
+  "duration": 46.8,
+  "frame_at": 34.8,
+  "still": "gallery/stills/armB_backpropagation_hy3_rep1_seq066.jpg",
+  "still_bytes": 3138,
+  "video_bytes": 646575
+ },
+ "armB_backpropagation_hy3_rep2_seq216": {
+  "bg_luma": 0,
+  "content": 0.231,
+  "duration": 6.0,
+  "frame_at": 1.8,
+  "still": "gallery/stills/armB_backpropagation_hy3_rep2_seq216.jpg",
+  "still_bytes": 1332,
+  "video_bytes": 45199
+ },
+ "armB_backpropagation_kimi-k2.6_rep1_seq064": {
+  "bg_luma": 0,
+  "content": 0.402,
+  "duration": 144.33,
+  "frame_at": 108.0,
+  "still": "gallery/stills/armB_backpropagation_kimi-k2.6_rep1_seq064.jpg",
+  "still_bytes": 5990,
+  "video_bytes": 2341931
+ },
+ "armB_backpropagation_mimo-v2.5-pro_rep1_seq065": {
+  "bg_luma": 0,
+  "content": 0.47,
+  "duration": 56.0,
+  "frame_at": 49.0,
+  "still": "gallery/stills/armB_backpropagation_mimo-v2.5-pro_rep1_seq065.jpg",
+  "still_bytes": 2209,
+  "video_bytes": 500529
+ },
+ "armB_backpropagation_mimo-v2.5-pro_rep2_seq215": {
+  "bg_luma": 0,
+  "content": 0.693,
+  "duration": 30.87,
+  "frame_at": 29.13,
+  "still": "gallery/stills/armB_backpropagation_mimo-v2.5-pro_rep2_seq215.jpg",
+  "still_bytes": 13183,
+  "video_bytes": 403102
+ },
+ "armB_backpropagation_muse-glimmer-30b_rep1_seq068": {
+  "bg_luma": 0,
+  "content": 0.544,
+  "duration": 41.6,
+  "frame_at": 5.2,
+  "still": "gallery/stills/armB_backpropagation_muse-glimmer-30b_rep1_seq068.jpg",
+  "still_bytes": 4964,
+  "video_bytes": 519212
+ },
+ "armB_backpropagation_muse-glimmer-30b_rep2_seq218": {
+  "bg_luma": 0,
+  "content": 0.123,
+  "duration": 2.0,
+  "frame_at": 0.6,
+  "still": "gallery/stills/armB_backpropagation_muse-glimmer-30b_rep2_seq218.jpg",
+  "still_bytes": 1683,
+  "video_bytes": 10981
+ },
+ "armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217": {
+  "bg_luma": 0,
+  "content": 0.861,
+  "duration": 94.2,
+  "frame_at": 46.4,
+  "still": "gallery/stills/armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217.jpg",
+  "still_bytes": 9477,
+  "video_bytes": 1371071
+ },
+ "armB_backpropagation_qwen3.8-flash_rep1_seq062": {
+  "bg_luma": 0,
+  "content": 0.0,
+  "duration": 1.0,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armB_backpropagation_qwen3.8-flash_rep1_seq062.jpg",
+  "still_bytes": 970,
+  "video_bytes": 3162
+ },
+ "armB_derivative_deepseek-v4-flash_rep2_seq203": {
+  "bg_luma": 0,
+  "content": 0.449,
+  "duration": 86.2,
+  "frame_at": 74.2,
+  "still": "gallery/stills/armB_derivative_deepseek-v4-flash_rep2_seq203.jpg",
+  "still_bytes": 11448,
+  "video_bytes": 880324
+ },
+ "armB_derivative_gemma-4-31b-it_rep1_seq059": {
+  "bg_luma": 0,
+  "content": 0.503,
+  "duration": 56.0,
+  "frame_at": 37.33,
+  "still": "gallery/stills/armB_derivative_gemma-4-31b-it_rep1_seq059.jpg",
+  "still_bytes": 1325,
+  "video_bytes": 535938
+ },
+ "armB_derivative_gemma-4-31b-it_rep2_seq209": {
+  "bg_luma": 0,
+  "content": 0.465,
+  "duration": 51.0,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armB_derivative_gemma-4-31b-it_rep2_seq209.jpg",
+  "still_bytes": 970,
+  "video_bytes": 561152
+ },
+ "armB_derivative_glm-5.3_rep1_seq051": {
+  "bg_luma": 0,
+  "content": 0.233,
+  "duration": 2.0,
+  "frame_at": 0.93,
+  "still": "gallery/stills/armB_derivative_glm-5.3_rep1_seq051.jpg",
+  "still_bytes": 2605,
+  "video_bytes": 14802
+ },
+ "armB_derivative_glm-5.3_rep2_seq201": {
+  "bg_luma": 0,
+  "content": 0.55,
+  "duration": 125.73,
+  "frame_at": 109.2,
+  "still": "gallery/stills/armB_derivative_glm-5.3_rep2_seq201.jpg",
+  "still_bytes": 9602,
+  "video_bytes": 1764194
+ },
+ "armB_derivative_kimi-k2.6_rep1_seq054": {
+  "bg_luma": 0,
+  "content": 0.458,
+  "duration": 129.33,
+  "frame_at": 64.0,
+  "still": "gallery/stills/armB_derivative_kimi-k2.6_rep1_seq054.jpg",
+  "still_bytes": 1588,
+  "video_bytes": 1449574
+ },
+ "armB_derivative_kimi-k2.6_rep2_seq204": {
+  "bg_luma": 0,
+  "content": 0.565,
+  "duration": 155.0,
+  "frame_at": 76.8,
+  "still": "gallery/stills/armB_derivative_kimi-k2.6_rep2_seq204.jpg",
+  "still_bytes": 7081,
+  "video_bytes": 1790666
+ },
+ "armB_derivative_mimo-v2.5-pro_rep1_seq055": {
+  "bg_luma": 0,
+  "content": 0.726,
+  "duration": 151.6,
+  "frame_at": 112.8,
+  "still": "gallery/stills/armB_derivative_mimo-v2.5-pro_rep1_seq055.jpg",
+  "still_bytes": 9941,
+  "video_bytes": 1822982
+ },
+ "armB_derivative_mimo-v2.5-pro_rep2_seq205": {
+  "bg_luma": 0,
+  "content": 0.527,
+  "duration": 13.0,
+  "frame_at": 9.6,
+  "still": "gallery/stills/armB_derivative_mimo-v2.5-pro_rep2_seq205.jpg",
+  "still_bytes": 9823,
+  "video_bytes": 171031
+ },
+ "armB_derivative_muse-glimmer-30b_rep1_seq058": {
+  "bg_luma": 0,
+  "content": 0.0,
+  "duration": 8.4,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armB_derivative_muse-glimmer-30b_rep1_seq058.jpg",
+  "still_bytes": 970,
+  "video_bytes": 17567
+ },
+ "armB_derivative_muse-glimmer-30b_rep2_seq208": {
+  "bg_luma": 0,
+  "content": 0.546,
+  "duration": 44.4,
+  "frame_at": 32.4,
+  "still": "gallery/stills/armB_derivative_muse-glimmer-30b_rep2_seq208.jpg",
+  "still_bytes": 7815,
+  "video_bytes": 530031
+ },
+ "armB_derivative_qwen3.8-flash_rep1_seq052": {
+  "bg_luma": 0,
+  "content": 0.254,
+  "duration": 1.0,
+  "frame_at": 0.13,
+  "still": "gallery/stills/armB_derivative_qwen3.8-flash_rep1_seq052.jpg",
+  "still_bytes": 2580,
+  "video_bytes": 5655
+ },
+ "armB_derivative_qwen3.8-flash_rep2_seq202": {
+  "bg_luma": 0,
+  "content": 0.595,
+  "duration": 2.0,
+  "frame_at": 1.33,
+  "still": "gallery/stills/armB_derivative_qwen3.8-flash_rep2_seq202.jpg",
+  "still_bytes": 5389,
+  "video_bytes": 32327
+ },
+ "armB_doppler_deepseek-v4-flash_rep1_seq083": {
+  "bg_luma": 0,
+  "content": 0.5,
+  "duration": 111.6,
+  "frame_at": 82.8,
+  "still": "gallery/stills/armB_doppler_deepseek-v4-flash_rep1_seq083.jpg",
+  "still_bytes": 11199,
+  "video_bytes": 1980333
+ },
+ "armB_doppler_deepseek-v4-flash_rep2_seq233": {
+  "bg_luma": 0,
+  "content": 0.491,
+  "duration": 91.07,
+  "frame_at": 22.4,
+  "still": "gallery/stills/armB_doppler_deepseek-v4-flash_rep2_seq233.jpg",
+  "still_bytes": 2768,
+  "video_bytes": 1275203
+ },
+ "armB_doppler_gemma-4-31b-it_rep1_seq089": {
+  "bg_luma": 0,
+  "content": 0.527,
+  "duration": 68.66,
+  "frame_at": 50.4,
+  "still": "gallery/stills/armB_doppler_gemma-4-31b-it_rep1_seq089.jpg",
+  "still_bytes": 4202,
+  "video_bytes": 693416
+ },
+ "armB_doppler_gemma-4-31b-it_rep2_seq239": {
+  "bg_luma": 0,
+  "content": 0.6,
+  "duration": 36.27,
+  "frame_at": 20.53,
+  "still": "gallery/stills/armB_doppler_gemma-4-31b-it_rep2_seq239.jpg",
+  "still_bytes": 12054,
+  "video_bytes": 616868
+ },
+ "armB_doppler_glm-5.3_rep1_seq081": {
+  "bg_luma": 0,
+  "content": 0.467,
+  "duration": 73.47,
+  "frame_at": 54.0,
+  "still": "gallery/stills/armB_doppler_glm-5.3_rep1_seq081.jpg",
+  "still_bytes": 3200,
+  "video_bytes": 948045
+ },
+ "armB_doppler_glm-5.3_rep2_seq231": {
+  "bg_luma": 0,
+  "content": 0.246,
+  "duration": 25.0,
+  "frame_at": 7.0,
+  "still": "gallery/stills/armB_doppler_glm-5.3_rep2_seq231.jpg",
+  "still_bytes": 1581,
+  "video_bytes": 123309
+ },
+ "armB_doppler_gpt-oss-120b_rep1_seq090": {
+  "bg_luma": 0,
+  "content": 0.531,
+  "duration": 72.6,
+  "frame_at": 27.0,
+  "still": "gallery/stills/armB_doppler_gpt-oss-120b_rep1_seq090.jpg",
+  "still_bytes": 3105,
+  "video_bytes": 871403
+ },
+ "armB_doppler_hy3_rep1_seq086": {
+  "bg_luma": 0,
+  "content": 0.474,
+  "duration": 68.67,
+  "frame_at": 22.4,
+  "still": "gallery/stills/armB_doppler_hy3_rep1_seq086.jpg",
+  "still_bytes": 4312,
+  "video_bytes": 1502184
+ },
+ "armB_doppler_kimi-k2.6_rep1_seq084": {
+  "bg_luma": 0,
+  "content": 0.425,
+  "duration": 89.0,
+  "frame_at": 73.33,
+  "still": "gallery/stills/armB_doppler_kimi-k2.6_rep1_seq084.jpg",
+  "still_bytes": 6288,
+  "video_bytes": 758901
+ },
+ "armB_doppler_kimi-k2.6_rep2_seq234": {
+  "bg_luma": 0,
+  "content": 0.885,
+  "duration": 163.67,
+  "frame_at": 108.8,
+  "still": "gallery/stills/armB_doppler_kimi-k2.6_rep2_seq234.jpg",
+  "still_bytes": 9093,
+  "video_bytes": 2369640
+ },
+ "armB_doppler_mimo-v2.5-pro_rep1_seq085": {
+  "bg_luma": 0,
+  "content": 0.816,
+  "duration": 185.73,
+  "frame_at": 154.67,
+  "still": "gallery/stills/armB_doppler_mimo-v2.5-pro_rep1_seq085.jpg",
+  "still_bytes": 10621,
+  "video_bytes": 3060127
+ },
+ "armB_doppler_mimo-v2.5-pro_rep2_seq235": {
+  "bg_luma": 0,
+  "content": 0.759,
+  "duration": 137.33,
+  "frame_at": 68.0,
+  "still": "gallery/stills/armB_doppler_mimo-v2.5-pro_rep2_seq235.jpg",
+  "still_bytes": 10785,
+  "video_bytes": 2335399
+ },
+ "armB_doppler_muse-glimmer-30b_rep1_seq088": {
+  "bg_luma": 0,
+  "content": 0.173,
+  "duration": 9.07,
+  "frame_at": 4.67,
+  "still": "gallery/stills/armB_doppler_muse-glimmer-30b_rep1_seq088.jpg",
+  "still_bytes": 5174,
+  "video_bytes": 80134
+ },
+ "armB_doppler_muse-glimmer-30b_rep2_seq238": {
+  "bg_luma": 0,
+  "content": 0.668,
+  "duration": 52.6,
+  "frame_at": 29.87,
+  "still": "gallery/stills/armB_doppler_muse-glimmer-30b_rep2_seq238.jpg",
+  "still_bytes": 6264,
+  "video_bytes": 707678
+ },
+ "armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237": {
+  "bg_luma": 0,
+  "content": 0.368,
+  "duration": 77.73,
+  "frame_at": 57.6,
+  "still": "gallery/stills/armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237.jpg",
+  "still_bytes": 3492,
+  "video_bytes": 886949
+ },
+ "armB_eigenvectors_deepseek-v4-flash_rep1_seq093": {
+  "bg_luma": 0,
+  "content": 0.59,
+  "duration": 115.53,
+  "frame_at": 96.0,
+  "still": "gallery/stills/armB_eigenvectors_deepseek-v4-flash_rep1_seq093.jpg",
+  "still_bytes": 3824,
+  "video_bytes": 1916501
+ },
+ "armB_eigenvectors_deepseek-v4-flash_rep2_seq243": {
+  "bg_luma": 0,
+  "content": 0.604,
+  "duration": 16.87,
+  "frame_at": 4.0,
+  "still": "gallery/stills/armB_eigenvectors_deepseek-v4-flash_rep2_seq243.jpg",
+  "still_bytes": 3995,
+  "video_bytes": 232039
+ },
+ "armB_eigenvectors_gemma-4-31b-it_rep1_seq099": {
+  "bg_luma": 0,
+  "content": 0.714,
+  "duration": 71.0,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armB_eigenvectors_gemma-4-31b-it_rep1_seq099.jpg",
+  "still_bytes": 970,
+  "video_bytes": 1929632
+ },
+ "armB_eigenvectors_gemma-4-31b-it_rep2_seq249": {
+  "bg_luma": 0,
+  "content": 0.802,
+  "duration": 66.0,
+  "frame_at": 16.4,
+  "still": "gallery/stills/armB_eigenvectors_gemma-4-31b-it_rep2_seq249.jpg",
+  "still_bytes": 14609,
+  "video_bytes": 881592
+ },
+ "armB_eigenvectors_glm-5.3_rep1_seq091": {
+  "bg_luma": 0,
+  "content": 0.23,
+  "duration": 13.0,
+  "frame_at": 1.07,
+  "still": "gallery/stills/armB_eigenvectors_glm-5.3_rep1_seq091.jpg",
+  "still_bytes": 2362,
+  "video_bytes": 95775
+ },
+ "armB_eigenvectors_gpt-oss-120b_rep1_seq100": {
+  "bg_luma": 0,
+  "content": 0.449,
+  "duration": 36.87,
+  "frame_at": 13.8,
+  "still": "gallery/stills/armB_eigenvectors_gpt-oss-120b_rep1_seq100.jpg",
+  "still_bytes": 4138,
+  "video_bytes": 345488
+ },
+ "armB_eigenvectors_hy3_rep1_seq096": {
+  "bg_luma": 0,
+  "content": 0.745,
+  "duration": 36.93,
+  "frame_at": 9.2,
+  "still": "gallery/stills/armB_eigenvectors_hy3_rep1_seq096.jpg",
+  "still_bytes": 8503,
+  "video_bytes": 422366
+ },
+ "armB_eigenvectors_kimi-k2.6_rep1_seq094": {
+  "bg_luma": 0,
+  "content": 0.693,
+  "duration": 59.27,
+  "frame_at": 22.2,
+  "still": "gallery/stills/armB_eigenvectors_kimi-k2.6_rep1_seq094.jpg",
+  "still_bytes": 3483,
+  "video_bytes": 510188
+ },
+ "armB_eigenvectors_kimi-k2.6_rep2_seq244": {
+  "bg_luma": 0,
+  "content": 0.54,
+  "duration": 21.0,
+  "frame_at": 17.33,
+  "still": "gallery/stills/armB_eigenvectors_kimi-k2.6_rep2_seq244.jpg",
+  "still_bytes": 6058,
+  "video_bytes": 370110
+ },
+ "armB_eigenvectors_mimo-v2.5-pro_rep1_seq095": {
+  "bg_luma": 0,
+  "content": 0.52,
+  "duration": 140.93,
+  "frame_at": 105.6,
+  "still": "gallery/stills/armB_eigenvectors_mimo-v2.5-pro_rep1_seq095.jpg",
+  "still_bytes": 8276,
+  "video_bytes": 2148562
+ },
+ "armB_eigenvectors_mimo-v2.5-pro_rep2_seq245": {
+  "bg_luma": 0,
+  "content": 0.841,
+  "duration": 56.0,
+  "frame_at": 28.0,
+  "still": "gallery/stills/armB_eigenvectors_mimo-v2.5-pro_rep2_seq245.jpg",
+  "still_bytes": 4741,
+  "video_bytes": 744294
+ },
+ "armB_eigenvectors_muse-glimmer-30b_rep1_seq098": {
+  "bg_luma": 0,
+  "content": 0.437,
+  "duration": 41.47,
+  "frame_at": 30.0,
+  "still": "gallery/stills/armB_eigenvectors_muse-glimmer-30b_rep1_seq098.jpg",
+  "still_bytes": 3986,
+  "video_bytes": 459855
+ },
+ "armB_fourier_deepseek-v4-flash_rep1_seq073": {
+  "bg_luma": 0,
+  "content": 0.655,
+  "duration": 108.87,
+  "frame_at": 13.6,
+  "still": "gallery/stills/armB_fourier_deepseek-v4-flash_rep1_seq073.jpg",
+  "still_bytes": 10924,
+  "video_bytes": 1583379
+ },
+ "armB_fourier_deepseek-v4-flash_rep2_seq223": {
+  "bg_luma": 0,
+  "content": 0.356,
+  "duration": 16.6,
+  "frame_at": 13.33,
+  "still": "gallery/stills/armB_fourier_deepseek-v4-flash_rep2_seq223.jpg",
+  "still_bytes": 6992,
+  "video_bytes": 301699
+ },
+ "armB_fourier_gemma-4-31b-it_rep1_seq079": {
+  "bg_luma": 0,
+  "content": 0.52,
+  "duration": 61.0,
+  "frame_at": 20.27,
+  "still": "gallery/stills/armB_fourier_gemma-4-31b-it_rep1_seq079.jpg",
+  "still_bytes": 14364,
+  "video_bytes": 771458
+ },
+ "armB_fourier_gemma-4-31b-it_rep2_seq229": {
+  "bg_luma": 0,
+  "content": 0.684,
+  "duration": 63.0,
+  "frame_at": 31.2,
+  "still": "gallery/stills/armB_fourier_gemma-4-31b-it_rep2_seq229.jpg",
+  "still_bytes": 5462,
+  "video_bytes": 842409
+ },
+ "armB_fourier_glm-5.3_rep2_seq221": {
+  "bg_luma": 0,
+  "content": 1.027,
+  "duration": 5.0,
+  "frame_at": 4.2,
+  "still": "gallery/stills/armB_fourier_glm-5.3_rep2_seq221.jpg",
+  "still_bytes": 6907,
+  "video_bytes": 57156
+ },
+ "armB_fourier_hy3_rep1_seq076": {
+  "bg_luma": 0,
+  "content": 0.848,
+  "duration": 52.27,
+  "frame_at": 12.8,
+  "still": "gallery/stills/armB_fourier_hy3_rep1_seq076.jpg",
+  "still_bytes": 3674,
+  "video_bytes": 711832
+ },
+ "armB_fourier_hy3_rep2_seq226": {
+  "bg_luma": 0,
+  "content": 0.907,
+  "duration": 41.4,
+  "frame_at": 30.0,
+  "still": "gallery/stills/armB_fourier_hy3_rep2_seq226.jpg",
+  "still_bytes": 7162,
+  "video_bytes": 531128
+ },
+ "armB_fourier_kimi-k2.6_rep1_seq074": {
+  "bg_luma": 0,
+  "content": 0.525,
+  "duration": 171.6,
+  "frame_at": 57.07,
+  "still": "gallery/stills/armB_fourier_kimi-k2.6_rep1_seq074.jpg",
+  "still_bytes": 6785,
+  "video_bytes": 3674691
+ },
+ "armB_fourier_kimi-k2.6_rep2_seq224": {
+  "bg_luma": 0,
+  "content": 0.64,
+  "duration": 127.33,
+  "frame_at": 110.6,
+  "still": "gallery/stills/armB_fourier_kimi-k2.6_rep2_seq224.jpg",
+  "still_bytes": 11432,
+  "video_bytes": 2948723
+ },
+ "armB_fourier_mimo-v2.5-pro_rep1_seq075": {
+  "bg_luma": 0,
+  "content": 0.614,
+  "duration": 119.73,
+  "frame_at": 103.6,
+  "still": "gallery/stills/armB_fourier_mimo-v2.5-pro_rep1_seq075.jpg",
+  "still_bytes": 3836,
+  "video_bytes": 1906906
+ },
+ "armB_fourier_mimo-v2.5-pro_rep2_seq225": {
+  "bg_luma": 0,
+  "content": 0.517,
+  "duration": 17.0,
+  "frame_at": 4.0,
+  "still": "gallery/stills/armB_fourier_mimo-v2.5-pro_rep2_seq225.jpg",
+  "still_bytes": 3742,
+  "video_bytes": 138074
+ },
+ "armB_fourier_muse-glimmer-30b_rep1_seq078": {
+  "bg_luma": 0,
+  "content": 0.755,
+  "duration": 52.6,
+  "frame_at": 19.2,
+  "still": "gallery/stills/armB_fourier_muse-glimmer-30b_rep1_seq078.jpg",
+  "still_bytes": 5235,
+  "video_bytes": 786039
+ },
+ "armB_fourier_muse-glimmer-30b_rep2_seq228": {
+  "bg_luma": 0,
+  "content": 0.647,
+  "duration": 2.0,
+  "frame_at": 1.27,
+  "still": "gallery/stills/armB_fourier_muse-glimmer-30b_rep2_seq228.jpg",
+  "still_bytes": 6237,
+  "video_bytes": 39333
+ },
+ "armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077": {
+  "bg_luma": 0,
+  "content": 0.929,
+  "duration": 83.4,
+  "frame_at": 41.6,
+  "still": "gallery/stills/armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077.jpg",
+  "still_bytes": 7466,
+  "video_bytes": 1079971
+ },
+ "armB_fourier_qwen3.8-flash_rep2_seq222": {
+  "bg_luma": 0,
+  "content": 0.0,
+  "duration": 1.0,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armB_fourier_qwen3.8-flash_rep2_seq222.jpg",
+  "still_bytes": 970,
+  "video_bytes": 3162
+ },
+ "armC_backpropagation_deepseek-v4-flash_rep2_seq263": {
+  "bg_luma": 25,
+  "content": 0.713,
+  "duration": 64.46,
+  "frame_at": 56.0,
+  "still": "gallery/stills/armC_backpropagation_deepseek-v4-flash_rep2_seq263.jpg",
+  "still_bytes": 7676,
+  "video_bytes": 1472700
+ },
+ "armC_backpropagation_glm-5.3_rep2_seq261": {
+  "bg_luma": 25,
+  "content": 0.607,
+  "duration": 56.06,
+  "frame_at": 35.0,
+  "still": "gallery/stills/armC_backpropagation_glm-5.3_rep2_seq261.jpg",
+  "still_bytes": 4055,
+  "video_bytes": 892048
+ },
+ "armC_backpropagation_hy3_rep1_seq116": {
+  "bg_luma": 25,
+  "content": 0.472,
+  "duration": 71.8,
+  "frame_at": 5.87,
+  "still": "gallery/stills/armC_backpropagation_hy3_rep1_seq116.jpg",
+  "still_bytes": 9039,
+  "video_bytes": 1066665
+ },
+ "armC_backpropagation_kimi-k2.6_rep1_seq114": {
+  "bg_luma": 25,
+  "content": 1.03,
+  "duration": 182.66,
+  "frame_at": 91.2,
+  "still": "gallery/stills/armC_backpropagation_kimi-k2.6_rep1_seq114.jpg",
+  "still_bytes": 12167,
+  "video_bytes": 3141769
+ },
+ "armC_backpropagation_kimi-k2.6_rep2_seq264": {
+  "bg_luma": 42,
+  "content": 0.566,
+  "duration": 14.6,
+  "frame_at": 12.6,
+  "still": "gallery/stills/armC_backpropagation_kimi-k2.6_rep2_seq264.jpg",
+  "still_bytes": 6265,
+  "video_bytes": 157971
+ },
+ "armC_backpropagation_mimo-v2.5-pro_rep1_seq115": {
+  "bg_luma": 25,
+  "content": 0.824,
+  "duration": 121.0,
+  "frame_at": 105.0,
+  "still": "gallery/stills/armC_backpropagation_mimo-v2.5-pro_rep1_seq115.jpg",
+  "still_bytes": 17608,
+  "video_bytes": 3009351
+ },
+ "armC_backpropagation_mimo-v2.5-pro_rep2_seq265": {
+  "bg_luma": 32,
+  "content": 1.004,
+  "duration": 36.27,
+  "frame_at": 30.8,
+  "still": "gallery/stills/armC_backpropagation_mimo-v2.5-pro_rep2_seq265.jpg",
+  "still_bytes": 15178,
+  "video_bytes": 834008
+ },
+ "armC_backpropagation_muse-glimmer-30b_rep1_seq118": {
+  "bg_luma": 25,
+  "content": 0.814,
+  "duration": 70.8,
+  "frame_at": 58.67,
+  "still": "gallery/stills/armC_backpropagation_muse-glimmer-30b_rep1_seq118.jpg",
+  "still_bytes": 16043,
+  "video_bytes": 1202505
+ },
+ "armC_derivative_gemma-4-31b-it_rep2_seq259": {
+  "bg_luma": 25,
+  "content": 0.602,
+  "duration": 90.2,
+  "frame_at": 82.13,
+  "still": "gallery/stills/armC_derivative_gemma-4-31b-it_rep2_seq259.jpg",
+  "still_bytes": 16710,
+  "video_bytes": 1178840
+ },
+ "armC_derivative_glm-5.3_rep1_seq101": {
+  "bg_luma": 25,
+  "content": 0.333,
+  "duration": 90.0,
+  "frame_at": 74.67,
+  "still": "gallery/stills/armC_derivative_glm-5.3_rep1_seq101.jpg",
+  "still_bytes": 4225,
+  "video_bytes": 1188820
+ },
+ "armC_derivative_hy3_rep1_seq106": {
+  "bg_luma": 0,
+  "content": 1.169,
+  "duration": 105.66,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armC_derivative_hy3_rep1_seq106.jpg",
+  "still_bytes": 970,
+  "video_bytes": 1617591
+ },
+ "armC_derivative_kimi-k2.6_rep1_seq104": {
+  "bg_luma": 27,
+  "content": 0.801,
+  "duration": 65.87,
+  "frame_at": 16.4,
+  "still": "gallery/stills/armC_derivative_kimi-k2.6_rep1_seq104.jpg",
+  "still_bytes": 14585,
+  "video_bytes": 1442871
+ },
+ "armC_derivative_kimi-k2.6_rep2_seq254": {
+  "bg_luma": 25,
+  "content": 0.419,
+  "duration": 13.93,
+  "frame_at": 11.2,
+  "still": "gallery/stills/armC_derivative_kimi-k2.6_rep2_seq254.jpg",
+  "still_bytes": 9957,
+  "video_bytes": 251914
+ },
+ "armC_derivative_mimo-v2.5-pro_rep1_seq105": {
+  "bg_luma": 25,
+  "content": 0.429,
+  "duration": 48.8,
+  "frame_at": 36.0,
+  "still": "gallery/stills/armC_derivative_mimo-v2.5-pro_rep1_seq105.jpg",
+  "still_bytes": 5623,
+  "video_bytes": 780531
+ },
+ "armC_derivative_mimo-v2.5-pro_rep2_seq255": {
+  "bg_luma": 25,
+  "content": 0.324,
+  "duration": 90.26,
+  "frame_at": 37.33,
+  "still": "gallery/stills/armC_derivative_mimo-v2.5-pro_rep2_seq255.jpg",
+  "still_bytes": 6284,
+  "video_bytes": 1096284
+ },
+ "armC_derivative_muse-glimmer-30b_rep1_seq108": {
+  "bg_luma": 26,
+  "content": 0.886,
+  "duration": 60.67,
+  "frame_at": 56.73,
+  "still": "gallery/stills/armC_derivative_muse-glimmer-30b_rep1_seq108.jpg",
+  "still_bytes": 23003,
+  "video_bytes": 1318884
+ },
+ "armC_derivative_muse-glimmer-30b_rep2_seq258": {
+  "bg_luma": 25,
+  "content": 0.434,
+  "duration": 81.87,
+  "frame_at": 30.6,
+  "still": "gallery/stills/armC_derivative_muse-glimmer-30b_rep2_seq258.jpg",
+  "still_bytes": 11433,
+  "video_bytes": 805670
+ },
+ "armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107": {
+  "bg_luma": 51,
+  "content": 0.938,
+  "duration": 49.4,
+  "frame_at": 40.0,
+  "still": "gallery/stills/armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107.jpg",
+  "still_bytes": 8746,
+  "video_bytes": 657782
+ },
+ "armC_doppler_gemma-4-31b-it_rep1_seq139": {
+  "bg_luma": 25,
+  "content": 0.382,
+  "duration": 127.0,
+  "frame_at": 110.6,
+  "still": "gallery/stills/armC_doppler_gemma-4-31b-it_rep1_seq139.jpg",
+  "still_bytes": 4126,
+  "video_bytes": 910921
+ },
+ "armC_doppler_gemma-4-31b-it_rep2_seq289": {
+  "bg_luma": 24,
+  "content": 0.635,
+  "duration": 100.13,
+  "frame_at": 90.93,
+  "still": "gallery/stills/armC_doppler_gemma-4-31b-it_rep2_seq289.jpg",
+  "still_bytes": 21442,
+  "video_bytes": 2177181
+ },
+ "armC_doppler_glm-5.3_rep2_seq281": {
+  "bg_luma": 26,
+  "content": 0.792,
+  "duration": 66.4,
+  "frame_at": 32.8,
+  "still": "gallery/stills/armC_doppler_glm-5.3_rep2_seq281.jpg",
+  "still_bytes": 8349,
+  "video_bytes": 1811588
+ },
+ "armC_doppler_gpt-oss-120b_rep2_seq290": {
+  "bg_luma": 28,
+  "content": 0.828,
+  "duration": 30.2,
+  "frame_at": 21.6,
+  "still": "gallery/stills/armC_doppler_gpt-oss-120b_rep2_seq290.jpg",
+  "still_bytes": 15282,
+  "video_bytes": 777383
+ },
+ "armC_doppler_kimi-k2.6_rep1_seq134": {
+  "bg_luma": 25,
+  "content": 1.107,
+  "duration": 53.67,
+  "frame_at": 46.2,
+  "still": "gallery/stills/armC_doppler_kimi-k2.6_rep1_seq134.jpg",
+  "still_bytes": 27739,
+  "video_bytes": 2205199
+ },
+ "armC_doppler_kimi-k2.6_rep2_seq284": {
+  "bg_luma": 25,
+  "content": 0.536,
+  "duration": 161.06,
+  "frame_at": 100.0,
+  "still": "gallery/stills/armC_doppler_kimi-k2.6_rep2_seq284.jpg",
+  "still_bytes": 5780,
+  "video_bytes": 2686884
+ },
+ "armC_doppler_mimo-v2.5-pro_rep1_seq135": {
+  "bg_luma": 25,
+  "content": 1.088,
+  "duration": 70.8,
+  "frame_at": 44.0,
+  "still": "gallery/stills/armC_doppler_mimo-v2.5-pro_rep1_seq135.jpg",
+  "still_bytes": 4472,
+  "video_bytes": 1720486
+ },
+ "armC_doppler_mimo-v2.5-pro_rep2_seq285": {
+  "bg_luma": 25,
+  "content": 0.74,
+  "duration": 55.66,
+  "frame_at": 47.6,
+  "still": "gallery/stills/armC_doppler_mimo-v2.5-pro_rep2_seq285.jpg",
+  "still_bytes": 9574,
+  "video_bytes": 1639138
+ },
+ "armC_doppler_muse-glimmer-30b_rep1_seq138": {
+  "bg_luma": 28,
+  "content": 0.751,
+  "duration": 60.67,
+  "frame_at": 44.4,
+  "still": "gallery/stills/armC_doppler_muse-glimmer-30b_rep1_seq138.jpg",
+  "still_bytes": 25329,
+  "video_bytes": 1539768
+ },
+ "armC_doppler_muse-glimmer-30b_rep2_seq288": {
+  "bg_luma": 25,
+  "content": 0.983,
+  "duration": 54.13,
+  "frame_at": 13.2,
+  "still": "gallery/stills/armC_doppler_muse-glimmer-30b_rep2_seq288.jpg",
+  "still_bytes": 10999,
+  "video_bytes": 1443386
+ },
+ "armC_eigenvectors_deepseek-v4-flash_rep2_seq293": {
+  "bg_luma": 32,
+  "content": 0.639,
+  "duration": 72.53,
+  "frame_at": 6.0,
+  "still": "gallery/stills/armC_eigenvectors_deepseek-v4-flash_rep2_seq293.jpg",
+  "still_bytes": 4327,
+  "video_bytes": 1527603
+ },
+ "armC_eigenvectors_gemma-4-31b-it_rep1_seq149": {
+  "bg_luma": 25,
+  "content": 0.424,
+  "duration": 97.07,
+  "frame_at": 80.0,
+  "still": "gallery/stills/armC_eigenvectors_gemma-4-31b-it_rep1_seq149.jpg",
+  "still_bytes": 7621,
+  "video_bytes": 1285403
+ },
+ "armC_eigenvectors_gemma-4-31b-it_rep2_seq299": {
+  "bg_luma": 26,
+  "content": 0.395,
+  "duration": 89.53,
+  "frame_at": 11.0,
+  "still": "gallery/stills/armC_eigenvectors_gemma-4-31b-it_rep2_seq299.jpg",
+  "still_bytes": 16032,
+  "video_bytes": 1828370
+ },
+ "armC_eigenvectors_glm-5.3_rep2_seq291": {
+  "bg_luma": 26,
+  "content": 0.561,
+  "duration": 89.33,
+  "frame_at": 0.0,
+  "still": "gallery/stills/armC_eigenvectors_glm-5.3_rep2_seq291.jpg",
+  "still_bytes": 969,
+  "video_bytes": 1310103
+ },
+ "armC_eigenvectors_gpt-oss-120b_rep1_seq150": {
+  "bg_luma": 28,
+  "content": 0.781,
+  "duration": 30.2,
+  "frame_at": 21.6,
+  "still": "gallery/stills/armC_eigenvectors_gpt-oss-120b_rep1_seq150.jpg",
+  "still_bytes": 13358,
+  "video_bytes": 712609
+ },
+ "armC_eigenvectors_kimi-k2.6_rep1_seq144": {
+  "bg_luma": 0,
+  "content": 0.663,
+  "duration": 77.66,
+  "frame_at": 6.4,
+  "still": "gallery/stills/armC_eigenvectors_kimi-k2.6_rep1_seq144.jpg",
+  "still_bytes": 6587,
+  "video_bytes": 1188938
+ },
+ "armC_eigenvectors_kimi-k2.6_rep2_seq294": {
+  "bg_luma": 0,
+  "content": 1.103,
+  "duration": 83.67,
+  "frame_at": 6.93,
+  "still": "gallery/stills/armC_eigenvectors_kimi-k2.6_rep2_seq294.jpg",
+  "still_bytes": 6805,
+  "video_bytes": 847659
+ },
+ "armC_eigenvectors_mimo-v2.5-pro_rep1_seq145": {
+  "bg_luma": 26,
+  "content": 1.019,
+  "duration": 54.13,
+  "frame_at": 44.0,
+  "still": "gallery/stills/armC_eigenvectors_mimo-v2.5-pro_rep1_seq145.jpg",
+  "still_bytes": 18752,
+  "video_bytes": 2973312
+ },
+ "armC_eigenvectors_mimo-v2.5-pro_rep2_seq295": {
+  "bg_luma": 28,
+  "content": 0.619,
+  "duration": 35.4,
+  "frame_at": 26.4,
+  "still": "gallery/stills/armC_eigenvectors_mimo-v2.5-pro_rep2_seq295.jpg",
+  "still_bytes": 10675,
+  "video_bytes": 1320808
+ },
+ "armC_eigenvectors_muse-glimmer-30b_rep2_seq298": {
+  "bg_luma": 25,
+  "content": 0.673,
+  "duration": 49.87,
+  "frame_at": 45.47,
+  "still": "gallery/stills/armC_eigenvectors_muse-glimmer-30b_rep2_seq298.jpg",
+  "still_bytes": 10670,
+  "video_bytes": 658845
+ },
+ "armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147": {
+  "bg_luma": 28,
+  "content": 0.366,
+  "duration": 47.93,
+  "frame_at": 11.6,
+  "still": "gallery/stills/armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147.jpg",
+  "still_bytes": 9274,
+  "video_bytes": 1141259
+ },
+ "armC_fourier_deepseek-v4-flash_rep2_seq273": {
+  "bg_luma": 32,
+  "content": 0.674,
+  "duration": 73.8,
+  "frame_at": 64.4,
+  "still": "gallery/stills/armC_fourier_deepseek-v4-flash_rep2_seq273.jpg",
+  "still_bytes": 6115,
+  "video_bytes": 1102650
+ },
+ "armC_fourier_gemma-4-31b-it_rep1_seq129": {
+  "bg_luma": 25,
+  "content": 0.727,
+  "duration": 53.13,
+  "frame_at": 46.2,
+  "still": "gallery/stills/armC_fourier_gemma-4-31b-it_rep1_seq129.jpg",
+  "still_bytes": 8141,
+  "video_bytes": 993436
+ },
+ "armC_fourier_gemma-4-31b-it_rep2_seq279": {
+  "bg_luma": 25,
+  "content": 0.814,
+  "duration": 112.0,
+  "frame_at": 96.6,
+  "still": "gallery/stills/armC_fourier_gemma-4-31b-it_rep2_seq279.jpg",
+  "still_bytes": 11266,
+  "video_bytes": 3070407
+ },
+ "armC_fourier_glm-5.3_rep1_seq121": {
+  "bg_luma": 26,
+  "content": 0.922,
+  "duration": 149.27,
+  "frame_at": 74.4,
+  "still": "gallery/stills/armC_fourier_glm-5.3_rep1_seq121.jpg",
+  "still_bytes": 10677,
+  "video_bytes": 3395658
+ },
+ "armC_fourier_glm-5.3_rep2_seq271": {
+  "bg_luma": 24,
+  "content": 0.815,
+  "duration": 172.2,
+  "frame_at": 85.6,
+  "still": "gallery/stills/armC_fourier_glm-5.3_rep2_seq271.jpg",
+  "still_bytes": 27565,
+  "video_bytes": 4723750
+ },
+ "armC_fourier_hy3_rep1_seq126": {
+  "bg_luma": 25,
+  "content": 0.787,
+  "duration": 82.13,
+  "frame_at": 68.0,
+  "still": "gallery/stills/armC_fourier_hy3_rep1_seq126.jpg",
+  "still_bytes": 7717,
+  "video_bytes": 1205210
+ },
+ "armC_fourier_hy3_rep2_seq276": {
+  "bg_luma": 25,
+  "content": 0.789,
+  "duration": 61.8,
+  "frame_at": 50.67,
+  "still": "gallery/stills/armC_fourier_hy3_rep2_seq276.jpg",
+  "still_bytes": 7310,
+  "video_bytes": 1000321
+ },
+ "armC_fourier_kimi-k2.6_rep1_seq124": {
+  "bg_luma": 27,
+  "content": 0.475,
+  "duration": 33.27,
+  "frame_at": 16.0,
+  "still": "gallery/stills/armC_fourier_kimi-k2.6_rep1_seq124.jpg",
+  "still_bytes": 4566,
+  "video_bytes": 532409
+ },
+ "armC_fourier_kimi-k2.6_rep2_seq274": {
+  "bg_luma": 51,
+  "content": 1.043,
+  "duration": 128.0,
+  "frame_at": 121.13,
+  "still": "gallery/stills/armC_fourier_kimi-k2.6_rep2_seq274.jpg",
+  "still_bytes": 5062,
+  "video_bytes": 2160846
+ },
+ "armC_fourier_mimo-v2.5-pro_rep1_seq125": {
+  "bg_luma": 25,
+  "content": 0.622,
+  "duration": 88.26,
+  "frame_at": 22.0,
+  "still": "gallery/stills/armC_fourier_mimo-v2.5-pro_rep1_seq125.jpg",
+  "still_bytes": 13224,
+  "video_bytes": 1680971
+ },
+ "armC_fourier_mimo-v2.5-pro_rep2_seq275": {
+  "bg_luma": 25,
+  "content": 0.62,
+  "duration": 72.06,
+  "frame_at": 63.0,
+  "still": "gallery/stills/armC_fourier_mimo-v2.5-pro_rep2_seq275.jpg",
+  "still_bytes": 11427,
+  "video_bytes": 1196212
+ },
+ "armC_fourier_muse-glimmer-30b_rep1_seq128": {
+  "bg_luma": 25,
+  "content": 0.752,
+  "duration": 49.8,
+  "frame_at": 4.13,
+  "still": "gallery/stills/armC_fourier_muse-glimmer-30b_rep1_seq128.jpg",
+  "still_bytes": 6831,
+  "video_bytes": 673111
+ },
+ "armC_fourier_muse-glimmer-30b_rep2_seq278": {
+  "bg_luma": 25,
+  "content": 1.094,
+  "duration": 57.13,
+  "frame_at": 51.33,
+  "still": "gallery/stills/armC_fourier_muse-glimmer-30b_rep2_seq278.jpg",
+  "still_bytes": 26039,
+  "video_bytes": 1987292
+ },
+ "armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277": {
+  "bg_luma": 25,
+  "content": 0.63,
+  "duration": 34.4,
+  "frame_at": 26.6,
+  "still": "gallery/stills/armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277.jpg",
+  "still_bytes": 17435,
+  "video_bytes": 742130
+ }
+}
