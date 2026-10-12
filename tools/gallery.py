@@ -38,6 +38,7 @@ STILLS = GALLERY / "stills"
 MANIFEST = GALLERY / "manifest.json"
 
 REPO = "jdluu/ConceptCast-results"
+SOURCE = "jdluu/ConceptCast"          # the framework itself, made public separately
 RELEASE = f"https://github.com/{REPO}/releases/tag/artifacts-v1"
 
 ARM_ORDER = ["A", "B", "C"]
@@ -254,6 +255,19 @@ h1{font-size:30px;line-height:1.15;letter-spacing:-.02em;margin:0 0 12px;font-we
 .facts{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.01em}
 .jump{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;margin-top:4px}
 .jump a{color:var(--accent)}
+.lead{color:var(--fg)}
+dl.arms{margin:18px 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
+        background:var(--panel);display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:baseline}
+dl.arms dt{font-weight:600;white-space:nowrap}
+dl.arms dt span{color:var(--muted);font-weight:400;font-size:13px}
+dl.arms dd{margin:0;color:var(--muted)}
+@media (max-width:560px){dl.arms{grid-template-columns:1fr;gap:2px 0}dl.arms dd{margin:0 0 8px}}
+.fchips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.fchips button{font:inherit;font-size:13px;color:var(--muted);background:var(--panel-2);
+               border:1px solid var(--line);border-radius:var(--radius);padding:7px 11px;cursor:pointer}
+.fchips button:hover{color:var(--accent);border-color:var(--accent)}
+kbd{font:12px/1 var(--mono);border:1px solid var(--line);border-radius:5px;padding:2px 5px;
+    background:var(--panel-2);color:var(--muted)}
 
 section.arm{padding:34px 0 6px;border-top:1px solid var(--line);margin-top:26px}
 section.arm[hidden]{display:none}
@@ -352,7 +366,8 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
   .tools{gap:8px}
   .count{margin-left:0;text-align:left;min-width:0;flex:0 0 auto}
   .seg{width:auto}
-  .seg button{padding:0 12px}
+  /* A/B/C are single letters, so padding alone left them under the 44px minimum tap width */
+  .seg button{padding:0 12px;min-width:44px;justify-content:center}
   .seg button .wide{display:none}
   .seg button .narrow{display:inline}
   #topic,#model{flex:1 1 0;width:auto;min-width:96px}
@@ -394,9 +409,9 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
              title="Matches job name, topic, model, arm, repetition or job number">
       <div class="seg" role="group" aria-label="Filter by arm">
         <button type="button" data-arm="all" aria-pressed="true"><span class="wide">All arms</span><span class="narrow">All</span></button>
-        <button type="button" data-arm="A" aria-pressed="false">A</button>
-        <button type="button" data-arm="B" aria-pressed="false">B</button>
-        <button type="button" data-arm="C" aria-pressed="false">C</button>
+        <button type="button" data-arm="A" aria-pressed="false" title="__TIP_A__">A</button>
+        <button type="button" data-arm="B" aria-pressed="false" title="__TIP_B__">B</button>
+        <button type="button" data-arm="C" aria-pressed="false" title="__TIP_C__">C</button>
       </div>
       <label class="skip" for="topic">Filter by topic</label>
       <select id="topic">
@@ -417,15 +432,28 @@ __MODEL_OPTIONS__
 <main id="main" class="wrap">
   <div class="intro">
     <h1>Rendered videos from the ConceptCast benchmark</h1>
-    <p>Every job in the ablation study that produced a video, each one beside the Manim
-       script that generated it. Open a video to watch it, read its code, and compare the
-       same topic and model across arms.</p>
-    <p class="facts">__TOTAL_JOBS__ videos &middot; __TOTAL_MODELS__ models &middot; 5 topics &middot; __TOTAL_MB__ MB &middot; __TOTAL_DUR__ minutes of animation</p>
+    <p class="lead">ConceptCast turns a topic prompt into a narrated mathematical animation. It
+       splits that work across three agents. An <strong>Analyst</strong> breaks the topic into a
+       plan, an <strong>Architect</strong> lays the plan out as a storyboard of scenes, and an
+       <strong>Animator</strong> writes the Manim code for each scene. Deterministic checks and a
+       repair loop sit around them, so generated code is inspected before anything renders.</p>
+    <p>The benchmark compares three pipeline configurations, called arms, across ten open-weight
+       models, five topics, and two repetitions each, for 300 jobs in total. This page holds every
+       job that finished with a video, __TOTAL_JOBS__ of them, each one beside the Manim script
+       that generated it. Open a video to watch it, read its code, and compare the same topic and
+       model across arms.</p>
+    <dl class="arms">
+__ARM_INTRO__
+    </dl>
+    <p class="facts">__TOTAL_JOBS__ videos &middot; __TOTAL_MODELS__ models &middot; 5 topics &middot; 3 arms &middot; __TOTAL_MB__ MB &middot; __TOTAL_DUR__ minutes of animation</p>
     <div class="jump">
       <a href="__RELEASE__">Bulk download</a>
-      <a href="__REPO__">Repository</a>
+      <a href="__REPO__">Results repository</a>
+      <a href="__SOURCE__">Source code</a>
       <a href="artifacts/README.md">Artifact layout</a>
     </div>
+    <p class="hintline">Filter by name, topic, model, arm or job number. Press <kbd>/</kbd> to jump
+       to the filter box. Filters are kept in the address bar, so a filtered view can be shared.</p>
   </div>
 
 __SECTIONS__
@@ -464,6 +492,7 @@ __SECTIONS__
         <a id="dscript" href="#" target="_blank" rel="noopener">Open script</a>
         <button type="button" id="dcopy">Copy link</button>
       </div>
+      <div class="fchips" id="fchips"></div>
       <div class="cmp" id="dcmpwrap">
         <h3>Other runs of this topic and model</h3>
         <ul id="dcmp"></ul>
@@ -508,6 +537,46 @@ __SECTIONS__
         && (modelSel.value === 'all' || el.dataset.model === modelSel.value);
   }
 
+  function readURL() {
+    var sp = new URLSearchParams(location.search);
+    var a = sp.get('arm');
+    if (a === 'A' || a === 'B' || a === 'C') arm = a;
+    if (sp.get('q')) filter.value = sp.get('q');
+    var t = sp.get('topic');
+    if (t && topicSel.querySelector('option[value="' + t + '"]')) topicSel.value = t;
+    var m = sp.get('model');
+    if (m && modelSel.querySelector('option[value="' + m + '"]')) modelSel.value = m;
+    document.querySelectorAll('.seg button').forEach(function (o) {
+      o.setAttribute('aria-pressed', String(o.dataset.arm === arm));
+    });
+  }
+
+  // Filters are put in the query string, so a filtered view can be shared or bookmarked.
+  // replaceState keeps that out of the back-button history while typing.
+  function writeURL() {
+    var sp = new URLSearchParams();
+    if (filter.value.trim()) sp.set('q', filter.value.trim());
+    if (arm !== 'all') sp.set('arm', arm);
+    if (topicSel.value !== 'all') sp.set('topic', topicSel.value);
+    if (modelSel.value !== 'all') sp.set('model', modelSel.value);
+    var qs = sp.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  }
+
+  function setFilter(o) {
+    if (o.arm) {
+      arm = o.arm;
+      document.querySelectorAll('.seg button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x.dataset.arm === o.arm));
+      });
+    }
+    if (o.topic) topicSel.value = o.topic;
+    if (o.model) modelSel.value = o.model;
+    apply();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+  }
+
   function apply() {
     visible = [];
     items.forEach(function (el) {
@@ -526,6 +595,7 @@ __SECTIONS__
     var filtered = filter.value.trim() !== '' || arm !== 'all'
                 || topicSel.value !== 'all' || modelSel.value !== 'all';
     reset.hidden = !filtered || n === 0;
+    writeURL();
   }
   function clearAll() {
     filter.value = '';
@@ -538,6 +608,25 @@ __SECTIONS__
     apply();
   }
 
+  // One tap from the detail view to everything sharing that arm, topic or model.
+  function fillChips(job) {
+    var fc = document.getElementById('fchips');
+    fc.replaceChildren();
+    [['arm ' + job.arm, {arm: job.arm}, 'only Arm ' + job.arm],
+     [job.topic_label, {topic: job.topic}, 'only ' + job.topic_label],
+     [job.model, {model: job.model}, 'only ' + job.model]].forEach(function (row) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = row[0];
+      b.title = row[2];
+      b.addEventListener('click', function () { dlg.close(); setFilter(row[1]); });
+      fc.appendChild(b);
+    });
+  }
+
+  filter.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && filter.value) { filter.value = ''; apply(); }
+  });
   filter.addEventListener('input', apply);
   topicSel.addEventListener('change', apply);
   modelSel.addEventListener('change', apply);
@@ -623,6 +712,7 @@ __SECTIONS__
       li.appendChild(a);
       dcmp.appendChild(li);
     });
+    fillChips(job);
     loadCode(job);
     var i = visible.findIndex(function (el) { return el.dataset.job === job.job; });
     document.getElementById('dprev').disabled = i <= 0;
@@ -700,6 +790,7 @@ __SECTIONS__
     if (name && JOBS[name]) openJob(name);
   });
 
+  readURL();
   apply();
   var start = location.hash.slice(1);
   if (start && JOBS[start]) openJob(start);
@@ -765,6 +856,13 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
     payload = {j["job"]: {k: v for k, v in j.items() if k != "search"} for j in jobs}
     options = "\n".join(f'        <option value="{t}">{TOPIC_LABELS[t]}</option>'
                         for t in TOPIC_ORDER)
+    # each arm is defined once, in ARM_NOTES, and reused for the intro, the section note
+    # and the tooltip on the bar's arm buttons
+    arm_intro = "\n".join(
+        f'      <dt>Arm {a} <span>{ARM_TITLES[a].split(", ", 1)[1]}</span></dt>\n'
+        f'      <dd>{html.escape(ARM_NOTES[a])}</dd>' for a in ARM_ORDER)
+    tips = {a: html.escape(f"Arm {a}, {ARM_TITLES[a].split(', ', 1)[1]}. {ARM_NOTES[a]}", quote=True)
+            for a in ARM_ORDER}
     models = sorted({j["model"] for j in jobs})
     model_options = "\n".join(f'        <option value="{html.escape(m, quote=True)}">'
                               f'{html.escape(m)}</option>' for m in models)
@@ -779,8 +877,11 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
             .replace("__TOTAL_MODELS__", str(len({j["model"] for j in jobs})))
             .replace("__TOTAL_MB__", f"{total_bytes / 1048576:.0f}")
             .replace("__TOTAL_DUR__", f"{total_dur / 60:.0f}")
+            .replace("__ARM_INTRO__", arm_intro)
+            .replace("__TIP_A__", tips["A"]).replace("__TIP_B__", tips["B"]).replace("__TIP_C__", tips["C"])
             .replace("__RELEASE__", RELEASE)
-            .replace("__REPO__", f"https://github.com/{REPO}"))
+            .replace("__REPO__", f"https://github.com/{REPO}")
+            .replace("__SOURCE__", f"https://github.com/{SOURCE}"))
     # The page carries one executable inline script and one inline style sheet, and nothing
     # else inline, so the policy can name both by hash and keep 'unsafe-inline' out entirely.
     # Both must be hashed. Naming only the script leaves the style sheet blocked, which
@@ -814,7 +915,8 @@ def main() -> None:
         return
 
     out = ROOT / "index.html"
-    out.write_text(build_page(load_jobs(), {"A": 100, "B": 100, "C": 53}))
+    # every arm attempted 100 jobs: 10 models x 5 topics x 2 repetitions
+    out.write_text(build_page(load_jobs(), {"A": 100, "B": 100, "C": 100}))
     print(f"wrote {out.relative_to(ROOT)} ({out.stat().st_size:,} bytes)")
 
 

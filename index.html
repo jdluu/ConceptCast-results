@@ -5,7 +5,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ConceptCast benchmark artifacts</title>
 <meta name="description" content="Rendered videos from the ConceptCast ablation benchmark, each beside the Manim script that generated it.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self' 'sha256-n3Ed+XmirorK7WKfYBAq9bwnhRWS3GyMR+Z1iLZyvOo='; script-src 'self' 'sha256-cXZZdwGaXYferHHtbfkoaKCJ8a+5xE/gof1pVNt44rY='; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self' 'sha256-woAspwE9VB9ylnpBtTH382hma2LoFHZLZsgSvQffeMo='; script-src 'self' 'sha256-Eq6RtNWS1ZVuutVprKJPpOZrBfHO6lZgakTBLNmxGyA='; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233fa796'/%3E%3Cpath d='M13 10l9 6-9 6z' fill='%230c0f13'/%3E%3C/svg%3E">
 <link rel="preload" href="gallery/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="gallery/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -64,6 +64,19 @@ h1{font-size:30px;line-height:1.15;letter-spacing:-.02em;margin:0 0 12px;font-we
 .facts{font-family:var(--mono);font-size:12.5px;color:var(--muted);letter-spacing:.01em}
 .jump{display:flex;gap:18px;flex-wrap:wrap;font-size:14px;margin-top:4px}
 .jump a{color:var(--accent)}
+.lead{color:var(--fg)}
+dl.arms{margin:18px 0 16px;padding:14px 16px;border:1px solid var(--line);border-radius:var(--radius);
+        background:var(--panel);display:grid;grid-template-columns:auto 1fr;gap:6px 16px;align-items:baseline}
+dl.arms dt{font-weight:600;white-space:nowrap}
+dl.arms dt span{color:var(--muted);font-weight:400;font-size:13px}
+dl.arms dd{margin:0;color:var(--muted)}
+@media (max-width:560px){dl.arms{grid-template-columns:1fr;gap:2px 0}dl.arms dd{margin:0 0 8px}}
+.fchips{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 14px}
+.fchips button{font:inherit;font-size:13px;color:var(--muted);background:var(--panel-2);
+               border:1px solid var(--line);border-radius:var(--radius);padding:7px 11px;cursor:pointer}
+.fchips button:hover{color:var(--accent);border-color:var(--accent)}
+kbd{font:12px/1 var(--mono);border:1px solid var(--line);border-radius:5px;padding:2px 5px;
+    background:var(--panel-2);color:var(--muted)}
 
 section.arm{padding:34px 0 6px;border-top:1px solid var(--line);margin-top:26px}
 section.arm[hidden]{display:none}
@@ -162,7 +175,8 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
   .tools{gap:8px}
   .count{margin-left:0;text-align:left;min-width:0;flex:0 0 auto}
   .seg{width:auto}
-  .seg button{padding:0 12px}
+  /* A/B/C are single letters, so padding alone left them under the 44px minimum tap width */
+  .seg button{padding:0 12px;min-width:44px;justify-content:center}
   .seg button .wide{display:none}
   .seg button .narrow{display:inline}
   #topic,#model{flex:1 1 0;width:auto;min-width:96px}
@@ -204,9 +218,9 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
              title="Matches job name, topic, model, arm, repetition or job number">
       <div class="seg" role="group" aria-label="Filter by arm">
         <button type="button" data-arm="all" aria-pressed="true"><span class="wide">All arms</span><span class="narrow">All</span></button>
-        <button type="button" data-arm="A" aria-pressed="false">A</button>
-        <button type="button" data-arm="B" aria-pressed="false">B</button>
-        <button type="button" data-arm="C" aria-pressed="false">C</button>
+        <button type="button" data-arm="A" aria-pressed="false" title="Arm A, monolithic baseline. One generation from one prompt, rendered exactly as produced. No retrieval, no verification, no repair.">A</button>
+        <button type="button" data-arm="B" aria-pressed="false" title="Arm B, monolithic with repair. One generation, then AST checks, a sandboxed render, and a search-and-replace repair loop.">B</button>
+        <button type="button" data-arm="C" aria-pressed="false" title="Arm C, agent council. The full council: Analyst, Architect, and Animator, with the check and repair stages around them.">C</button>
       </div>
       <label class="skip" for="topic">Filter by topic</label>
       <select id="topic">
@@ -240,15 +254,33 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
 <main id="main" class="wrap">
   <div class="intro">
     <h1>Rendered videos from the ConceptCast benchmark</h1>
-    <p>Every job in the ablation study that produced a video, each one beside the Manim
-       script that generated it. Open a video to watch it, read its code, and compare the
-       same topic and model across arms.</p>
-    <p class="facts">157 videos &middot; 10 models &middot; 5 topics &middot; 184 MB &middot; 193 minutes of animation</p>
+    <p class="lead">ConceptCast turns a topic prompt into a narrated mathematical animation. It
+       splits that work across three agents. An <strong>Analyst</strong> breaks the topic into a
+       plan, an <strong>Architect</strong> lays the plan out as a storyboard of scenes, and an
+       <strong>Animator</strong> writes the Manim code for each scene. Deterministic checks and a
+       repair loop sit around them, so generated code is inspected before anything renders.</p>
+    <p>The benchmark compares three pipeline configurations, called arms, across ten open-weight
+       models, five topics, and two repetitions each, for 300 jobs in total. This page holds every
+       job that finished with a video, 157 of them, each one beside the Manim script
+       that generated it. Open a video to watch it, read its code, and compare the same topic and
+       model across arms.</p>
+    <dl class="arms">
+      <dt>Arm A <span>monolithic baseline</span></dt>
+      <dd>One generation from one prompt, rendered exactly as produced. No retrieval, no verification, no repair.</dd>
+      <dt>Arm B <span>monolithic with repair</span></dt>
+      <dd>One generation, then AST checks, a sandboxed render, and a search-and-replace repair loop.</dd>
+      <dt>Arm C <span>agent council</span></dt>
+      <dd>The full council: Analyst, Architect, and Animator, with the check and repair stages around them.</dd>
+    </dl>
+    <p class="facts">157 videos &middot; 10 models &middot; 5 topics &middot; 3 arms &middot; 184 MB &middot; 193 minutes of animation</p>
     <div class="jump">
       <a href="https://github.com/jdluu/ConceptCast-results/releases/tag/artifacts-v1">Bulk download</a>
-      <a href="https://github.com/jdluu/ConceptCast-results">Repository</a>
+      <a href="https://github.com/jdluu/ConceptCast-results">Results repository</a>
+      <a href="https://github.com/jdluu/ConceptCast">Source code</a>
       <a href="artifacts/README.md">Artifact layout</a>
     </div>
+    <p class="hintline">Filter by name, topic, model, arm or job number. Press <kbd>/</kbd> to jump
+       to the filter box. Filters are kept in the address bar, so a filtered view can be shared.</p>
   </div>
 
   <section class="arm" data-arm="arm_A">
@@ -1413,7 +1445,7 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
 
   <section class="arm" data-arm="arm_C">
     <h2>Arm C, agent council</h2>
-    <p class="armnote">The full council: Analyst, Architect, and Animator, with the check and repair stages around them. 53 of the 53 jobs in this arm produced a video.</p>
+    <p class="armnote">The full council: Analyst, Architect, and Animator, with the check and repair stages around them. 53 of the 100 jobs in this arm produced a video.</p>
     <div class="grid">
       <article class="item" data-job="armC_backpropagation_deepseek-v4-flash_rep2_seq263" data-arm="arm_C" data-topic="backpropagation" data-model="deepseek-v4-flash" data-search="armc_backpropagation_deepseek-v4-flash_rep2_seq263 arm c armc backpropagation backpropagation deepseek-v4-flash seq263 rep2">
         <a class="shot" href="#armC_backpropagation_deepseek-v4-flash_rep2_seq263" aria-label="Backpropagation &middot; deepseek-v4-flash, job armC_backpropagation_deepseek-v4-flash_rep2_seq263">
@@ -2036,6 +2068,7 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
         <a id="dscript" href="#" target="_blank" rel="noopener">Open script</a>
         <button type="button" id="dcopy">Copy link</button>
       </div>
+      <div class="fchips" id="fchips"></div>
       <div class="cmp" id="dcmpwrap">
         <h3>Other runs of this topic and model</h3>
         <ul id="dcmp"></ul>
@@ -2080,6 +2113,46 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
         && (modelSel.value === 'all' || el.dataset.model === modelSel.value);
   }
 
+  function readURL() {
+    var sp = new URLSearchParams(location.search);
+    var a = sp.get('arm');
+    if (a === 'A' || a === 'B' || a === 'C') arm = a;
+    if (sp.get('q')) filter.value = sp.get('q');
+    var t = sp.get('topic');
+    if (t && topicSel.querySelector('option[value="' + t + '"]')) topicSel.value = t;
+    var m = sp.get('model');
+    if (m && modelSel.querySelector('option[value="' + m + '"]')) modelSel.value = m;
+    document.querySelectorAll('.seg button').forEach(function (o) {
+      o.setAttribute('aria-pressed', String(o.dataset.arm === arm));
+    });
+  }
+
+  // Filters are put in the query string, so a filtered view can be shared or bookmarked.
+  // replaceState keeps that out of the back-button history while typing.
+  function writeURL() {
+    var sp = new URLSearchParams();
+    if (filter.value.trim()) sp.set('q', filter.value.trim());
+    if (arm !== 'all') sp.set('arm', arm);
+    if (topicSel.value !== 'all') sp.set('topic', topicSel.value);
+    if (modelSel.value !== 'all') sp.set('model', modelSel.value);
+    var qs = sp.toString();
+    history.replaceState(null, '', location.pathname + (qs ? '?' + qs : '') + location.hash);
+  }
+
+  function setFilter(o) {
+    if (o.arm) {
+      arm = o.arm;
+      document.querySelectorAll('.seg button').forEach(function (x) {
+        x.setAttribute('aria-pressed', String(x.dataset.arm === o.arm));
+      });
+    }
+    if (o.topic) topicSel.value = o.topic;
+    if (o.model) modelSel.value = o.model;
+    apply();
+    var reduce = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    window.scrollTo({top: 0, behavior: reduce ? 'auto' : 'smooth'});
+  }
+
   function apply() {
     visible = [];
     items.forEach(function (el) {
@@ -2098,6 +2171,7 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
     var filtered = filter.value.trim() !== '' || arm !== 'all'
                 || topicSel.value !== 'all' || modelSel.value !== 'all';
     reset.hidden = !filtered || n === 0;
+    writeURL();
   }
   function clearAll() {
     filter.value = '';
@@ -2110,6 +2184,25 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
     apply();
   }
 
+  // One tap from the detail view to everything sharing that arm, topic or model.
+  function fillChips(job) {
+    var fc = document.getElementById('fchips');
+    fc.replaceChildren();
+    [['arm ' + job.arm, {arm: job.arm}, 'only Arm ' + job.arm],
+     [job.topic_label, {topic: job.topic}, 'only ' + job.topic_label],
+     [job.model, {model: job.model}, 'only ' + job.model]].forEach(function (row) {
+      var b = document.createElement('button');
+      b.type = 'button';
+      b.textContent = row[0];
+      b.title = row[2];
+      b.addEventListener('click', function () { dlg.close(); setFilter(row[1]); });
+      fc.appendChild(b);
+    });
+  }
+
+  filter.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && filter.value) { filter.value = ''; apply(); }
+  });
   filter.addEventListener('input', apply);
   topicSel.addEventListener('change', apply);
   modelSel.addEventListener('change', apply);
@@ -2195,6 +2288,7 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
       li.appendChild(a);
       dcmp.appendChild(li);
     });
+    fillChips(job);
     loadCode(job);
     var i = visible.findIndex(function (el) { return el.dataset.job === job.job; });
     document.getElementById('dprev').disabled = i <= 0;
@@ -2272,6 +2366,7 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
     if (name && JOBS[name]) openJob(name);
   });
 
+  readURL();
   apply();
   var start = location.hash.slice(1);
   if (start && JOBS[start]) openJob(start);
