@@ -1,0 +1,254 @@
+job_seq,arm,rep,topic,model,status,code_file,video
+1,A,1,derivative of a function in calculus,z-ai/glm-5.3,failed,,
+2,A,1,derivative of a function in calculus,qwen/qwen3.8-flash,failed,,
+3,A,1,derivative of a function in calculus,deepseek/deepseek-v4-flash,failed,,
+4,A,1,derivative of a function in calculus,moonshotai/kimi-k2.6,completed,armA_derivative_kimi-k2.6_rep1_seq004.py,armA_derivative_kimi-k2.6_rep1_seq004.mp4
+5,A,1,derivative of a function in calculus,xiaomi/mimo-v2.5-pro,failed,,
+6,A,1,derivative of a function in calculus,tencent/hy3,completed,armA_derivative_hy3_rep1_seq006.py,armA_derivative_hy3_rep1_seq006.mp4
+7,A,1,derivative of a function in calculus,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+8,A,1,derivative of a function in calculus,meta/muse-glimmer-30b,failed,,
+9,A,1,derivative of a function in calculus,google/gemma-4-31b-it,failed,,
+10,A,1,derivative of a function in calculus,openai/gpt-oss-120b,failed,,
+11,A,1,backpropagation,z-ai/glm-5.3,failed,,
+12,A,1,backpropagation,qwen/qwen3.8-flash,failed,,
+13,A,1,backpropagation,deepseek/deepseek-v4-flash,failed,,
+14,A,1,backpropagation,moonshotai/kimi-k2.6,completed,armA_backpropagation_kimi-k2.6_rep1_seq014.py,armA_backpropagation_kimi-k2.6_rep1_seq014.mp4
+15,A,1,backpropagation,xiaomi/mimo-v2.5-pro,failed,,
+16,A,1,backpropagation,tencent/hy3,completed,armA_backpropagation_hy3_rep1_seq016.py,armA_backpropagation_hy3_rep1_seq016.mp4
+17,A,1,backpropagation,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+18,A,1,backpropagation,meta/muse-glimmer-30b,failed,,
+19,A,1,backpropagation,google/gemma-4-31b-it,failed,,
+20,A,1,backpropagation,openai/gpt-oss-120b,failed,,
+21,A,1,Fourier transform,z-ai/glm-5.3,completed,armA_fourier_glm-5.3_rep1_seq021.py,armA_fourier_glm-5.3_rep1_seq021.mp4
+22,A,1,Fourier transform,qwen/qwen3.8-flash,failed,,
+23,A,1,Fourier transform,deepseek/deepseek-v4-flash,completed,armA_fourier_deepseek-v4-flash_rep1_seq023.py,armA_fourier_deepseek-v4-flash_rep1_seq023.mp4
+24,A,1,Fourier transform,moonshotai/kimi-k2.6,failed,,
+25,A,1,Fourier transform,xiaomi/mimo-v2.5-pro,failed,,
+26,A,1,Fourier transform,tencent/hy3,failed,,
+27,A,1,Fourier transform,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+28,A,1,Fourier transform,meta/muse-glimmer-30b,failed,,
+29,A,1,Fourier transform,google/gemma-4-31b-it,failed,,
+30,A,1,Fourier transform,openai/gpt-oss-120b,failed,,
+31,A,1,Doppler effect,z-ai/glm-5.3,completed,armA_doppler_glm-5.3_rep1_seq031.py,armA_doppler_glm-5.3_rep1_seq031.mp4
+32,A,1,Doppler effect,qwen/qwen3.8-flash,failed,,
+33,A,1,Doppler effect,deepseek/deepseek-v4-flash,completed,armA_doppler_deepseek-v4-flash_rep1_seq033.py,armA_doppler_deepseek-v4-flash_rep1_seq033.mp4
+34,A,1,Doppler effect,moonshotai/kimi-k2.6,failed,,
+35,A,1,Doppler effect,xiaomi/mimo-v2.5-pro,completed,armA_doppler_mimo-v2.5-pro_rep1_seq035.py,armA_doppler_mimo-v2.5-pro_rep1_seq035.mp4
+36,A,1,Doppler effect,tencent/hy3,completed,armA_doppler_hy3_rep1_seq036.py,armA_doppler_hy3_rep1_seq036.mp4
+37,A,1,Doppler effect,nvidia/nemotron-3-ultra-550b-a55b,completed,armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037.py,armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037.mp4
+38,A,1,Doppler effect,meta/muse-glimmer-30b,completed,armA_doppler_muse-glimmer-30b_rep1_seq038.py,armA_doppler_muse-glimmer-30b_rep1_seq038.mp4
+39,A,1,Doppler effect,google/gemma-4-31b-it,completed,armA_doppler_gemma-4-31b-it_rep1_seq039.py,armA_doppler_gemma-4-31b-it_rep1_seq039.mp4
+40,A,1,Doppler effect,openai/gpt-oss-120b,failed,,
+41,A,1,eigenvectors,z-ai/glm-5.3,failed,,
+42,A,1,eigenvectors,qwen/qwen3.8-flash,failed,,
+43,A,1,eigenvectors,deepseek/deepseek-v4-flash,completed,armA_eigenvectors_deepseek-v4-flash_rep1_seq043.py,armA_eigenvectors_deepseek-v4-flash_rep1_seq043.mp4
+44,A,1,eigenvectors,moonshotai/kimi-k2.6,completed,armA_eigenvectors_kimi-k2.6_rep1_seq044.py,armA_eigenvectors_kimi-k2.6_rep1_seq044.mp4
+45,A,1,eigenvectors,xiaomi/mimo-v2.5-pro,completed,armA_eigenvectors_mimo-v2.5-pro_rep1_seq045.py,armA_eigenvectors_mimo-v2.5-pro_rep1_seq045.mp4
+46,A,1,eigenvectors,tencent/hy3,completed,armA_eigenvectors_hy3_rep1_seq046.py,armA_eigenvectors_hy3_rep1_seq046.mp4
+47,A,1,eigenvectors,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+48,A,1,eigenvectors,meta/muse-glimmer-30b,completed,armA_eigenvectors_muse-glimmer-30b_rep1_seq048.py,armA_eigenvectors_muse-glimmer-30b_rep1_seq048.mp4
+49,A,1,eigenvectors,google/gemma-4-31b-it,failed,,
+50,A,1,eigenvectors,openai/gpt-oss-120b,failed,,
+51,B,1,derivative of a function in calculus,z-ai/glm-5.3,completed,armB_derivative_glm-5.3_rep1_seq051.py,armB_derivative_glm-5.3_rep1_seq051.mp4
+52,B,1,derivative of a function in calculus,qwen/qwen3.8-flash,completed,armB_derivative_qwen3.8-flash_rep1_seq052.py,armB_derivative_qwen3.8-flash_rep1_seq052.mp4
+53,B,1,derivative of a function in calculus,deepseek/deepseek-v4-flash,failed,,
+54,B,1,derivative of a function in calculus,moonshotai/kimi-k2.6,completed,armB_derivative_kimi-k2.6_rep1_seq054.py,armB_derivative_kimi-k2.6_rep1_seq054.mp4
+55,B,1,derivative of a function in calculus,xiaomi/mimo-v2.5-pro,completed,armB_derivative_mimo-v2.5-pro_rep1_seq055.py,armB_derivative_mimo-v2.5-pro_rep1_seq055.mp4
+56,B,1,derivative of a function in calculus,tencent/hy3,failed,,
+57,B,1,derivative of a function in calculus,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+58,B,1,derivative of a function in calculus,meta/muse-glimmer-30b,completed,armB_derivative_muse-glimmer-30b_rep1_seq058.py,armB_derivative_muse-glimmer-30b_rep1_seq058.mp4
+59,B,1,derivative of a function in calculus,google/gemma-4-31b-it,completed,armB_derivative_gemma-4-31b-it_rep1_seq059.py,armB_derivative_gemma-4-31b-it_rep1_seq059.mp4
+60,B,1,derivative of a function in calculus,openai/gpt-oss-120b,failed,,
+61,B,1,backpropagation,z-ai/glm-5.3,failed,,
+62,B,1,backpropagation,qwen/qwen3.8-flash,completed,armB_backpropagation_qwen3.8-flash_rep1_seq062.py,armB_backpropagation_qwen3.8-flash_rep1_seq062.mp4
+63,B,1,backpropagation,deepseek/deepseek-v4-flash,completed,armB_backpropagation_deepseek-v4-flash_rep1_seq063.py,armB_backpropagation_deepseek-v4-flash_rep1_seq063.mp4
+64,B,1,backpropagation,moonshotai/kimi-k2.6,completed,armB_backpropagation_kimi-k2.6_rep1_seq064.py,armB_backpropagation_kimi-k2.6_rep1_seq064.mp4
+65,B,1,backpropagation,xiaomi/mimo-v2.5-pro,completed,armB_backpropagation_mimo-v2.5-pro_rep1_seq065.py,armB_backpropagation_mimo-v2.5-pro_rep1_seq065.mp4
+66,B,1,backpropagation,tencent/hy3,completed,armB_backpropagation_hy3_rep1_seq066.py,armB_backpropagation_hy3_rep1_seq066.mp4
+67,B,1,backpropagation,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+68,B,1,backpropagation,meta/muse-glimmer-30b,completed,armB_backpropagation_muse-glimmer-30b_rep1_seq068.py,armB_backpropagation_muse-glimmer-30b_rep1_seq068.mp4
+69,B,1,backpropagation,google/gemma-4-31b-it,completed,armB_backpropagation_gemma-4-31b-it_rep1_seq069.py,armB_backpropagation_gemma-4-31b-it_rep1_seq069.mp4
+70,B,1,backpropagation,openai/gpt-oss-120b,completed,armB_backpropagation_gpt-oss-120b_rep1_seq070.py,armB_backpropagation_gpt-oss-120b_rep1_seq070.mp4
+71,B,1,Fourier transform,z-ai/glm-5.3,failed,,
+72,B,1,Fourier transform,qwen/qwen3.8-flash,failed,,
+73,B,1,Fourier transform,deepseek/deepseek-v4-flash,completed,armB_fourier_deepseek-v4-flash_rep1_seq073.py,armB_fourier_deepseek-v4-flash_rep1_seq073.mp4
+74,B,1,Fourier transform,moonshotai/kimi-k2.6,completed,armB_fourier_kimi-k2.6_rep1_seq074.py,armB_fourier_kimi-k2.6_rep1_seq074.mp4
+75,B,1,Fourier transform,xiaomi/mimo-v2.5-pro,completed,armB_fourier_mimo-v2.5-pro_rep1_seq075.py,armB_fourier_mimo-v2.5-pro_rep1_seq075.mp4
+76,B,1,Fourier transform,tencent/hy3,completed,armB_fourier_hy3_rep1_seq076.py,armB_fourier_hy3_rep1_seq076.mp4
+77,B,1,Fourier transform,nvidia/nemotron-3-ultra-550b-a55b,completed,armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077.py,armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077.mp4
+78,B,1,Fourier transform,meta/muse-glimmer-30b,completed,armB_fourier_muse-glimmer-30b_rep1_seq078.py,armB_fourier_muse-glimmer-30b_rep1_seq078.mp4
+79,B,1,Fourier transform,google/gemma-4-31b-it,completed,armB_fourier_gemma-4-31b-it_rep1_seq079.py,armB_fourier_gemma-4-31b-it_rep1_seq079.mp4
+80,B,1,Fourier transform,openai/gpt-oss-120b,failed,,
+81,B,1,Doppler effect,z-ai/glm-5.3,completed,armB_doppler_glm-5.3_rep1_seq081.py,armB_doppler_glm-5.3_rep1_seq081.mp4
+82,B,1,Doppler effect,qwen/qwen3.8-flash,failed,,
+83,B,1,Doppler effect,deepseek/deepseek-v4-flash,completed,armB_doppler_deepseek-v4-flash_rep1_seq083.py,armB_doppler_deepseek-v4-flash_rep1_seq083.mp4
+84,B,1,Doppler effect,moonshotai/kimi-k2.6,completed,armB_doppler_kimi-k2.6_rep1_seq084.py,armB_doppler_kimi-k2.6_rep1_seq084.mp4
+85,B,1,Doppler effect,xiaomi/mimo-v2.5-pro,completed,armB_doppler_mimo-v2.5-pro_rep1_seq085.py,armB_doppler_mimo-v2.5-pro_rep1_seq085.mp4
+86,B,1,Doppler effect,tencent/hy3,completed,armB_doppler_hy3_rep1_seq086.py,armB_doppler_hy3_rep1_seq086.mp4
+87,B,1,Doppler effect,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+88,B,1,Doppler effect,meta/muse-glimmer-30b,completed,armB_doppler_muse-glimmer-30b_rep1_seq088.py,armB_doppler_muse-glimmer-30b_rep1_seq088.mp4
+89,B,1,Doppler effect,google/gemma-4-31b-it,completed,armB_doppler_gemma-4-31b-it_rep1_seq089.py,armB_doppler_gemma-4-31b-it_rep1_seq089.mp4
+90,B,1,Doppler effect,openai/gpt-oss-120b,completed,armB_doppler_gpt-oss-120b_rep1_seq090.py,armB_doppler_gpt-oss-120b_rep1_seq090.mp4
+91,B,1,eigenvectors,z-ai/glm-5.3,completed,armB_eigenvectors_glm-5.3_rep1_seq091.py,armB_eigenvectors_glm-5.3_rep1_seq091.mp4
+92,B,1,eigenvectors,qwen/qwen3.8-flash,failed,,
+93,B,1,eigenvectors,deepseek/deepseek-v4-flash,completed,armB_eigenvectors_deepseek-v4-flash_rep1_seq093.py,armB_eigenvectors_deepseek-v4-flash_rep1_seq093.mp4
+94,B,1,eigenvectors,moonshotai/kimi-k2.6,completed,armB_eigenvectors_kimi-k2.6_rep1_seq094.py,armB_eigenvectors_kimi-k2.6_rep1_seq094.mp4
+95,B,1,eigenvectors,xiaomi/mimo-v2.5-pro,completed,armB_eigenvectors_mimo-v2.5-pro_rep1_seq095.py,armB_eigenvectors_mimo-v2.5-pro_rep1_seq095.mp4
+96,B,1,eigenvectors,tencent/hy3,completed,armB_eigenvectors_hy3_rep1_seq096.py,armB_eigenvectors_hy3_rep1_seq096.mp4
+97,B,1,eigenvectors,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+98,B,1,eigenvectors,meta/muse-glimmer-30b,completed,armB_eigenvectors_muse-glimmer-30b_rep1_seq098.py,armB_eigenvectors_muse-glimmer-30b_rep1_seq098.mp4
+99,B,1,eigenvectors,google/gemma-4-31b-it,completed,armB_eigenvectors_gemma-4-31b-it_rep1_seq099.py,armB_eigenvectors_gemma-4-31b-it_rep1_seq099.mp4
+100,B,1,eigenvectors,openai/gpt-oss-120b,completed,armB_eigenvectors_gpt-oss-120b_rep1_seq100.py,armB_eigenvectors_gpt-oss-120b_rep1_seq100.mp4
+101,C,1,derivative of a function in calculus,z-ai/glm-5.3,,armC_derivative_glm-5.3_rep1_seq101.py,armC_derivative_glm-5.3_rep1_seq101.mp4
+104,C,1,derivative of a function in calculus,moonshotai/kimi-k2.6,,armC_derivative_kimi-k2.6_rep1_seq104.py,armC_derivative_kimi-k2.6_rep1_seq104.mp4
+105,C,1,derivative of a function in calculus,xiaomi/mimo-v2.5-pro,,armC_derivative_mimo-v2.5-pro_rep1_seq105.py,armC_derivative_mimo-v2.5-pro_rep1_seq105.mp4
+106,C,1,derivative of a function in calculus,tencent/hy3,,armC_derivative_hy3_rep1_seq106.py,armC_derivative_hy3_rep1_seq106.mp4
+107,C,1,derivative of a function in calculus,nvidia/nemotron-3-ultra-550b-a55b,,armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107.py,armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107.mp4
+108,C,1,derivative of a function in calculus,meta/muse-glimmer-30b,,armC_derivative_muse-glimmer-30b_rep1_seq108.py,armC_derivative_muse-glimmer-30b_rep1_seq108.mp4
+114,C,1,backpropagation,moonshotai/kimi-k2.6,,armC_backpropagation_kimi-k2.6_rep1_seq114.py,armC_backpropagation_kimi-k2.6_rep1_seq114.mp4
+115,C,1,backpropagation,xiaomi/mimo-v2.5-pro,,armC_backpropagation_mimo-v2.5-pro_rep1_seq115.py,armC_backpropagation_mimo-v2.5-pro_rep1_seq115.mp4
+116,C,1,backpropagation,tencent/hy3,,armC_backpropagation_hy3_rep1_seq116.py,armC_backpropagation_hy3_rep1_seq116.mp4
+118,C,1,backpropagation,meta/muse-glimmer-30b,,armC_backpropagation_muse-glimmer-30b_rep1_seq118.py,armC_backpropagation_muse-glimmer-30b_rep1_seq118.mp4
+121,C,1,Fourier transform,z-ai/glm-5.3,,armC_fourier_glm-5.3_rep1_seq121.py,armC_fourier_glm-5.3_rep1_seq121.mp4
+124,C,1,Fourier transform,moonshotai/kimi-k2.6,,armC_fourier_kimi-k2.6_rep1_seq124.py,armC_fourier_kimi-k2.6_rep1_seq124.mp4
+125,C,1,Fourier transform,xiaomi/mimo-v2.5-pro,,armC_fourier_mimo-v2.5-pro_rep1_seq125.py,armC_fourier_mimo-v2.5-pro_rep1_seq125.mp4
+126,C,1,Fourier transform,tencent/hy3,,armC_fourier_hy3_rep1_seq126.py,armC_fourier_hy3_rep1_seq126.mp4
+128,C,1,Fourier transform,meta/muse-glimmer-30b,,armC_fourier_muse-glimmer-30b_rep1_seq128.py,armC_fourier_muse-glimmer-30b_rep1_seq128.mp4
+129,C,1,Fourier transform,google/gemma-4-31b-it,,armC_fourier_gemma-4-31b-it_rep1_seq129.py,armC_fourier_gemma-4-31b-it_rep1_seq129.mp4
+134,C,1,Doppler effect,moonshotai/kimi-k2.6,,armC_doppler_kimi-k2.6_rep1_seq134.py,armC_doppler_kimi-k2.6_rep1_seq134.mp4
+135,C,1,Doppler effect,xiaomi/mimo-v2.5-pro,,armC_doppler_mimo-v2.5-pro_rep1_seq135.py,armC_doppler_mimo-v2.5-pro_rep1_seq135.mp4
+138,C,1,Doppler effect,meta/muse-glimmer-30b,,armC_doppler_muse-glimmer-30b_rep1_seq138.py,armC_doppler_muse-glimmer-30b_rep1_seq138.mp4
+139,C,1,Doppler effect,google/gemma-4-31b-it,,armC_doppler_gemma-4-31b-it_rep1_seq139.py,armC_doppler_gemma-4-31b-it_rep1_seq139.mp4
+144,C,1,eigenvectors,moonshotai/kimi-k2.6,,armC_eigenvectors_kimi-k2.6_rep1_seq144.py,armC_eigenvectors_kimi-k2.6_rep1_seq144.mp4
+145,C,1,eigenvectors,xiaomi/mimo-v2.5-pro,,armC_eigenvectors_mimo-v2.5-pro_rep1_seq145.py,armC_eigenvectors_mimo-v2.5-pro_rep1_seq145.mp4
+147,C,1,eigenvectors,nvidia/nemotron-3-ultra-550b-a55b,,armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147.py,armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147.mp4
+149,C,1,eigenvectors,google/gemma-4-31b-it,,armC_eigenvectors_gemma-4-31b-it_rep1_seq149.py,armC_eigenvectors_gemma-4-31b-it_rep1_seq149.mp4
+150,C,1,eigenvectors,openai/gpt-oss-120b,,armC_eigenvectors_gpt-oss-120b_rep1_seq150.py,armC_eigenvectors_gpt-oss-120b_rep1_seq150.mp4
+151,A,2,derivative of a function in calculus,z-ai/glm-5.3,completed,armA_derivative_glm-5.3_rep2_seq151.py,armA_derivative_glm-5.3_rep2_seq151.mp4
+152,A,2,derivative of a function in calculus,qwen/qwen3.8-flash,failed,,
+153,A,2,derivative of a function in calculus,deepseek/deepseek-v4-flash,failed,,
+154,A,2,derivative of a function in calculus,moonshotai/kimi-k2.6,completed,armA_derivative_kimi-k2.6_rep2_seq154.py,armA_derivative_kimi-k2.6_rep2_seq154.mp4
+155,A,2,derivative of a function in calculus,xiaomi/mimo-v2.5-pro,completed,armA_derivative_mimo-v2.5-pro_rep2_seq155.py,armA_derivative_mimo-v2.5-pro_rep2_seq155.mp4
+156,A,2,derivative of a function in calculus,tencent/hy3,completed,armA_derivative_hy3_rep2_seq156.py,armA_derivative_hy3_rep2_seq156.mp4
+157,A,2,derivative of a function in calculus,nvidia/nemotron-3-ultra-550b-a55b,completed,armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157.py,armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157.mp4
+158,A,2,derivative of a function in calculus,meta/muse-glimmer-30b,failed,,
+159,A,2,derivative of a function in calculus,google/gemma-4-31b-it,failed,,
+160,A,2,derivative of a function in calculus,openai/gpt-oss-120b,failed,,
+161,A,2,backpropagation,z-ai/glm-5.3,failed,,
+162,A,2,backpropagation,qwen/qwen3.8-flash,failed,,
+163,A,2,backpropagation,deepseek/deepseek-v4-flash,completed,armA_backpropagation_deepseek-v4-flash_rep2_seq163.py,armA_backpropagation_deepseek-v4-flash_rep2_seq163.mp4
+164,A,2,backpropagation,moonshotai/kimi-k2.6,failed,,
+165,A,2,backpropagation,xiaomi/mimo-v2.5-pro,failed,,
+166,A,2,backpropagation,tencent/hy3,completed,armA_backpropagation_hy3_rep2_seq166.py,armA_backpropagation_hy3_rep2_seq166.mp4
+167,A,2,backpropagation,nvidia/nemotron-3-ultra-550b-a55b,completed,armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167.py,armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167.mp4
+168,A,2,backpropagation,meta/muse-glimmer-30b,completed,armA_backpropagation_muse-glimmer-30b_rep2_seq168.py,armA_backpropagation_muse-glimmer-30b_rep2_seq168.mp4
+169,A,2,backpropagation,google/gemma-4-31b-it,completed,armA_backpropagation_gemma-4-31b-it_rep2_seq169.py,armA_backpropagation_gemma-4-31b-it_rep2_seq169.mp4
+170,A,2,backpropagation,openai/gpt-oss-120b,failed,,
+171,A,2,Fourier transform,z-ai/glm-5.3,failed,,
+172,A,2,Fourier transform,qwen/qwen3.8-flash,failed,,
+173,A,2,Fourier transform,deepseek/deepseek-v4-flash,completed,armA_fourier_deepseek-v4-flash_rep2_seq173.py,armA_fourier_deepseek-v4-flash_rep2_seq173.mp4
+174,A,2,Fourier transform,moonshotai/kimi-k2.6,failed,,
+175,A,2,Fourier transform,xiaomi/mimo-v2.5-pro,failed,,
+176,A,2,Fourier transform,tencent/hy3,completed,armA_fourier_hy3_rep2_seq176.py,armA_fourier_hy3_rep2_seq176.mp4
+177,A,2,Fourier transform,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+178,A,2,Fourier transform,meta/muse-glimmer-30b,completed,armA_fourier_muse-glimmer-30b_rep2_seq178.py,armA_fourier_muse-glimmer-30b_rep2_seq178.mp4
+179,A,2,Fourier transform,google/gemma-4-31b-it,failed,,
+180,A,2,Fourier transform,openai/gpt-oss-120b,failed,,
+181,A,2,Doppler effect,z-ai/glm-5.3,failed,,
+182,A,2,Doppler effect,qwen/qwen3.8-flash,failed,,
+183,A,2,Doppler effect,deepseek/deepseek-v4-flash,failed,,
+184,A,2,Doppler effect,moonshotai/kimi-k2.6,completed,armA_doppler_kimi-k2.6_rep2_seq184.py,armA_doppler_kimi-k2.6_rep2_seq184.mp4
+185,A,2,Doppler effect,xiaomi/mimo-v2.5-pro,failed,,
+186,A,2,Doppler effect,tencent/hy3,completed,armA_doppler_hy3_rep2_seq186.py,armA_doppler_hy3_rep2_seq186.mp4
+187,A,2,Doppler effect,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+188,A,2,Doppler effect,meta/muse-glimmer-30b,completed,armA_doppler_muse-glimmer-30b_rep2_seq188.py,armA_doppler_muse-glimmer-30b_rep2_seq188.mp4
+189,A,2,Doppler effect,google/gemma-4-31b-it,completed,armA_doppler_gemma-4-31b-it_rep2_seq189.py,armA_doppler_gemma-4-31b-it_rep2_seq189.mp4
+190,A,2,Doppler effect,openai/gpt-oss-120b,failed,,
+191,A,2,eigenvectors,z-ai/glm-5.3,failed,,
+192,A,2,eigenvectors,qwen/qwen3.8-flash,failed,,
+193,A,2,eigenvectors,deepseek/deepseek-v4-flash,failed,,
+194,A,2,eigenvectors,moonshotai/kimi-k2.6,failed,,
+195,A,2,eigenvectors,xiaomi/mimo-v2.5-pro,failed,,
+196,A,2,eigenvectors,tencent/hy3,completed,armA_eigenvectors_hy3_rep2_seq196.py,armA_eigenvectors_hy3_rep2_seq196.mp4
+197,A,2,eigenvectors,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+198,A,2,eigenvectors,meta/muse-glimmer-30b,failed,,
+199,A,2,eigenvectors,google/gemma-4-31b-it,failed,,
+200,A,2,eigenvectors,openai/gpt-oss-120b,failed,,
+201,B,2,derivative of a function in calculus,z-ai/glm-5.3,completed,armB_derivative_glm-5.3_rep2_seq201.py,armB_derivative_glm-5.3_rep2_seq201.mp4
+202,B,2,derivative of a function in calculus,qwen/qwen3.8-flash,completed,armB_derivative_qwen3.8-flash_rep2_seq202.py,armB_derivative_qwen3.8-flash_rep2_seq202.mp4
+203,B,2,derivative of a function in calculus,deepseek/deepseek-v4-flash,completed,armB_derivative_deepseek-v4-flash_rep2_seq203.py,armB_derivative_deepseek-v4-flash_rep2_seq203.mp4
+204,B,2,derivative of a function in calculus,moonshotai/kimi-k2.6,completed,armB_derivative_kimi-k2.6_rep2_seq204.py,armB_derivative_kimi-k2.6_rep2_seq204.mp4
+205,B,2,derivative of a function in calculus,xiaomi/mimo-v2.5-pro,completed,armB_derivative_mimo-v2.5-pro_rep2_seq205.py,armB_derivative_mimo-v2.5-pro_rep2_seq205.mp4
+206,B,2,derivative of a function in calculus,tencent/hy3,failed,,
+207,B,2,derivative of a function in calculus,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+208,B,2,derivative of a function in calculus,meta/muse-glimmer-30b,completed,armB_derivative_muse-glimmer-30b_rep2_seq208.py,armB_derivative_muse-glimmer-30b_rep2_seq208.mp4
+209,B,2,derivative of a function in calculus,google/gemma-4-31b-it,completed,armB_derivative_gemma-4-31b-it_rep2_seq209.py,armB_derivative_gemma-4-31b-it_rep2_seq209.mp4
+210,B,2,derivative of a function in calculus,openai/gpt-oss-120b,failed,,
+211,B,2,backpropagation,z-ai/glm-5.3,completed,armB_backpropagation_glm-5.3_rep2_seq211.py,armB_backpropagation_glm-5.3_rep2_seq211.mp4
+212,B,2,backpropagation,qwen/qwen3.8-flash,failed,,
+213,B,2,backpropagation,deepseek/deepseek-v4-flash,failed,,
+214,B,2,backpropagation,moonshotai/kimi-k2.6,failed,,
+215,B,2,backpropagation,xiaomi/mimo-v2.5-pro,completed,armB_backpropagation_mimo-v2.5-pro_rep2_seq215.py,armB_backpropagation_mimo-v2.5-pro_rep2_seq215.mp4
+216,B,2,backpropagation,tencent/hy3,completed,armB_backpropagation_hy3_rep2_seq216.py,armB_backpropagation_hy3_rep2_seq216.mp4
+217,B,2,backpropagation,nvidia/nemotron-3-ultra-550b-a55b,completed,armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217.py,armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217.mp4
+218,B,2,backpropagation,meta/muse-glimmer-30b,completed,armB_backpropagation_muse-glimmer-30b_rep2_seq218.py,armB_backpropagation_muse-glimmer-30b_rep2_seq218.mp4
+219,B,2,backpropagation,google/gemma-4-31b-it,failed,,
+220,B,2,backpropagation,openai/gpt-oss-120b,failed,,
+221,B,2,Fourier transform,z-ai/glm-5.3,completed,armB_fourier_glm-5.3_rep2_seq221.py,armB_fourier_glm-5.3_rep2_seq221.mp4
+222,B,2,Fourier transform,qwen/qwen3.8-flash,completed,armB_fourier_qwen3.8-flash_rep2_seq222.py,armB_fourier_qwen3.8-flash_rep2_seq222.mp4
+223,B,2,Fourier transform,deepseek/deepseek-v4-flash,completed,armB_fourier_deepseek-v4-flash_rep2_seq223.py,armB_fourier_deepseek-v4-flash_rep2_seq223.mp4
+224,B,2,Fourier transform,moonshotai/kimi-k2.6,completed,armB_fourier_kimi-k2.6_rep2_seq224.py,armB_fourier_kimi-k2.6_rep2_seq224.mp4
+225,B,2,Fourier transform,xiaomi/mimo-v2.5-pro,completed,armB_fourier_mimo-v2.5-pro_rep2_seq225.py,armB_fourier_mimo-v2.5-pro_rep2_seq225.mp4
+226,B,2,Fourier transform,tencent/hy3,completed,armB_fourier_hy3_rep2_seq226.py,armB_fourier_hy3_rep2_seq226.mp4
+227,B,2,Fourier transform,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+228,B,2,Fourier transform,meta/muse-glimmer-30b,completed,armB_fourier_muse-glimmer-30b_rep2_seq228.py,armB_fourier_muse-glimmer-30b_rep2_seq228.mp4
+229,B,2,Fourier transform,google/gemma-4-31b-it,completed,armB_fourier_gemma-4-31b-it_rep2_seq229.py,armB_fourier_gemma-4-31b-it_rep2_seq229.mp4
+230,B,2,Fourier transform,openai/gpt-oss-120b,failed,,
+231,B,2,Doppler effect,z-ai/glm-5.3,completed,armB_doppler_glm-5.3_rep2_seq231.py,armB_doppler_glm-5.3_rep2_seq231.mp4
+232,B,2,Doppler effect,qwen/qwen3.8-flash,failed,,
+233,B,2,Doppler effect,deepseek/deepseek-v4-flash,completed,armB_doppler_deepseek-v4-flash_rep2_seq233.py,armB_doppler_deepseek-v4-flash_rep2_seq233.mp4
+234,B,2,Doppler effect,moonshotai/kimi-k2.6,completed,armB_doppler_kimi-k2.6_rep2_seq234.py,armB_doppler_kimi-k2.6_rep2_seq234.mp4
+235,B,2,Doppler effect,xiaomi/mimo-v2.5-pro,completed,armB_doppler_mimo-v2.5-pro_rep2_seq235.py,armB_doppler_mimo-v2.5-pro_rep2_seq235.mp4
+236,B,2,Doppler effect,tencent/hy3,failed,,
+237,B,2,Doppler effect,nvidia/nemotron-3-ultra-550b-a55b,completed,armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237.py,armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237.mp4
+238,B,2,Doppler effect,meta/muse-glimmer-30b,completed,armB_doppler_muse-glimmer-30b_rep2_seq238.py,armB_doppler_muse-glimmer-30b_rep2_seq238.mp4
+239,B,2,Doppler effect,google/gemma-4-31b-it,completed,armB_doppler_gemma-4-31b-it_rep2_seq239.py,armB_doppler_gemma-4-31b-it_rep2_seq239.mp4
+240,B,2,Doppler effect,openai/gpt-oss-120b,failed,,
+241,B,2,eigenvectors,z-ai/glm-5.3,failed,,
+242,B,2,eigenvectors,qwen/qwen3.8-flash,failed,,
+243,B,2,eigenvectors,deepseek/deepseek-v4-flash,completed,armB_eigenvectors_deepseek-v4-flash_rep2_seq243.py,armB_eigenvectors_deepseek-v4-flash_rep2_seq243.mp4
+244,B,2,eigenvectors,moonshotai/kimi-k2.6,completed,armB_eigenvectors_kimi-k2.6_rep2_seq244.py,armB_eigenvectors_kimi-k2.6_rep2_seq244.mp4
+245,B,2,eigenvectors,xiaomi/mimo-v2.5-pro,completed,armB_eigenvectors_mimo-v2.5-pro_rep2_seq245.py,armB_eigenvectors_mimo-v2.5-pro_rep2_seq245.mp4
+246,B,2,eigenvectors,tencent/hy3,failed,,
+247,B,2,eigenvectors,nvidia/nemotron-3-ultra-550b-a55b,failed,,
+248,B,2,eigenvectors,meta/muse-glimmer-30b,failed,,
+249,B,2,eigenvectors,google/gemma-4-31b-it,completed,armB_eigenvectors_gemma-4-31b-it_rep2_seq249.py,armB_eigenvectors_gemma-4-31b-it_rep2_seq249.mp4
+250,B,2,eigenvectors,openai/gpt-oss-120b,failed,,
+254,C,2,derivative of a function in calculus,moonshotai/kimi-k2.6,,armC_derivative_kimi-k2.6_rep2_seq254.py,armC_derivative_kimi-k2.6_rep2_seq254.mp4
+255,C,2,derivative of a function in calculus,xiaomi/mimo-v2.5-pro,,armC_derivative_mimo-v2.5-pro_rep2_seq255.py,armC_derivative_mimo-v2.5-pro_rep2_seq255.mp4
+258,C,2,derivative of a function in calculus,meta/muse-glimmer-30b,,armC_derivative_muse-glimmer-30b_rep2_seq258.py,armC_derivative_muse-glimmer-30b_rep2_seq258.mp4
+259,C,2,derivative of a function in calculus,google/gemma-4-31b-it,,armC_derivative_gemma-4-31b-it_rep2_seq259.py,armC_derivative_gemma-4-31b-it_rep2_seq259.mp4
+261,C,2,backpropagation,z-ai/glm-5.3,,armC_backpropagation_glm-5.3_rep2_seq261.py,armC_backpropagation_glm-5.3_rep2_seq261.mp4
+263,C,2,backpropagation,deepseek/deepseek-v4-flash,,armC_backpropagation_deepseek-v4-flash_rep2_seq263.py,armC_backpropagation_deepseek-v4-flash_rep2_seq263.mp4
+264,C,2,backpropagation,moonshotai/kimi-k2.6,,armC_backpropagation_kimi-k2.6_rep2_seq264.py,armC_backpropagation_kimi-k2.6_rep2_seq264.mp4
+265,C,2,backpropagation,xiaomi/mimo-v2.5-pro,,armC_backpropagation_mimo-v2.5-pro_rep2_seq265.py,armC_backpropagation_mimo-v2.5-pro_rep2_seq265.mp4
+271,C,2,Fourier transform,z-ai/glm-5.3,,armC_fourier_glm-5.3_rep2_seq271.py,armC_fourier_glm-5.3_rep2_seq271.mp4
+273,C,2,Fourier transform,deepseek/deepseek-v4-flash,,armC_fourier_deepseek-v4-flash_rep2_seq273.py,armC_fourier_deepseek-v4-flash_rep2_seq273.mp4
+274,C,2,Fourier transform,moonshotai/kimi-k2.6,,armC_fourier_kimi-k2.6_rep2_seq274.py,armC_fourier_kimi-k2.6_rep2_seq274.mp4
+275,C,2,Fourier transform,xiaomi/mimo-v2.5-pro,,armC_fourier_mimo-v2.5-pro_rep2_seq275.py,armC_fourier_mimo-v2.5-pro_rep2_seq275.mp4
+276,C,2,Fourier transform,tencent/hy3,,armC_fourier_hy3_rep2_seq276.py,armC_fourier_hy3_rep2_seq276.mp4
+277,C,2,Fourier transform,nvidia/nemotron-3-ultra-550b-a55b,,armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277.py,armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277.mp4
+278,C,2,Fourier transform,meta/muse-glimmer-30b,,armC_fourier_muse-glimmer-30b_rep2_seq278.py,armC_fourier_muse-glimmer-30b_rep2_seq278.mp4
+279,C,2,Fourier transform,google/gemma-4-31b-it,,armC_fourier_gemma-4-31b-it_rep2_seq279.py,armC_fourier_gemma-4-31b-it_rep2_seq279.mp4
+281,C,2,Doppler effect,z-ai/glm-5.3,,armC_doppler_glm-5.3_rep2_seq281.py,armC_doppler_glm-5.3_rep2_seq281.mp4
+284,C,2,Doppler effect,moonshotai/kimi-k2.6,,armC_doppler_kimi-k2.6_rep2_seq284.py,armC_doppler_kimi-k2.6_rep2_seq284.mp4
+285,C,2,Doppler effect,xiaomi/mimo-v2.5-pro,,armC_doppler_mimo-v2.5-pro_rep2_seq285.py,armC_doppler_mimo-v2.5-pro_rep2_seq285.mp4
+288,C,2,Doppler effect,meta/muse-glimmer-30b,,armC_doppler_muse-glimmer-30b_rep2_seq288.py,armC_doppler_muse-glimmer-30b_rep2_seq288.mp4
+289,C,2,Doppler effect,google/gemma-4-31b-it,,armC_doppler_gemma-4-31b-it_rep2_seq289.py,armC_doppler_gemma-4-31b-it_rep2_seq289.mp4
+290,C,2,Doppler effect,openai/gpt-oss-120b,,armC_doppler_gpt-oss-120b_rep2_seq290.py,armC_doppler_gpt-oss-120b_rep2_seq290.mp4
+291,C,2,eigenvectors,z-ai/glm-5.3,,armC_eigenvectors_glm-5.3_rep2_seq291.py,armC_eigenvectors_glm-5.3_rep2_seq291.mp4
+293,C,2,eigenvectors,deepseek/deepseek-v4-flash,,armC_eigenvectors_deepseek-v4-flash_rep2_seq293.py,armC_eigenvectors_deepseek-v4-flash_rep2_seq293.mp4
+294,C,2,eigenvectors,moonshotai/kimi-k2.6,,armC_eigenvectors_kimi-k2.6_rep2_seq294.py,armC_eigenvectors_kimi-k2.6_rep2_seq294.mp4
+295,C,2,eigenvectors,xiaomi/mimo-v2.5-pro,,armC_eigenvectors_mimo-v2.5-pro_rep2_seq295.py,armC_eigenvectors_mimo-v2.5-pro_rep2_seq295.mp4
+298,C,2,eigenvectors,meta/muse-glimmer-30b,,armC_eigenvectors_muse-glimmer-30b_rep2_seq298.py,armC_eigenvectors_muse-glimmer-30b_rep2_seq298.mp4
+299,C,2,eigenvectors,google/gemma-4-31b-it,,armC_eigenvectors_gemma-4-31b-it_rep2_seq299.py,armC_eigenvectors_gemma-4-31b-it_rep2_seq299.mp4
