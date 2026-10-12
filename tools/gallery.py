@@ -195,7 +195,7 @@ PAGE = r"""<!doctype html>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>ConceptCast benchmark artifacts</title>
 <meta name="description" content="Rendered videos from the ConceptCast ablation benchmark, each beside the Manim script that generated it.">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self'; script-src 'self' __CSP_SCRIPT_HASH__; connect-src 'self'; base-uri 'none'; form-action 'none'">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; media-src 'self'; font-src 'self'; style-src 'self' __CSP_STYLE_HASH__; script-src 'self' __CSP_SCRIPT_HASH__; connect-src 'self'; base-uri 'none'; form-action 'none'">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%233fa796'/%3E%3Cpath d='M13 10l9 6-9 6z' fill='%230c0f13'/%3E%3C/svg%3E">
 <link rel="preload" href="gallery/fonts/geist-latin.woff2" as="font" type="font/woff2" crossorigin>
 <link rel="preload" href="gallery/fonts/geist-mono-latin.woff2" as="font" type="font/woff2" crossorigin>
@@ -781,15 +781,22 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
             .replace("__TOTAL_DUR__", f"{total_dur / 60:.0f}")
             .replace("__RELEASE__", RELEASE)
             .replace("__REPO__", f"https://github.com/{REPO}"))
-    # The page carries one executable inline script and no inline styles, so the policy can
-    # name that script by hash and keep 'unsafe-inline' out of the page entirely.
+    # The page carries one executable inline script and one inline style sheet, and nothing
+    # else inline, so the policy can name both by hash and keep 'unsafe-inline' out entirely.
+    # Both must be hashed. Naming only the script leaves the style sheet blocked, which
+    # renders the whole page unstyled.
     # frame-ancestors stays out too: a meta element cannot carry it and the browser logs a
     # console warning, which Lighthouse counts against the page.
+    def _hash(block) -> str:
+        digest = hashlib.sha256(block.encode("utf-8")).digest()
+        return "'sha256-" + base64.b64encode(digest).decode("ascii") + "'"
+
+    style = re.search(r"<style>(.*?)</style>", page, re.S)
     script = re.search(r"<script>(.*?)</script>", page, re.S)
-    if not script:
-        raise SystemExit("inline script not found, cannot compute the CSP hash")
-    digest = hashlib.sha256(script.group(1).encode("utf-8")).digest()
-    page = page.replace("__CSP_SCRIPT_HASH__", "'sha256-" + base64.b64encode(digest).decode("ascii") + "'")
+    if not style or not script:
+        raise SystemExit("inline style or script not found, cannot compute the CSP hashes")
+    page = (page.replace("__CSP_STYLE_HASH__", _hash(style.group(1)))
+                .replace("__CSP_SCRIPT_HASH__", _hash(script.group(1))))
     leftover = [tok for tok in page.split() if tok.startswith("__") and tok.endswith("__")]
     if leftover:
         raise SystemExit(f"unreplaced placeholder: {leftover[:3]}")
