@@ -117,6 +117,7 @@ PAGE = """<!DOCTYPE html>
   const cards = Array.from(document.querySelectorAll('.card'));
   const count = document.getElementById('count');
   const heads = Array.from(document.querySelectorAll('[data-head]'));
+  const armHeads = Array.from(document.querySelectorAll('[data-arm-head]'));
   function apply() {{
     const q = input.value.trim().toLowerCase();
     let shown = 0;
@@ -132,6 +133,11 @@ PAGE = """<!DOCTYPE html>
       const sect = h.nextElementSibling;
       if (sect && sect.classList.contains('grid')) sect.classList.toggle('hidden', !any);
     }}
+    for (const h of armHeads) {{
+      const arm = h.dataset.armHead;
+      const any = cards.some(c => c.dataset.arm === arm && !c.classList.contains('hidden'));
+      h.classList.toggle('hidden', !any);
+    }}
     count.textContent = shown === cards.length
       ? `${{cards.length}} jobs`
       : `${{shown}} of ${{cards.length}} jobs`;
@@ -143,7 +149,7 @@ PAGE = """<!DOCTYPE html>
 </html>
 """
 
-CARD = """    <article class="card" data-key="{key}" data-group="{group}">
+CARD = """    <article class="card" data-key="{key}" data-group="{group}" data-arm="{arm}">
       <video controls preload="none" src="{video}"></video>
       <div class="name">{job}</div>
       <div class="meta">{topic} &middot; {model} &middot; rep {rep} &middot; job {seq}</div>
@@ -164,8 +170,8 @@ def main() -> None:
     sections: list[str] = []
     for arm in sorted({r["arm"] for r in rows}):
         arm_rows = [r for r in rows if r["arm"] == arm]
-        sections.append(f'  <h2 data-head="arm_{arm}">{ARM_TITLES[arm]}</h2>')
-        sections.append(f'  <p class="armnote" data-head="arm_{arm}">{ARM_NOTES[arm]} '
+        sections.append(f'  <h2 data-arm-head="arm_{arm}">{ARM_TITLES[arm]}</h2>')
+        sections.append(f'  <p class="armnote" data-arm-head="arm_{arm}">{ARM_NOTES[arm]} '
                         f'{len(arm_rows)} of the jobs in this arm produced a video.</p>')
         topics = [t for t in TOPIC_ORDER if any(slug(r["topic"]) == t for r in arm_rows)]
         for topic in topics:
@@ -178,8 +184,9 @@ def main() -> None:
                 folder = str(pathlib.PurePosixPath(r["code_file"]).parent)
                 job = folder.split("/")[-1]
                 sections.append(CARD.format(
-                    key=job.lower(),
+                    key=" ".join([job, f"arm {arm}", f"arm{arm}", r["topic"]]).lower(),
                     group=group,
+                    arm=f"arm_{arm}",
                     video=html.escape(f"artifacts/{r['video']}"),
                     script=html.escape(f"artifacts/{r['code_file']}"),
                     folder=html.escape(f"artifacts/{folder}"),
