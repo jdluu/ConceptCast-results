@@ -14,5 +14,10 @@ __pycache__/
 # Live run logs (audit trail stays local; data lives in traces/ + data/)
 benchmark_run.log
 
+# SQLite runtime sidecars. They are recreated whenever the database is opened; the
+# committed snapshot in data/conceptcast.db is the artifact.
+data/*.db-shm
+data/*.db-wal
+
 # Raw render work dirs (final videos are in artifacts/; partials are transient)
 traces/renders/
