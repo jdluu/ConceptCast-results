@@ -169,6 +169,7 @@ def load_jobs() -> list[dict]:
             "still": m["still"],
             "folder": f"artifacts/{folder}",
             "github_folder": f"https://github.com/{REPO}/tree/main/artifacts/{folder}",
+            "github_script": f"https://github.com/{REPO}/blob/main/artifacts/{folder}/scene.py",
         })
     jobs.sort(key=lambda j: (ARM_ORDER.index(j["arm"]), j["topic"], j["model"], j["rep"], j["seq"]))
     # other runs of the same topic and model, so a reader can compare arms
@@ -412,7 +413,7 @@ __SECTIONS__
       <div class="dlinks">
         <a id="dgh" href="#">Open job folder</a>
         <a id="dvideo-raw" href="#">Download video</a>
-        <a id="dscript" href="#">Open script</a>
+        <a id="dscript" href="#" target="_blank" rel="noopener">Open script</a>
         <button type="button" id="dcopy">Copy link</button>
       </div>
       <div class="cmp" id="dcmpwrap">
@@ -544,7 +545,7 @@ __SECTIONS__
     dvideo.src = job.video;
     document.getElementById('dgh').href = job.github_folder;
     document.getElementById('dvideo-raw').href = job.video;
-    document.getElementById('dscript').href = job.code;
+    document.getElementById('dscript').href = job.github_script;
     details.open = false;
     dcmp.replaceChildren();          // clearing only; children are built with createElement
     dcmpwrap.hidden = job.compare.length === 0;
@@ -651,7 +652,7 @@ ITEM = """      <article class="item" data-job="{job}" data-arm="arm_{arm}" data
         <div class="title"><a href="#{job}">{topic_label} <span class="sep">&middot;</span> {model}</a></div>
         <div class="facts2">arm {arm} &middot; rep {rep} &middot; {duration}</div>
         <div class="jobid" title="{job}">{job}</div>
-        <div class="actions"><a href="{code}">script</a><a href="{video}">video</a></div>
+        <div class="actions"><a href="{gh_script}" target="_blank" rel="noopener">script</a><a href="{video}">video</a></div>
       </article>
 """
 
@@ -678,7 +679,7 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
             search=html.escape(j["search"], quote=True), still=j["still"],
             topic_label=html.escape(j["topic_label"]), model=html.escape(j["model"]),
             rep=j["rep"], duration=human_duration(j["duration"]),
-            code=j["code"], video=j["video"],
+            code=j["code"], video=j["video"], gh_script=j["github_script"],
         ) for j in arm_jobs)
         sections.append(SECTION.format(
             arm=arm, title=ARM_TITLES[arm], note=ARM_NOTES[arm], made=len(arm_jobs),
