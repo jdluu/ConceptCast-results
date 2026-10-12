@@ -230,13 +230,16 @@ a:hover{color:var(--accent)}
 .tools{display:flex;align-items:center;gap:10px;margin-left:auto;min-width:0}
 input[type=search],select{font:inherit;color:var(--fg);background:var(--panel);
      border:1px solid var(--line);border-radius:var(--radius);padding:0 10px;height:38px;min-width:0}
-input[type=search]{width:300px}
+input[type=search]{width:230px}
+#topic{width:132px}
+#model{width:200px}
 input[type=search]::placeholder{color:var(--muted);opacity:1}
 .seg{display:flex;border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:var(--panel);height:38px}
 .seg button{font:inherit;color:var(--muted);background:none;border:0;padding:0 13px;cursor:pointer;
             display:inline-flex;align-items:center}
 .seg button+button{border-left:1px solid var(--line)}
 .seg button[aria-pressed=true]{background:var(--panel-2);color:var(--fg)}
+.seg button .narrow{display:none}
 .count{color:var(--muted);font-size:13px;white-space:nowrap;font-variant-numeric:tabular-nums;
        text-align:right;min-width:86px}
 
@@ -324,14 +327,21 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
 .dnav button:disabled{opacity:.4;cursor:default}
 .dnav .hint{color:var(--muted);font-size:12.5px}
 
-@media (max-width:1180px){ input[type=search]{width:200px} }
-@media (max-width:900px){
+@media (max-width:1200px){
   .bar .wrap{flex-wrap:wrap;padding-top:10px;padding-bottom:10px;min-height:0}
   .tools{width:100%;margin-left:0;flex-wrap:wrap}
-  input[type=search]{width:100%}
   .count{margin-left:auto}
 }
 @media (max-width:760px){
+  input[type=search]{flex:1 1 auto;width:auto;min-width:0}
+  .tools{gap:8px}
+  .count{margin-left:0;text-align:left;min-width:0;flex:0 0 auto}
+  .seg{width:auto}
+  .seg button{padding:0 10px}
+  .seg button .wide{display:none}
+  .seg button .narrow{display:inline}
+  #topic,#model{flex:1 1 0;width:auto;min-width:0}
+  .brand span{display:none}
   .intro{padding-top:26px}
   h1{font-size:24px}
   .grid{grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:12px}
@@ -349,9 +359,10 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
     <div class="brand">ConceptCast<span>benchmark artifacts</span></div>
     <div class="tools">
       <label class="skip" for="filter">Filter jobs</label>
-      <input type="search" id="filter" placeholder="Filter by topic, model, arm, or job" autocomplete="off">
+      <input type="search" id="filter" placeholder="Filter jobs" autocomplete="off"
+             title="Matches job name, topic, model, arm, repetition or job number">
       <div class="seg" role="group" aria-label="Filter by arm">
-        <button type="button" data-arm="all" aria-pressed="true">All arms</button>
+        <button type="button" data-arm="all" aria-pressed="true"><span class="wide">All arms</span><span class="narrow">All</span></button>
         <button type="button" data-arm="A" aria-pressed="false">A</button>
         <button type="button" data-arm="B" aria-pressed="false">B</button>
         <button type="button" data-arm="C" aria-pressed="false">C</button>
@@ -360,6 +371,11 @@ pre{margin:0;padding:14px 18px;font:12.5px/1.55 var(--mono);overflow-x:auto;whit
       <select id="topic">
         <option value="all">All topics</option>
 __TOPIC_OPTIONS__
+      </select>
+      <label class="skip" for="model">Filter by model</label>
+      <select id="model">
+        <option value="all">All models</option>
+__MODEL_OPTIONS__
       </select>
       <span class="count" id="count" aria-live="polite"></span>
     </div>
@@ -445,19 +461,24 @@ __SECTIONS__
   var sections = Array.prototype.slice.call(document.querySelectorAll('section.arm'));
   var filter = document.getElementById('filter');
   var topicSel = document.getElementById('topic');
+  var modelSel = document.getElementById('model');
   var count = document.getElementById('count');
   var empty = document.getElementById('empty');
   var arm = 'all';
   var visible = items.slice();
 
-  function apply() {
+  function matches(el) {
     var q = filter.value.trim().toLowerCase();
-    var topic = topicSel.value;
+    return (!q || el.dataset.search.indexOf(q) !== -1)
+        && (arm === 'all' || el.dataset.arm === 'arm_' + arm)
+        && (topicSel.value === 'all' || el.dataset.topic === topicSel.value)
+        && (modelSel.value === 'all' || el.dataset.model === modelSel.value);
+  }
+
+  function apply() {
     visible = [];
     items.forEach(function (el) {
-      var ok = (!q || el.dataset.search.indexOf(q) !== -1)
-            && (arm === 'all' || el.dataset.arm === 'arm_' + arm)
-            && (topic === 'all' || el.dataset.topic === topic);
+      var ok = matches(el);
       el.hidden = !ok;
       if (ok) visible.push(el);
     });
@@ -468,9 +489,20 @@ __SECTIONS__
     count.textContent = n === total ? total + ' videos' : n + ' of ' + total;
     empty.classList.toggle('on', n === 0);
   }
+  function clearAll() {
+    filter.value = '';
+    topicSel.value = 'all';
+    modelSel.value = 'all';
+    arm = 'all';
+    document.querySelectorAll('.seg button').forEach(function (o) {
+      o.setAttribute('aria-pressed', String(o.dataset.arm === 'all'));
+    });
+    apply();
+  }
 
   filter.addEventListener('input', apply);
   topicSel.addEventListener('change', apply);
+  modelSel.addEventListener('change', apply);
   document.querySelectorAll('.seg button').forEach(function (b) {
     b.addEventListener('click', function () {
       arm = b.dataset.arm;
@@ -480,13 +512,7 @@ __SECTIONS__
       apply();
     });
   });
-  document.getElementById('clear').addEventListener('click', function () {
-    filter.value = ''; topicSel.value = 'all'; arm = 'all';
-    document.querySelectorAll('.seg button').forEach(function (o) {
-      o.setAttribute('aria-pressed', String(o.dataset.arm === 'all'));
-    });
-    apply();
-  });
+  document.getElementById('clear').addEventListener('click', clearAll);
 
   var dlg = document.getElementById('detail');
   var dvideo = document.getElementById('dvideo');
@@ -644,7 +670,7 @@ __SECTIONS__
 </html>
 """
 
-ITEM = """      <article class="item" data-job="{job}" data-arm="arm_{arm}" data-topic="{topic}" data-search="{search}">
+ITEM = """      <article class="item" data-job="{job}" data-arm="arm_{arm}" data-topic="{topic}" data-model="{model_plain}" data-search="{search}">
         <a class="shot" href="#{job}" aria-label="Open {job}">
           <img src="{still}" alt="" width="480" height="270" loading="lazy" decoding="async">
           <span class="play" aria-hidden="true"><i></i></span>
@@ -678,6 +704,7 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
             job=j["job"], arm=arm, topic=j["topic"],
             search=html.escape(j["search"], quote=True), still=j["still"],
             topic_label=html.escape(j["topic_label"]), model=html.escape(j["model"]),
+            model_plain=html.escape(j["model"], quote=True),
             rep=j["rep"], duration=human_duration(j["duration"]),
             video=j["video"], gh_script=j["github_script"],
         ) for j in arm_jobs)
@@ -691,10 +718,14 @@ def build_page(jobs: list[dict], attempted: dict[str, int]) -> str:
     payload = {j["job"]: {k: v for k, v in j.items() if k != "search"} for j in jobs}
     options = "\n".join(f'        <option value="{t}">{TOPIC_LABELS[t]}</option>'
                         for t in TOPIC_ORDER)
+    models = sorted({j["model"] for j in jobs})
+    model_options = "\n".join(f'        <option value="{html.escape(m, quote=True)}">'
+                              f'{html.escape(m)}</option>' for m in models)
 
     page = (PAGE
             .replace("__SECTIONS__", "\n\n".join(sections))
             .replace("__TOPIC_OPTIONS__", options)
+            .replace("__MODEL_OPTIONS__", model_options)
             .replace("__JOBS__", json.dumps(payload, separators=(",", ":"), sort_keys=True))
             .replace("__ARM_NOTES__", json.dumps({a: ARM_NOTES[a] for a in ARM_ORDER}))
             .replace("__TOTAL_JOBS__", str(len(jobs)))
