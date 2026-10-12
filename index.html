@@ -1,0 +1,1876 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ConceptCast benchmark artifacts</title>
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #ffffff; --fg: #1b1f24; --muted: #5b6672; --line: #d8dee6;
+    --card: #f7f9fb; --accent: #1f6feb;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --bg: #0d1117; --fg: #e6edf3; --muted: #9198a1; --line: #30363d;
+             --card: #161b22; --accent: #6cb6ff; }
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; padding: 2rem 1.25rem 4rem; background: var(--bg); color: var(--fg);
+         font: 15px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 1180px; margin: 0 auto; }
+  h1 { font-size: 1.6rem; margin: 0 0 .35rem; }
+  p.lead { color: var(--muted); margin: 0 0 1.5rem; max-width: 70ch; }
+  a { color: var(--accent); }
+  .controls { display: flex; flex-wrap: wrap; gap: .6rem; align-items: center;
+               padding: .85rem 0 1.25rem; border-bottom: 1px solid var(--line); margin-bottom: 1.5rem; }
+  input[type=search] { flex: 1 1 260px; max-width: 380px; padding: .5rem .7rem; font: inherit;
+                        color: var(--fg); background: var(--card);
+                        border: 1px solid var(--line); border-radius: 6px; }
+  .count { color: var(--muted); font-variant-numeric: tabular-nums; }
+  h2 { font-size: 1.15rem; margin: 2.25rem 0 .2rem; }
+  h2:first-of-type { margin-top: 0; }
+  .armnote { color: var(--muted); margin: 0 0 .4rem; max-width: 78ch; }
+  h3 { font-size: .82rem; text-transform: uppercase; letter-spacing: .06em;
+        color: var(--muted); margin: 1.5rem 0 .6rem; }
+  .grid { display: grid; gap: 1rem; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 8px;
+           padding: .7rem; display: flex; flex-direction: column; gap: .55rem; }
+  video { width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 5px; display: block; }
+  .name { font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .78rem;
+           word-break: break-all; }
+  .links { display: flex; gap: .9rem; flex-wrap: wrap; font-size: .84rem; }
+  .meta { color: var(--muted); font-size: .8rem; }
+  .hidden { display: none; }
+  footer { margin-top: 3rem; padding-top: 1rem; border-top: 1px solid var(--line);
+            color: var(--muted); font-size: .85rem; }
+</style>
+</head>
+<body>
+<main>
+  <h1>ConceptCast benchmark artifacts</h1>
+  <p class="lead">Every job that produced a video, grouped by arm and topic. Each card plays
+  the rendered video beside a link to the Manim script that generated it. GitHub's file view
+  cannot play these videos, which is why this page exists; the files themselves live under
+  <a href="artifacts/">artifacts/</a>, one folder per job, and the bulk archives are on the
+  <a href="https://github.com/jdluu/ConceptCast-results/releases/tag/artifacts-v1">artifacts-v1 release</a>.</p>
+
+  <div class="controls">
+    <input type="search" id="filter" placeholder="Filter by topic, model, arm, or job number" aria-label="Filter jobs">
+    <span class="count" id="count"></span>
+  </div>
+
+  <div id="cards">
+  <h2 data-head="arm_A">Arm A - Monolithic Baseline</h2>
+  <p class="armnote" data-head="arm_A">One generation, rendered as produced. No retrieval, verification, or repair. 36 of the jobs in this arm produced a video.</p>
+  <h3 data-head="arm_A_derivative">derivative <span class="count">(7)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="arma_derivative_kimi-k2.6_rep1_seq004" data-group="arm_A_derivative">
+      <video controls preload="none" src="artifacts/arm_A/armA_derivative_kimi-k2.6_rep1_seq004/video.mp4"></video>
+      <div class="name">armA_derivative_kimi-k2.6_rep1_seq004</div>
+      <div class="meta">derivative of a function in calculus &middot; kimi-k2.6 &middot; rep 1 &middot; job 4</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_derivative_kimi-k2.6_rep1_seq004/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_derivative_kimi-k2.6_rep1_seq004">job folder</a>
+        <a href="artifacts/arm_A/armA_derivative_kimi-k2.6_rep1_seq004/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_derivative_hy3_rep1_seq006" data-group="arm_A_derivative">
+      <video controls preload="none" src="artifacts/arm_A/armA_derivative_hy3_rep1_seq006/video.mp4"></video>
+      <div class="name">armA_derivative_hy3_rep1_seq006</div>
+      <div class="meta">derivative of a function in calculus &middot; hy3 &middot; rep 1 &middot; job 6</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_derivative_hy3_rep1_seq006/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_derivative_hy3_rep1_seq006">job folder</a>
+        <a href="artifacts/arm_A/armA_derivative_hy3_rep1_seq006/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_derivative_glm-5.3_rep2_seq151" data-group="arm_A_derivative">
+      <video controls preload="none" src="artifacts/arm_A/armA_derivative_glm-5.3_rep2_seq151/video.mp4"></video>
+      <div class="name">armA_derivative_glm-5.3_rep2_seq151</div>
+      <div class="meta">derivative of a function in calculus &middot; glm-5.3 &middot; rep 2 &middot; job 151</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_derivative_glm-5.3_rep2_seq151/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_derivative_glm-5.3_rep2_seq151">job folder</a>
+        <a href="artifacts/arm_A/armA_derivative_glm-5.3_rep2_seq151/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_derivative_kimi-k2.6_rep2_seq154" data-group="arm_A_derivative">
+      <video controls preload="none" src="artifacts/arm_A/armA_derivative_kimi-k2.6_rep2_seq154/video.mp4"></video>
+      <div class="name">armA_derivative_kimi-k2.6_rep2_seq154</div>
+      <div class="meta">derivative of a function in calculus &middot; kimi-k2.6 &middot; rep 2 &middot; job 154</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_derivative_kimi-k2.6_rep2_seq154/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_derivative_kimi-k2.6_rep2_seq154">job folder</a>
+        <a href="artifacts/arm_A/armA_derivative_kimi-k2.6_rep2_seq154/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_derivative_mimo-v2.5-pro_rep2_seq155" data-group="arm_A_derivative">
+      <video controls preload="none" src="artifacts/arm_A/armA_derivative_mimo-v2.5-pro_rep2_seq155/video.mp4"></video>
+      <div class="name">armA_derivative_mimo-v2.5-pro_rep2_seq155</div>
+      <div class="meta">derivative of a function in calculus &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 155</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_derivative_mimo-v2.5-pro_rep2_seq155/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_derivative_mimo-v2.5-pro_rep2_seq155">job folder</a>
+        <a href="artifacts/arm_A/armA_derivative_mimo-v2.5-pro_rep2_seq155/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_derivative_hy3_rep2_seq156" data-group="arm_A_derivative">
+      <video controls preload="none" src="artifacts/arm_A/armA_derivative_hy3_rep2_seq156/video.mp4"></video>
+      <div class="name">armA_derivative_hy3_rep2_seq156</div>
+      <div class="meta">derivative of a function in calculus &middot; hy3 &middot; rep 2 &middot; job 156</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_derivative_hy3_rep2_seq156/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_derivative_hy3_rep2_seq156">job folder</a>
+        <a href="artifacts/arm_A/armA_derivative_hy3_rep2_seq156/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157" data-group="arm_A_derivative">
+      <video controls preload="none" src="artifacts/arm_A/armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157/video.mp4"></video>
+      <div class="name">armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157</div>
+      <div class="meta">derivative of a function in calculus &middot; nemotron-3-ultra-550b-a55b &middot; rep 2 &middot; job 157</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157">job folder</a>
+        <a href="artifacts/arm_A/armA_derivative_nemotron-3-ultra-550b-a55b_rep2_seq157/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_A_backpropagation">backpropagation <span class="count">(7)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="arma_backpropagation_kimi-k2.6_rep1_seq014" data-group="arm_A_backpropagation">
+      <video controls preload="none" src="artifacts/arm_A/armA_backpropagation_kimi-k2.6_rep1_seq014/video.mp4"></video>
+      <div class="name">armA_backpropagation_kimi-k2.6_rep1_seq014</div>
+      <div class="meta">backpropagation &middot; kimi-k2.6 &middot; rep 1 &middot; job 14</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_backpropagation_kimi-k2.6_rep1_seq014/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_backpropagation_kimi-k2.6_rep1_seq014">job folder</a>
+        <a href="artifacts/arm_A/armA_backpropagation_kimi-k2.6_rep1_seq014/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_backpropagation_hy3_rep1_seq016" data-group="arm_A_backpropagation">
+      <video controls preload="none" src="artifacts/arm_A/armA_backpropagation_hy3_rep1_seq016/video.mp4"></video>
+      <div class="name">armA_backpropagation_hy3_rep1_seq016</div>
+      <div class="meta">backpropagation &middot; hy3 &middot; rep 1 &middot; job 16</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_backpropagation_hy3_rep1_seq016/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_backpropagation_hy3_rep1_seq016">job folder</a>
+        <a href="artifacts/arm_A/armA_backpropagation_hy3_rep1_seq016/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_backpropagation_deepseek-v4-flash_rep2_seq163" data-group="arm_A_backpropagation">
+      <video controls preload="none" src="artifacts/arm_A/armA_backpropagation_deepseek-v4-flash_rep2_seq163/video.mp4"></video>
+      <div class="name">armA_backpropagation_deepseek-v4-flash_rep2_seq163</div>
+      <div class="meta">backpropagation &middot; deepseek-v4-flash &middot; rep 2 &middot; job 163</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_backpropagation_deepseek-v4-flash_rep2_seq163/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_backpropagation_deepseek-v4-flash_rep2_seq163">job folder</a>
+        <a href="artifacts/arm_A/armA_backpropagation_deepseek-v4-flash_rep2_seq163/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_backpropagation_hy3_rep2_seq166" data-group="arm_A_backpropagation">
+      <video controls preload="none" src="artifacts/arm_A/armA_backpropagation_hy3_rep2_seq166/video.mp4"></video>
+      <div class="name">armA_backpropagation_hy3_rep2_seq166</div>
+      <div class="meta">backpropagation &middot; hy3 &middot; rep 2 &middot; job 166</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_backpropagation_hy3_rep2_seq166/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_backpropagation_hy3_rep2_seq166">job folder</a>
+        <a href="artifacts/arm_A/armA_backpropagation_hy3_rep2_seq166/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167" data-group="arm_A_backpropagation">
+      <video controls preload="none" src="artifacts/arm_A/armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167/video.mp4"></video>
+      <div class="name">armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167</div>
+      <div class="meta">backpropagation &middot; nemotron-3-ultra-550b-a55b &middot; rep 2 &middot; job 167</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167">job folder</a>
+        <a href="artifacts/arm_A/armA_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq167/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_backpropagation_muse-glimmer-30b_rep2_seq168" data-group="arm_A_backpropagation">
+      <video controls preload="none" src="artifacts/arm_A/armA_backpropagation_muse-glimmer-30b_rep2_seq168/video.mp4"></video>
+      <div class="name">armA_backpropagation_muse-glimmer-30b_rep2_seq168</div>
+      <div class="meta">backpropagation &middot; muse-glimmer-30b &middot; rep 2 &middot; job 168</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_backpropagation_muse-glimmer-30b_rep2_seq168/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_backpropagation_muse-glimmer-30b_rep2_seq168">job folder</a>
+        <a href="artifacts/arm_A/armA_backpropagation_muse-glimmer-30b_rep2_seq168/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_backpropagation_gemma-4-31b-it_rep2_seq169" data-group="arm_A_backpropagation">
+      <video controls preload="none" src="artifacts/arm_A/armA_backpropagation_gemma-4-31b-it_rep2_seq169/video.mp4"></video>
+      <div class="name">armA_backpropagation_gemma-4-31b-it_rep2_seq169</div>
+      <div class="meta">backpropagation &middot; gemma-4-31b-it &middot; rep 2 &middot; job 169</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_backpropagation_gemma-4-31b-it_rep2_seq169/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_backpropagation_gemma-4-31b-it_rep2_seq169">job folder</a>
+        <a href="artifacts/arm_A/armA_backpropagation_gemma-4-31b-it_rep2_seq169/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_A_fourier">fourier <span class="count">(5)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="arma_fourier_glm-5.3_rep1_seq021" data-group="arm_A_fourier">
+      <video controls preload="none" src="artifacts/arm_A/armA_fourier_glm-5.3_rep1_seq021/video.mp4"></video>
+      <div class="name">armA_fourier_glm-5.3_rep1_seq021</div>
+      <div class="meta">Fourier transform &middot; glm-5.3 &middot; rep 1 &middot; job 21</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_fourier_glm-5.3_rep1_seq021/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_fourier_glm-5.3_rep1_seq021">job folder</a>
+        <a href="artifacts/arm_A/armA_fourier_glm-5.3_rep1_seq021/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_fourier_deepseek-v4-flash_rep1_seq023" data-group="arm_A_fourier">
+      <video controls preload="none" src="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep1_seq023/video.mp4"></video>
+      <div class="name">armA_fourier_deepseek-v4-flash_rep1_seq023</div>
+      <div class="meta">Fourier transform &middot; deepseek-v4-flash &middot; rep 1 &middot; job 23</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep1_seq023/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep1_seq023">job folder</a>
+        <a href="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep1_seq023/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_fourier_deepseek-v4-flash_rep2_seq173" data-group="arm_A_fourier">
+      <video controls preload="none" src="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep2_seq173/video.mp4"></video>
+      <div class="name">armA_fourier_deepseek-v4-flash_rep2_seq173</div>
+      <div class="meta">Fourier transform &middot; deepseek-v4-flash &middot; rep 2 &middot; job 173</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep2_seq173/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep2_seq173">job folder</a>
+        <a href="artifacts/arm_A/armA_fourier_deepseek-v4-flash_rep2_seq173/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_fourier_hy3_rep2_seq176" data-group="arm_A_fourier">
+      <video controls preload="none" src="artifacts/arm_A/armA_fourier_hy3_rep2_seq176/video.mp4"></video>
+      <div class="name">armA_fourier_hy3_rep2_seq176</div>
+      <div class="meta">Fourier transform &middot; hy3 &middot; rep 2 &middot; job 176</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_fourier_hy3_rep2_seq176/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_fourier_hy3_rep2_seq176">job folder</a>
+        <a href="artifacts/arm_A/armA_fourier_hy3_rep2_seq176/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_fourier_muse-glimmer-30b_rep2_seq178" data-group="arm_A_fourier">
+      <video controls preload="none" src="artifacts/arm_A/armA_fourier_muse-glimmer-30b_rep2_seq178/video.mp4"></video>
+      <div class="name">armA_fourier_muse-glimmer-30b_rep2_seq178</div>
+      <div class="meta">Fourier transform &middot; muse-glimmer-30b &middot; rep 2 &middot; job 178</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_fourier_muse-glimmer-30b_rep2_seq178/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_fourier_muse-glimmer-30b_rep2_seq178">job folder</a>
+        <a href="artifacts/arm_A/armA_fourier_muse-glimmer-30b_rep2_seq178/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_A_doppler">doppler <span class="count">(11)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="arma_doppler_glm-5.3_rep1_seq031" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_glm-5.3_rep1_seq031/video.mp4"></video>
+      <div class="name">armA_doppler_glm-5.3_rep1_seq031</div>
+      <div class="meta">Doppler effect &middot; glm-5.3 &middot; rep 1 &middot; job 31</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_glm-5.3_rep1_seq031/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_glm-5.3_rep1_seq031">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_glm-5.3_rep1_seq031/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_deepseek-v4-flash_rep1_seq033" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_deepseek-v4-flash_rep1_seq033/video.mp4"></video>
+      <div class="name">armA_doppler_deepseek-v4-flash_rep1_seq033</div>
+      <div class="meta">Doppler effect &middot; deepseek-v4-flash &middot; rep 1 &middot; job 33</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_deepseek-v4-flash_rep1_seq033/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_deepseek-v4-flash_rep1_seq033">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_deepseek-v4-flash_rep1_seq033/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_mimo-v2.5-pro_rep1_seq035" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_mimo-v2.5-pro_rep1_seq035/video.mp4"></video>
+      <div class="name">armA_doppler_mimo-v2.5-pro_rep1_seq035</div>
+      <div class="meta">Doppler effect &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 35</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_mimo-v2.5-pro_rep1_seq035/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_mimo-v2.5-pro_rep1_seq035">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_mimo-v2.5-pro_rep1_seq035/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_hy3_rep1_seq036" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_hy3_rep1_seq036/video.mp4"></video>
+      <div class="name">armA_doppler_hy3_rep1_seq036</div>
+      <div class="meta">Doppler effect &middot; hy3 &middot; rep 1 &middot; job 36</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_hy3_rep1_seq036/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_hy3_rep1_seq036">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_hy3_rep1_seq036/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037/video.mp4"></video>
+      <div class="name">armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037</div>
+      <div class="meta">Doppler effect &middot; nemotron-3-ultra-550b-a55b &middot; rep 1 &middot; job 37</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_nemotron-3-ultra-550b-a55b_rep1_seq037/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_muse-glimmer-30b_rep1_seq038" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep1_seq038/video.mp4"></video>
+      <div class="name">armA_doppler_muse-glimmer-30b_rep1_seq038</div>
+      <div class="meta">Doppler effect &middot; muse-glimmer-30b &middot; rep 1 &middot; job 38</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep1_seq038/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep1_seq038">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep1_seq038/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_gemma-4-31b-it_rep1_seq039" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep1_seq039/video.mp4"></video>
+      <div class="name">armA_doppler_gemma-4-31b-it_rep1_seq039</div>
+      <div class="meta">Doppler effect &middot; gemma-4-31b-it &middot; rep 1 &middot; job 39</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep1_seq039/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep1_seq039">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep1_seq039/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_kimi-k2.6_rep2_seq184" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_kimi-k2.6_rep2_seq184/video.mp4"></video>
+      <div class="name">armA_doppler_kimi-k2.6_rep2_seq184</div>
+      <div class="meta">Doppler effect &middot; kimi-k2.6 &middot; rep 2 &middot; job 184</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_kimi-k2.6_rep2_seq184/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_kimi-k2.6_rep2_seq184">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_kimi-k2.6_rep2_seq184/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_hy3_rep2_seq186" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_hy3_rep2_seq186/video.mp4"></video>
+      <div class="name">armA_doppler_hy3_rep2_seq186</div>
+      <div class="meta">Doppler effect &middot; hy3 &middot; rep 2 &middot; job 186</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_hy3_rep2_seq186/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_hy3_rep2_seq186">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_hy3_rep2_seq186/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_muse-glimmer-30b_rep2_seq188" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep2_seq188/video.mp4"></video>
+      <div class="name">armA_doppler_muse-glimmer-30b_rep2_seq188</div>
+      <div class="meta">Doppler effect &middot; muse-glimmer-30b &middot; rep 2 &middot; job 188</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep2_seq188/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep2_seq188">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_muse-glimmer-30b_rep2_seq188/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_doppler_gemma-4-31b-it_rep2_seq189" data-group="arm_A_doppler">
+      <video controls preload="none" src="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep2_seq189/video.mp4"></video>
+      <div class="name">armA_doppler_gemma-4-31b-it_rep2_seq189</div>
+      <div class="meta">Doppler effect &middot; gemma-4-31b-it &middot; rep 2 &middot; job 189</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep2_seq189/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep2_seq189">job folder</a>
+        <a href="artifacts/arm_A/armA_doppler_gemma-4-31b-it_rep2_seq189/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_A_eigenvectors">eigenvectors <span class="count">(6)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="arma_eigenvectors_deepseek-v4-flash_rep1_seq043" data-group="arm_A_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_A/armA_eigenvectors_deepseek-v4-flash_rep1_seq043/video.mp4"></video>
+      <div class="name">armA_eigenvectors_deepseek-v4-flash_rep1_seq043</div>
+      <div class="meta">eigenvectors &middot; deepseek-v4-flash &middot; rep 1 &middot; job 43</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_eigenvectors_deepseek-v4-flash_rep1_seq043/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_deepseek-v4-flash_rep1_seq043">job folder</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_deepseek-v4-flash_rep1_seq043/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_eigenvectors_kimi-k2.6_rep1_seq044" data-group="arm_A_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_A/armA_eigenvectors_kimi-k2.6_rep1_seq044/video.mp4"></video>
+      <div class="name">armA_eigenvectors_kimi-k2.6_rep1_seq044</div>
+      <div class="meta">eigenvectors &middot; kimi-k2.6 &middot; rep 1 &middot; job 44</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_eigenvectors_kimi-k2.6_rep1_seq044/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_kimi-k2.6_rep1_seq044">job folder</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_kimi-k2.6_rep1_seq044/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_eigenvectors_mimo-v2.5-pro_rep1_seq045" data-group="arm_A_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_A/armA_eigenvectors_mimo-v2.5-pro_rep1_seq045/video.mp4"></video>
+      <div class="name">armA_eigenvectors_mimo-v2.5-pro_rep1_seq045</div>
+      <div class="meta">eigenvectors &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 45</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_eigenvectors_mimo-v2.5-pro_rep1_seq045/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_mimo-v2.5-pro_rep1_seq045">job folder</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_mimo-v2.5-pro_rep1_seq045/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_eigenvectors_hy3_rep1_seq046" data-group="arm_A_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_A/armA_eigenvectors_hy3_rep1_seq046/video.mp4"></video>
+      <div class="name">armA_eigenvectors_hy3_rep1_seq046</div>
+      <div class="meta">eigenvectors &middot; hy3 &middot; rep 1 &middot; job 46</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_eigenvectors_hy3_rep1_seq046/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_hy3_rep1_seq046">job folder</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_hy3_rep1_seq046/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_eigenvectors_muse-glimmer-30b_rep1_seq048" data-group="arm_A_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_A/armA_eigenvectors_muse-glimmer-30b_rep1_seq048/video.mp4"></video>
+      <div class="name">armA_eigenvectors_muse-glimmer-30b_rep1_seq048</div>
+      <div class="meta">eigenvectors &middot; muse-glimmer-30b &middot; rep 1 &middot; job 48</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_eigenvectors_muse-glimmer-30b_rep1_seq048/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_muse-glimmer-30b_rep1_seq048">job folder</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_muse-glimmer-30b_rep1_seq048/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="arma_eigenvectors_hy3_rep2_seq196" data-group="arm_A_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_A/armA_eigenvectors_hy3_rep2_seq196/video.mp4"></video>
+      <div class="name">armA_eigenvectors_hy3_rep2_seq196</div>
+      <div class="meta">eigenvectors &middot; hy3 &middot; rep 2 &middot; job 196</div>
+      <div class="links">
+        <a href="artifacts/arm_A/armA_eigenvectors_hy3_rep2_seq196/scene.py">scene.py</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_hy3_rep2_seq196">job folder</a>
+        <a href="artifacts/arm_A/armA_eigenvectors_hy3_rep2_seq196/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h2 data-head="arm_B">Arm B - Monolithic + Repair</h2>
+  <p class="armnote" data-head="arm_B">One generation, then AST checks, a sandboxed render, and search-and-replace repair. 68 of the jobs in this arm produced a video.</p>
+  <h3 data-head="arm_B_derivative">derivative <span class="count">(13)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armb_derivative_glm-5.3_rep1_seq051" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_glm-5.3_rep1_seq051/video.mp4"></video>
+      <div class="name">armB_derivative_glm-5.3_rep1_seq051</div>
+      <div class="meta">derivative of a function in calculus &middot; glm-5.3 &middot; rep 1 &middot; job 51</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_glm-5.3_rep1_seq051/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_glm-5.3_rep1_seq051">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_glm-5.3_rep1_seq051/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_qwen3.8-flash_rep1_seq052" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep1_seq052/video.mp4"></video>
+      <div class="name">armB_derivative_qwen3.8-flash_rep1_seq052</div>
+      <div class="meta">derivative of a function in calculus &middot; qwen3.8-flash &middot; rep 1 &middot; job 52</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep1_seq052/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep1_seq052">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep1_seq052/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_kimi-k2.6_rep1_seq054" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_kimi-k2.6_rep1_seq054/video.mp4"></video>
+      <div class="name">armB_derivative_kimi-k2.6_rep1_seq054</div>
+      <div class="meta">derivative of a function in calculus &middot; kimi-k2.6 &middot; rep 1 &middot; job 54</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_kimi-k2.6_rep1_seq054/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_kimi-k2.6_rep1_seq054">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_kimi-k2.6_rep1_seq054/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_mimo-v2.5-pro_rep1_seq055" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep1_seq055/video.mp4"></video>
+      <div class="name">armB_derivative_mimo-v2.5-pro_rep1_seq055</div>
+      <div class="meta">derivative of a function in calculus &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 55</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep1_seq055/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep1_seq055">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep1_seq055/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_muse-glimmer-30b_rep1_seq058" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep1_seq058/video.mp4"></video>
+      <div class="name">armB_derivative_muse-glimmer-30b_rep1_seq058</div>
+      <div class="meta">derivative of a function in calculus &middot; muse-glimmer-30b &middot; rep 1 &middot; job 58</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep1_seq058/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep1_seq058">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep1_seq058/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_gemma-4-31b-it_rep1_seq059" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep1_seq059/video.mp4"></video>
+      <div class="name">armB_derivative_gemma-4-31b-it_rep1_seq059</div>
+      <div class="meta">derivative of a function in calculus &middot; gemma-4-31b-it &middot; rep 1 &middot; job 59</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep1_seq059/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep1_seq059">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep1_seq059/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_glm-5.3_rep2_seq201" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_glm-5.3_rep2_seq201/video.mp4"></video>
+      <div class="name">armB_derivative_glm-5.3_rep2_seq201</div>
+      <div class="meta">derivative of a function in calculus &middot; glm-5.3 &middot; rep 2 &middot; job 201</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_glm-5.3_rep2_seq201/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_glm-5.3_rep2_seq201">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_glm-5.3_rep2_seq201/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_qwen3.8-flash_rep2_seq202" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep2_seq202/video.mp4"></video>
+      <div class="name">armB_derivative_qwen3.8-flash_rep2_seq202</div>
+      <div class="meta">derivative of a function in calculus &middot; qwen3.8-flash &middot; rep 2 &middot; job 202</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep2_seq202/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep2_seq202">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_qwen3.8-flash_rep2_seq202/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_deepseek-v4-flash_rep2_seq203" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_deepseek-v4-flash_rep2_seq203/video.mp4"></video>
+      <div class="name">armB_derivative_deepseek-v4-flash_rep2_seq203</div>
+      <div class="meta">derivative of a function in calculus &middot; deepseek-v4-flash &middot; rep 2 &middot; job 203</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_deepseek-v4-flash_rep2_seq203/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_deepseek-v4-flash_rep2_seq203">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_deepseek-v4-flash_rep2_seq203/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_kimi-k2.6_rep2_seq204" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_kimi-k2.6_rep2_seq204/video.mp4"></video>
+      <div class="name">armB_derivative_kimi-k2.6_rep2_seq204</div>
+      <div class="meta">derivative of a function in calculus &middot; kimi-k2.6 &middot; rep 2 &middot; job 204</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_kimi-k2.6_rep2_seq204/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_kimi-k2.6_rep2_seq204">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_kimi-k2.6_rep2_seq204/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_mimo-v2.5-pro_rep2_seq205" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep2_seq205/video.mp4"></video>
+      <div class="name">armB_derivative_mimo-v2.5-pro_rep2_seq205</div>
+      <div class="meta">derivative of a function in calculus &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 205</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep2_seq205/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep2_seq205">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_mimo-v2.5-pro_rep2_seq205/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_muse-glimmer-30b_rep2_seq208" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep2_seq208/video.mp4"></video>
+      <div class="name">armB_derivative_muse-glimmer-30b_rep2_seq208</div>
+      <div class="meta">derivative of a function in calculus &middot; muse-glimmer-30b &middot; rep 2 &middot; job 208</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep2_seq208/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep2_seq208">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_muse-glimmer-30b_rep2_seq208/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_derivative_gemma-4-31b-it_rep2_seq209" data-group="arm_B_derivative">
+      <video controls preload="none" src="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep2_seq209/video.mp4"></video>
+      <div class="name">armB_derivative_gemma-4-31b-it_rep2_seq209</div>
+      <div class="meta">derivative of a function in calculus &middot; gemma-4-31b-it &middot; rep 2 &middot; job 209</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep2_seq209/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep2_seq209">job folder</a>
+        <a href="artifacts/arm_B/armB_derivative_gemma-4-31b-it_rep2_seq209/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_B_backpropagation">backpropagation <span class="count">(13)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armb_backpropagation_qwen3.8-flash_rep1_seq062" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_qwen3.8-flash_rep1_seq062/video.mp4"></video>
+      <div class="name">armB_backpropagation_qwen3.8-flash_rep1_seq062</div>
+      <div class="meta">backpropagation &middot; qwen3.8-flash &middot; rep 1 &middot; job 62</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_qwen3.8-flash_rep1_seq062/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_qwen3.8-flash_rep1_seq062">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_qwen3.8-flash_rep1_seq062/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_deepseek-v4-flash_rep1_seq063" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_deepseek-v4-flash_rep1_seq063/video.mp4"></video>
+      <div class="name">armB_backpropagation_deepseek-v4-flash_rep1_seq063</div>
+      <div class="meta">backpropagation &middot; deepseek-v4-flash &middot; rep 1 &middot; job 63</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_deepseek-v4-flash_rep1_seq063/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_deepseek-v4-flash_rep1_seq063">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_deepseek-v4-flash_rep1_seq063/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_kimi-k2.6_rep1_seq064" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_kimi-k2.6_rep1_seq064/video.mp4"></video>
+      <div class="name">armB_backpropagation_kimi-k2.6_rep1_seq064</div>
+      <div class="meta">backpropagation &middot; kimi-k2.6 &middot; rep 1 &middot; job 64</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_kimi-k2.6_rep1_seq064/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_kimi-k2.6_rep1_seq064">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_kimi-k2.6_rep1_seq064/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_mimo-v2.5-pro_rep1_seq065" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep1_seq065/video.mp4"></video>
+      <div class="name">armB_backpropagation_mimo-v2.5-pro_rep1_seq065</div>
+      <div class="meta">backpropagation &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 65</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep1_seq065/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep1_seq065">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep1_seq065/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_hy3_rep1_seq066" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_hy3_rep1_seq066/video.mp4"></video>
+      <div class="name">armB_backpropagation_hy3_rep1_seq066</div>
+      <div class="meta">backpropagation &middot; hy3 &middot; rep 1 &middot; job 66</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_hy3_rep1_seq066/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_hy3_rep1_seq066">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_hy3_rep1_seq066/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_muse-glimmer-30b_rep1_seq068" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep1_seq068/video.mp4"></video>
+      <div class="name">armB_backpropagation_muse-glimmer-30b_rep1_seq068</div>
+      <div class="meta">backpropagation &middot; muse-glimmer-30b &middot; rep 1 &middot; job 68</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep1_seq068/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep1_seq068">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep1_seq068/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_gemma-4-31b-it_rep1_seq069" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_gemma-4-31b-it_rep1_seq069/video.mp4"></video>
+      <div class="name">armB_backpropagation_gemma-4-31b-it_rep1_seq069</div>
+      <div class="meta">backpropagation &middot; gemma-4-31b-it &middot; rep 1 &middot; job 69</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_gemma-4-31b-it_rep1_seq069/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_gemma-4-31b-it_rep1_seq069">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_gemma-4-31b-it_rep1_seq069/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_gpt-oss-120b_rep1_seq070" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_gpt-oss-120b_rep1_seq070/video.mp4"></video>
+      <div class="name">armB_backpropagation_gpt-oss-120b_rep1_seq070</div>
+      <div class="meta">backpropagation &middot; gpt-oss-120b &middot; rep 1 &middot; job 70</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_gpt-oss-120b_rep1_seq070/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_gpt-oss-120b_rep1_seq070">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_gpt-oss-120b_rep1_seq070/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_glm-5.3_rep2_seq211" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_glm-5.3_rep2_seq211/video.mp4"></video>
+      <div class="name">armB_backpropagation_glm-5.3_rep2_seq211</div>
+      <div class="meta">backpropagation &middot; glm-5.3 &middot; rep 2 &middot; job 211</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_glm-5.3_rep2_seq211/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_glm-5.3_rep2_seq211">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_glm-5.3_rep2_seq211/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_mimo-v2.5-pro_rep2_seq215" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep2_seq215/video.mp4"></video>
+      <div class="name">armB_backpropagation_mimo-v2.5-pro_rep2_seq215</div>
+      <div class="meta">backpropagation &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 215</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep2_seq215/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep2_seq215">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_mimo-v2.5-pro_rep2_seq215/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_hy3_rep2_seq216" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_hy3_rep2_seq216/video.mp4"></video>
+      <div class="name">armB_backpropagation_hy3_rep2_seq216</div>
+      <div class="meta">backpropagation &middot; hy3 &middot; rep 2 &middot; job 216</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_hy3_rep2_seq216/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_hy3_rep2_seq216">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_hy3_rep2_seq216/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217/video.mp4"></video>
+      <div class="name">armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217</div>
+      <div class="meta">backpropagation &middot; nemotron-3-ultra-550b-a55b &middot; rep 2 &middot; job 217</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_nemotron-3-ultra-550b-a55b_rep2_seq217/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_backpropagation_muse-glimmer-30b_rep2_seq218" data-group="arm_B_backpropagation">
+      <video controls preload="none" src="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep2_seq218/video.mp4"></video>
+      <div class="name">armB_backpropagation_muse-glimmer-30b_rep2_seq218</div>
+      <div class="meta">backpropagation &middot; muse-glimmer-30b &middot; rep 2 &middot; job 218</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep2_seq218/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep2_seq218">job folder</a>
+        <a href="artifacts/arm_B/armB_backpropagation_muse-glimmer-30b_rep2_seq218/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_B_fourier">fourier <span class="count">(15)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armb_fourier_deepseek-v4-flash_rep1_seq073" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep1_seq073/video.mp4"></video>
+      <div class="name">armB_fourier_deepseek-v4-flash_rep1_seq073</div>
+      <div class="meta">Fourier transform &middot; deepseek-v4-flash &middot; rep 1 &middot; job 73</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep1_seq073/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep1_seq073">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep1_seq073/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_kimi-k2.6_rep1_seq074" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_kimi-k2.6_rep1_seq074/video.mp4"></video>
+      <div class="name">armB_fourier_kimi-k2.6_rep1_seq074</div>
+      <div class="meta">Fourier transform &middot; kimi-k2.6 &middot; rep 1 &middot; job 74</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_kimi-k2.6_rep1_seq074/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_kimi-k2.6_rep1_seq074">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_kimi-k2.6_rep1_seq074/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_mimo-v2.5-pro_rep1_seq075" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep1_seq075/video.mp4"></video>
+      <div class="name">armB_fourier_mimo-v2.5-pro_rep1_seq075</div>
+      <div class="meta">Fourier transform &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 75</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep1_seq075/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep1_seq075">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep1_seq075/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_hy3_rep1_seq076" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_hy3_rep1_seq076/video.mp4"></video>
+      <div class="name">armB_fourier_hy3_rep1_seq076</div>
+      <div class="meta">Fourier transform &middot; hy3 &middot; rep 1 &middot; job 76</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_hy3_rep1_seq076/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_hy3_rep1_seq076">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_hy3_rep1_seq076/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077/video.mp4"></video>
+      <div class="name">armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077</div>
+      <div class="meta">Fourier transform &middot; nemotron-3-ultra-550b-a55b &middot; rep 1 &middot; job 77</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_nemotron-3-ultra-550b-a55b_rep1_seq077/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_muse-glimmer-30b_rep1_seq078" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep1_seq078/video.mp4"></video>
+      <div class="name">armB_fourier_muse-glimmer-30b_rep1_seq078</div>
+      <div class="meta">Fourier transform &middot; muse-glimmer-30b &middot; rep 1 &middot; job 78</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep1_seq078/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep1_seq078">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep1_seq078/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_gemma-4-31b-it_rep1_seq079" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep1_seq079/video.mp4"></video>
+      <div class="name">armB_fourier_gemma-4-31b-it_rep1_seq079</div>
+      <div class="meta">Fourier transform &middot; gemma-4-31b-it &middot; rep 1 &middot; job 79</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep1_seq079/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep1_seq079">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep1_seq079/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_glm-5.3_rep2_seq221" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_glm-5.3_rep2_seq221/video.mp4"></video>
+      <div class="name">armB_fourier_glm-5.3_rep2_seq221</div>
+      <div class="meta">Fourier transform &middot; glm-5.3 &middot; rep 2 &middot; job 221</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_glm-5.3_rep2_seq221/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_glm-5.3_rep2_seq221">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_glm-5.3_rep2_seq221/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_qwen3.8-flash_rep2_seq222" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_qwen3.8-flash_rep2_seq222/video.mp4"></video>
+      <div class="name">armB_fourier_qwen3.8-flash_rep2_seq222</div>
+      <div class="meta">Fourier transform &middot; qwen3.8-flash &middot; rep 2 &middot; job 222</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_qwen3.8-flash_rep2_seq222/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_qwen3.8-flash_rep2_seq222">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_qwen3.8-flash_rep2_seq222/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_deepseek-v4-flash_rep2_seq223" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep2_seq223/video.mp4"></video>
+      <div class="name">armB_fourier_deepseek-v4-flash_rep2_seq223</div>
+      <div class="meta">Fourier transform &middot; deepseek-v4-flash &middot; rep 2 &middot; job 223</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep2_seq223/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep2_seq223">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_deepseek-v4-flash_rep2_seq223/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_kimi-k2.6_rep2_seq224" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_kimi-k2.6_rep2_seq224/video.mp4"></video>
+      <div class="name">armB_fourier_kimi-k2.6_rep2_seq224</div>
+      <div class="meta">Fourier transform &middot; kimi-k2.6 &middot; rep 2 &middot; job 224</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_kimi-k2.6_rep2_seq224/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_kimi-k2.6_rep2_seq224">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_kimi-k2.6_rep2_seq224/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_mimo-v2.5-pro_rep2_seq225" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep2_seq225/video.mp4"></video>
+      <div class="name">armB_fourier_mimo-v2.5-pro_rep2_seq225</div>
+      <div class="meta">Fourier transform &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 225</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep2_seq225/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep2_seq225">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_mimo-v2.5-pro_rep2_seq225/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_hy3_rep2_seq226" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_hy3_rep2_seq226/video.mp4"></video>
+      <div class="name">armB_fourier_hy3_rep2_seq226</div>
+      <div class="meta">Fourier transform &middot; hy3 &middot; rep 2 &middot; job 226</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_hy3_rep2_seq226/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_hy3_rep2_seq226">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_hy3_rep2_seq226/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_muse-glimmer-30b_rep2_seq228" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep2_seq228/video.mp4"></video>
+      <div class="name">armB_fourier_muse-glimmer-30b_rep2_seq228</div>
+      <div class="meta">Fourier transform &middot; muse-glimmer-30b &middot; rep 2 &middot; job 228</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep2_seq228/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep2_seq228">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_muse-glimmer-30b_rep2_seq228/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_fourier_gemma-4-31b-it_rep2_seq229" data-group="arm_B_fourier">
+      <video controls preload="none" src="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep2_seq229/video.mp4"></video>
+      <div class="name">armB_fourier_gemma-4-31b-it_rep2_seq229</div>
+      <div class="meta">Fourier transform &middot; gemma-4-31b-it &middot; rep 2 &middot; job 229</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep2_seq229/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep2_seq229">job folder</a>
+        <a href="artifacts/arm_B/armB_fourier_gemma-4-31b-it_rep2_seq229/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_B_doppler">doppler <span class="count">(15)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armb_doppler_glm-5.3_rep1_seq081" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_glm-5.3_rep1_seq081/video.mp4"></video>
+      <div class="name">armB_doppler_glm-5.3_rep1_seq081</div>
+      <div class="meta">Doppler effect &middot; glm-5.3 &middot; rep 1 &middot; job 81</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_glm-5.3_rep1_seq081/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_glm-5.3_rep1_seq081">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_glm-5.3_rep1_seq081/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_deepseek-v4-flash_rep1_seq083" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep1_seq083/video.mp4"></video>
+      <div class="name">armB_doppler_deepseek-v4-flash_rep1_seq083</div>
+      <div class="meta">Doppler effect &middot; deepseek-v4-flash &middot; rep 1 &middot; job 83</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep1_seq083/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep1_seq083">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep1_seq083/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_kimi-k2.6_rep1_seq084" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_kimi-k2.6_rep1_seq084/video.mp4"></video>
+      <div class="name">armB_doppler_kimi-k2.6_rep1_seq084</div>
+      <div class="meta">Doppler effect &middot; kimi-k2.6 &middot; rep 1 &middot; job 84</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_kimi-k2.6_rep1_seq084/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_kimi-k2.6_rep1_seq084">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_kimi-k2.6_rep1_seq084/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_mimo-v2.5-pro_rep1_seq085" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep1_seq085/video.mp4"></video>
+      <div class="name">armB_doppler_mimo-v2.5-pro_rep1_seq085</div>
+      <div class="meta">Doppler effect &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 85</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep1_seq085/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep1_seq085">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep1_seq085/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_hy3_rep1_seq086" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_hy3_rep1_seq086/video.mp4"></video>
+      <div class="name">armB_doppler_hy3_rep1_seq086</div>
+      <div class="meta">Doppler effect &middot; hy3 &middot; rep 1 &middot; job 86</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_hy3_rep1_seq086/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_hy3_rep1_seq086">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_hy3_rep1_seq086/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_muse-glimmer-30b_rep1_seq088" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep1_seq088/video.mp4"></video>
+      <div class="name">armB_doppler_muse-glimmer-30b_rep1_seq088</div>
+      <div class="meta">Doppler effect &middot; muse-glimmer-30b &middot; rep 1 &middot; job 88</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep1_seq088/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep1_seq088">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep1_seq088/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_gemma-4-31b-it_rep1_seq089" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep1_seq089/video.mp4"></video>
+      <div class="name">armB_doppler_gemma-4-31b-it_rep1_seq089</div>
+      <div class="meta">Doppler effect &middot; gemma-4-31b-it &middot; rep 1 &middot; job 89</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep1_seq089/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep1_seq089">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep1_seq089/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_gpt-oss-120b_rep1_seq090" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_gpt-oss-120b_rep1_seq090/video.mp4"></video>
+      <div class="name">armB_doppler_gpt-oss-120b_rep1_seq090</div>
+      <div class="meta">Doppler effect &middot; gpt-oss-120b &middot; rep 1 &middot; job 90</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_gpt-oss-120b_rep1_seq090/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_gpt-oss-120b_rep1_seq090">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_gpt-oss-120b_rep1_seq090/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_glm-5.3_rep2_seq231" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_glm-5.3_rep2_seq231/video.mp4"></video>
+      <div class="name">armB_doppler_glm-5.3_rep2_seq231</div>
+      <div class="meta">Doppler effect &middot; glm-5.3 &middot; rep 2 &middot; job 231</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_glm-5.3_rep2_seq231/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_glm-5.3_rep2_seq231">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_glm-5.3_rep2_seq231/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_deepseek-v4-flash_rep2_seq233" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep2_seq233/video.mp4"></video>
+      <div class="name">armB_doppler_deepseek-v4-flash_rep2_seq233</div>
+      <div class="meta">Doppler effect &middot; deepseek-v4-flash &middot; rep 2 &middot; job 233</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep2_seq233/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep2_seq233">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_deepseek-v4-flash_rep2_seq233/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_kimi-k2.6_rep2_seq234" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_kimi-k2.6_rep2_seq234/video.mp4"></video>
+      <div class="name">armB_doppler_kimi-k2.6_rep2_seq234</div>
+      <div class="meta">Doppler effect &middot; kimi-k2.6 &middot; rep 2 &middot; job 234</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_kimi-k2.6_rep2_seq234/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_kimi-k2.6_rep2_seq234">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_kimi-k2.6_rep2_seq234/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_mimo-v2.5-pro_rep2_seq235" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep2_seq235/video.mp4"></video>
+      <div class="name">armB_doppler_mimo-v2.5-pro_rep2_seq235</div>
+      <div class="meta">Doppler effect &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 235</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep2_seq235/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep2_seq235">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_mimo-v2.5-pro_rep2_seq235/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237/video.mp4"></video>
+      <div class="name">armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237</div>
+      <div class="meta">Doppler effect &middot; nemotron-3-ultra-550b-a55b &middot; rep 2 &middot; job 237</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_nemotron-3-ultra-550b-a55b_rep2_seq237/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_muse-glimmer-30b_rep2_seq238" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep2_seq238/video.mp4"></video>
+      <div class="name">armB_doppler_muse-glimmer-30b_rep2_seq238</div>
+      <div class="meta">Doppler effect &middot; muse-glimmer-30b &middot; rep 2 &middot; job 238</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep2_seq238/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep2_seq238">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_muse-glimmer-30b_rep2_seq238/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_doppler_gemma-4-31b-it_rep2_seq239" data-group="arm_B_doppler">
+      <video controls preload="none" src="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep2_seq239/video.mp4"></video>
+      <div class="name">armB_doppler_gemma-4-31b-it_rep2_seq239</div>
+      <div class="meta">Doppler effect &middot; gemma-4-31b-it &middot; rep 2 &middot; job 239</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep2_seq239/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep2_seq239">job folder</a>
+        <a href="artifacts/arm_B/armB_doppler_gemma-4-31b-it_rep2_seq239/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_B_eigenvectors">eigenvectors <span class="count">(12)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armb_eigenvectors_glm-5.3_rep1_seq091" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_glm-5.3_rep1_seq091/video.mp4"></video>
+      <div class="name">armB_eigenvectors_glm-5.3_rep1_seq091</div>
+      <div class="meta">eigenvectors &middot; glm-5.3 &middot; rep 1 &middot; job 91</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_glm-5.3_rep1_seq091/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_glm-5.3_rep1_seq091">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_glm-5.3_rep1_seq091/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_deepseek-v4-flash_rep1_seq093" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep1_seq093/video.mp4"></video>
+      <div class="name">armB_eigenvectors_deepseek-v4-flash_rep1_seq093</div>
+      <div class="meta">eigenvectors &middot; deepseek-v4-flash &middot; rep 1 &middot; job 93</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep1_seq093/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep1_seq093">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep1_seq093/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_kimi-k2.6_rep1_seq094" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep1_seq094/video.mp4"></video>
+      <div class="name">armB_eigenvectors_kimi-k2.6_rep1_seq094</div>
+      <div class="meta">eigenvectors &middot; kimi-k2.6 &middot; rep 1 &middot; job 94</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep1_seq094/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep1_seq094">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep1_seq094/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_mimo-v2.5-pro_rep1_seq095" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep1_seq095/video.mp4"></video>
+      <div class="name">armB_eigenvectors_mimo-v2.5-pro_rep1_seq095</div>
+      <div class="meta">eigenvectors &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 95</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep1_seq095/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep1_seq095">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep1_seq095/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_hy3_rep1_seq096" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_hy3_rep1_seq096/video.mp4"></video>
+      <div class="name">armB_eigenvectors_hy3_rep1_seq096</div>
+      <div class="meta">eigenvectors &middot; hy3 &middot; rep 1 &middot; job 96</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_hy3_rep1_seq096/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_hy3_rep1_seq096">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_hy3_rep1_seq096/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_muse-glimmer-30b_rep1_seq098" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_muse-glimmer-30b_rep1_seq098/video.mp4"></video>
+      <div class="name">armB_eigenvectors_muse-glimmer-30b_rep1_seq098</div>
+      <div class="meta">eigenvectors &middot; muse-glimmer-30b &middot; rep 1 &middot; job 98</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_muse-glimmer-30b_rep1_seq098/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_muse-glimmer-30b_rep1_seq098">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_muse-glimmer-30b_rep1_seq098/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_gemma-4-31b-it_rep1_seq099" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep1_seq099/video.mp4"></video>
+      <div class="name">armB_eigenvectors_gemma-4-31b-it_rep1_seq099</div>
+      <div class="meta">eigenvectors &middot; gemma-4-31b-it &middot; rep 1 &middot; job 99</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep1_seq099/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep1_seq099">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep1_seq099/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_gpt-oss-120b_rep1_seq100" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_gpt-oss-120b_rep1_seq100/video.mp4"></video>
+      <div class="name">armB_eigenvectors_gpt-oss-120b_rep1_seq100</div>
+      <div class="meta">eigenvectors &middot; gpt-oss-120b &middot; rep 1 &middot; job 100</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_gpt-oss-120b_rep1_seq100/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_gpt-oss-120b_rep1_seq100">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_gpt-oss-120b_rep1_seq100/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_deepseek-v4-flash_rep2_seq243" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep2_seq243/video.mp4"></video>
+      <div class="name">armB_eigenvectors_deepseek-v4-flash_rep2_seq243</div>
+      <div class="meta">eigenvectors &middot; deepseek-v4-flash &middot; rep 2 &middot; job 243</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep2_seq243/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep2_seq243">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_deepseek-v4-flash_rep2_seq243/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_kimi-k2.6_rep2_seq244" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep2_seq244/video.mp4"></video>
+      <div class="name">armB_eigenvectors_kimi-k2.6_rep2_seq244</div>
+      <div class="meta">eigenvectors &middot; kimi-k2.6 &middot; rep 2 &middot; job 244</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep2_seq244/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep2_seq244">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_kimi-k2.6_rep2_seq244/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_mimo-v2.5-pro_rep2_seq245" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep2_seq245/video.mp4"></video>
+      <div class="name">armB_eigenvectors_mimo-v2.5-pro_rep2_seq245</div>
+      <div class="meta">eigenvectors &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 245</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep2_seq245/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep2_seq245">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_mimo-v2.5-pro_rep2_seq245/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armb_eigenvectors_gemma-4-31b-it_rep2_seq249" data-group="arm_B_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep2_seq249/video.mp4"></video>
+      <div class="name">armB_eigenvectors_gemma-4-31b-it_rep2_seq249</div>
+      <div class="meta">eigenvectors &middot; gemma-4-31b-it &middot; rep 2 &middot; job 249</div>
+      <div class="links">
+        <a href="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep2_seq249/scene.py">scene.py</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep2_seq249">job folder</a>
+        <a href="artifacts/arm_B/armB_eigenvectors_gemma-4-31b-it_rep2_seq249/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h2 data-head="arm_C">Arm C - Agent Council</h2>
+  <p class="armnote" data-head="arm_C">The full council pipeline: Analyst, Architect, and Animator with the check and repair stages. 53 of the jobs in this arm produced a video.</p>
+  <h3 data-head="arm_C_derivative">derivative <span class="count">(10)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armc_derivative_glm-5.3_rep1_seq101" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_glm-5.3_rep1_seq101/video.mp4"></video>
+      <div class="name">armC_derivative_glm-5.3_rep1_seq101</div>
+      <div class="meta">derivative of a function in calculus &middot; glm-5.3 &middot; rep 1 &middot; job 101</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_glm-5.3_rep1_seq101/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_glm-5.3_rep1_seq101">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_glm-5.3_rep1_seq101/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_kimi-k2.6_rep1_seq104" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_kimi-k2.6_rep1_seq104/video.mp4"></video>
+      <div class="name">armC_derivative_kimi-k2.6_rep1_seq104</div>
+      <div class="meta">derivative of a function in calculus &middot; kimi-k2.6 &middot; rep 1 &middot; job 104</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_kimi-k2.6_rep1_seq104/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_kimi-k2.6_rep1_seq104">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_kimi-k2.6_rep1_seq104/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_mimo-v2.5-pro_rep1_seq105" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep1_seq105/video.mp4"></video>
+      <div class="name">armC_derivative_mimo-v2.5-pro_rep1_seq105</div>
+      <div class="meta">derivative of a function in calculus &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 105</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep1_seq105/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep1_seq105">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep1_seq105/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_hy3_rep1_seq106" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_hy3_rep1_seq106/video.mp4"></video>
+      <div class="name">armC_derivative_hy3_rep1_seq106</div>
+      <div class="meta">derivative of a function in calculus &middot; hy3 &middot; rep 1 &middot; job 106</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_hy3_rep1_seq106/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_hy3_rep1_seq106">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_hy3_rep1_seq106/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107/video.mp4"></video>
+      <div class="name">armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107</div>
+      <div class="meta">derivative of a function in calculus &middot; nemotron-3-ultra-550b-a55b &middot; rep 1 &middot; job 107</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_nemotron-3-ultra-550b-a55b_rep1_seq107/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_muse-glimmer-30b_rep1_seq108" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep1_seq108/video.mp4"></video>
+      <div class="name">armC_derivative_muse-glimmer-30b_rep1_seq108</div>
+      <div class="meta">derivative of a function in calculus &middot; muse-glimmer-30b &middot; rep 1 &middot; job 108</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep1_seq108/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep1_seq108">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep1_seq108/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_kimi-k2.6_rep2_seq254" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_kimi-k2.6_rep2_seq254/video.mp4"></video>
+      <div class="name">armC_derivative_kimi-k2.6_rep2_seq254</div>
+      <div class="meta">derivative of a function in calculus &middot; kimi-k2.6 &middot; rep 2 &middot; job 254</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_kimi-k2.6_rep2_seq254/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_kimi-k2.6_rep2_seq254">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_kimi-k2.6_rep2_seq254/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_mimo-v2.5-pro_rep2_seq255" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep2_seq255/video.mp4"></video>
+      <div class="name">armC_derivative_mimo-v2.5-pro_rep2_seq255</div>
+      <div class="meta">derivative of a function in calculus &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 255</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep2_seq255/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep2_seq255">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_mimo-v2.5-pro_rep2_seq255/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_muse-glimmer-30b_rep2_seq258" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep2_seq258/video.mp4"></video>
+      <div class="name">armC_derivative_muse-glimmer-30b_rep2_seq258</div>
+      <div class="meta">derivative of a function in calculus &middot; muse-glimmer-30b &middot; rep 2 &middot; job 258</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep2_seq258/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep2_seq258">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_muse-glimmer-30b_rep2_seq258/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_derivative_gemma-4-31b-it_rep2_seq259" data-group="arm_C_derivative">
+      <video controls preload="none" src="artifacts/arm_C/armC_derivative_gemma-4-31b-it_rep2_seq259/video.mp4"></video>
+      <div class="name">armC_derivative_gemma-4-31b-it_rep2_seq259</div>
+      <div class="meta">derivative of a function in calculus &middot; gemma-4-31b-it &middot; rep 2 &middot; job 259</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_derivative_gemma-4-31b-it_rep2_seq259/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_derivative_gemma-4-31b-it_rep2_seq259">job folder</a>
+        <a href="artifacts/arm_C/armC_derivative_gemma-4-31b-it_rep2_seq259/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_C_backpropagation">backpropagation <span class="count">(8)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armc_backpropagation_kimi-k2.6_rep1_seq114" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep1_seq114/video.mp4"></video>
+      <div class="name">armC_backpropagation_kimi-k2.6_rep1_seq114</div>
+      <div class="meta">backpropagation &middot; kimi-k2.6 &middot; rep 1 &middot; job 114</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep1_seq114/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep1_seq114">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep1_seq114/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_backpropagation_mimo-v2.5-pro_rep1_seq115" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep1_seq115/video.mp4"></video>
+      <div class="name">armC_backpropagation_mimo-v2.5-pro_rep1_seq115</div>
+      <div class="meta">backpropagation &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 115</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep1_seq115/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep1_seq115">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep1_seq115/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_backpropagation_hy3_rep1_seq116" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_hy3_rep1_seq116/video.mp4"></video>
+      <div class="name">armC_backpropagation_hy3_rep1_seq116</div>
+      <div class="meta">backpropagation &middot; hy3 &middot; rep 1 &middot; job 116</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_hy3_rep1_seq116/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_hy3_rep1_seq116">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_hy3_rep1_seq116/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_backpropagation_muse-glimmer-30b_rep1_seq118" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_muse-glimmer-30b_rep1_seq118/video.mp4"></video>
+      <div class="name">armC_backpropagation_muse-glimmer-30b_rep1_seq118</div>
+      <div class="meta">backpropagation &middot; muse-glimmer-30b &middot; rep 1 &middot; job 118</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_muse-glimmer-30b_rep1_seq118/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_muse-glimmer-30b_rep1_seq118">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_muse-glimmer-30b_rep1_seq118/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_backpropagation_glm-5.3_rep2_seq261" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_glm-5.3_rep2_seq261/video.mp4"></video>
+      <div class="name">armC_backpropagation_glm-5.3_rep2_seq261</div>
+      <div class="meta">backpropagation &middot; glm-5.3 &middot; rep 2 &middot; job 261</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_glm-5.3_rep2_seq261/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_glm-5.3_rep2_seq261">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_glm-5.3_rep2_seq261/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_backpropagation_deepseek-v4-flash_rep2_seq263" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_deepseek-v4-flash_rep2_seq263/video.mp4"></video>
+      <div class="name">armC_backpropagation_deepseek-v4-flash_rep2_seq263</div>
+      <div class="meta">backpropagation &middot; deepseek-v4-flash &middot; rep 2 &middot; job 263</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_deepseek-v4-flash_rep2_seq263/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_deepseek-v4-flash_rep2_seq263">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_deepseek-v4-flash_rep2_seq263/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_backpropagation_kimi-k2.6_rep2_seq264" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep2_seq264/video.mp4"></video>
+      <div class="name">armC_backpropagation_kimi-k2.6_rep2_seq264</div>
+      <div class="meta">backpropagation &middot; kimi-k2.6 &middot; rep 2 &middot; job 264</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep2_seq264/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep2_seq264">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_kimi-k2.6_rep2_seq264/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_backpropagation_mimo-v2.5-pro_rep2_seq265" data-group="arm_C_backpropagation">
+      <video controls preload="none" src="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep2_seq265/video.mp4"></video>
+      <div class="name">armC_backpropagation_mimo-v2.5-pro_rep2_seq265</div>
+      <div class="meta">backpropagation &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 265</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep2_seq265/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep2_seq265">job folder</a>
+        <a href="artifacts/arm_C/armC_backpropagation_mimo-v2.5-pro_rep2_seq265/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_C_fourier">fourier <span class="count">(14)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armc_fourier_glm-5.3_rep1_seq121" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_glm-5.3_rep1_seq121/video.mp4"></video>
+      <div class="name">armC_fourier_glm-5.3_rep1_seq121</div>
+      <div class="meta">Fourier transform &middot; glm-5.3 &middot; rep 1 &middot; job 121</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_glm-5.3_rep1_seq121/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_glm-5.3_rep1_seq121">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_glm-5.3_rep1_seq121/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_kimi-k2.6_rep1_seq124" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_kimi-k2.6_rep1_seq124/video.mp4"></video>
+      <div class="name">armC_fourier_kimi-k2.6_rep1_seq124</div>
+      <div class="meta">Fourier transform &middot; kimi-k2.6 &middot; rep 1 &middot; job 124</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_kimi-k2.6_rep1_seq124/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_kimi-k2.6_rep1_seq124">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_kimi-k2.6_rep1_seq124/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_mimo-v2.5-pro_rep1_seq125" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep1_seq125/video.mp4"></video>
+      <div class="name">armC_fourier_mimo-v2.5-pro_rep1_seq125</div>
+      <div class="meta">Fourier transform &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 125</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep1_seq125/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep1_seq125">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep1_seq125/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_hy3_rep1_seq126" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_hy3_rep1_seq126/video.mp4"></video>
+      <div class="name">armC_fourier_hy3_rep1_seq126</div>
+      <div class="meta">Fourier transform &middot; hy3 &middot; rep 1 &middot; job 126</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_hy3_rep1_seq126/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_hy3_rep1_seq126">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_hy3_rep1_seq126/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_muse-glimmer-30b_rep1_seq128" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep1_seq128/video.mp4"></video>
+      <div class="name">armC_fourier_muse-glimmer-30b_rep1_seq128</div>
+      <div class="meta">Fourier transform &middot; muse-glimmer-30b &middot; rep 1 &middot; job 128</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep1_seq128/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep1_seq128">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep1_seq128/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_gemma-4-31b-it_rep1_seq129" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep1_seq129/video.mp4"></video>
+      <div class="name">armC_fourier_gemma-4-31b-it_rep1_seq129</div>
+      <div class="meta">Fourier transform &middot; gemma-4-31b-it &middot; rep 1 &middot; job 129</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep1_seq129/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep1_seq129">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep1_seq129/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_glm-5.3_rep2_seq271" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_glm-5.3_rep2_seq271/video.mp4"></video>
+      <div class="name">armC_fourier_glm-5.3_rep2_seq271</div>
+      <div class="meta">Fourier transform &middot; glm-5.3 &middot; rep 2 &middot; job 271</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_glm-5.3_rep2_seq271/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_glm-5.3_rep2_seq271">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_glm-5.3_rep2_seq271/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_deepseek-v4-flash_rep2_seq273" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_deepseek-v4-flash_rep2_seq273/video.mp4"></video>
+      <div class="name">armC_fourier_deepseek-v4-flash_rep2_seq273</div>
+      <div class="meta">Fourier transform &middot; deepseek-v4-flash &middot; rep 2 &middot; job 273</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_deepseek-v4-flash_rep2_seq273/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_deepseek-v4-flash_rep2_seq273">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_deepseek-v4-flash_rep2_seq273/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_kimi-k2.6_rep2_seq274" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_kimi-k2.6_rep2_seq274/video.mp4"></video>
+      <div class="name">armC_fourier_kimi-k2.6_rep2_seq274</div>
+      <div class="meta">Fourier transform &middot; kimi-k2.6 &middot; rep 2 &middot; job 274</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_kimi-k2.6_rep2_seq274/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_kimi-k2.6_rep2_seq274">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_kimi-k2.6_rep2_seq274/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_mimo-v2.5-pro_rep2_seq275" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep2_seq275/video.mp4"></video>
+      <div class="name">armC_fourier_mimo-v2.5-pro_rep2_seq275</div>
+      <div class="meta">Fourier transform &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 275</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep2_seq275/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep2_seq275">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_mimo-v2.5-pro_rep2_seq275/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_hy3_rep2_seq276" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_hy3_rep2_seq276/video.mp4"></video>
+      <div class="name">armC_fourier_hy3_rep2_seq276</div>
+      <div class="meta">Fourier transform &middot; hy3 &middot; rep 2 &middot; job 276</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_hy3_rep2_seq276/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_hy3_rep2_seq276">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_hy3_rep2_seq276/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277/video.mp4"></video>
+      <div class="name">armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277</div>
+      <div class="meta">Fourier transform &middot; nemotron-3-ultra-550b-a55b &middot; rep 2 &middot; job 277</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_nemotron-3-ultra-550b-a55b_rep2_seq277/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_muse-glimmer-30b_rep2_seq278" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep2_seq278/video.mp4"></video>
+      <div class="name">armC_fourier_muse-glimmer-30b_rep2_seq278</div>
+      <div class="meta">Fourier transform &middot; muse-glimmer-30b &middot; rep 2 &middot; job 278</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep2_seq278/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep2_seq278">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_muse-glimmer-30b_rep2_seq278/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_fourier_gemma-4-31b-it_rep2_seq279" data-group="arm_C_fourier">
+      <video controls preload="none" src="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep2_seq279/video.mp4"></video>
+      <div class="name">armC_fourier_gemma-4-31b-it_rep2_seq279</div>
+      <div class="meta">Fourier transform &middot; gemma-4-31b-it &middot; rep 2 &middot; job 279</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep2_seq279/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep2_seq279">job folder</a>
+        <a href="artifacts/arm_C/armC_fourier_gemma-4-31b-it_rep2_seq279/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_C_doppler">doppler <span class="count">(10)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armc_doppler_kimi-k2.6_rep1_seq134" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_kimi-k2.6_rep1_seq134/video.mp4"></video>
+      <div class="name">armC_doppler_kimi-k2.6_rep1_seq134</div>
+      <div class="meta">Doppler effect &middot; kimi-k2.6 &middot; rep 1 &middot; job 134</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_kimi-k2.6_rep1_seq134/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_kimi-k2.6_rep1_seq134">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_kimi-k2.6_rep1_seq134/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_mimo-v2.5-pro_rep1_seq135" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep1_seq135/video.mp4"></video>
+      <div class="name">armC_doppler_mimo-v2.5-pro_rep1_seq135</div>
+      <div class="meta">Doppler effect &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 135</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep1_seq135/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep1_seq135">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep1_seq135/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_muse-glimmer-30b_rep1_seq138" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep1_seq138/video.mp4"></video>
+      <div class="name">armC_doppler_muse-glimmer-30b_rep1_seq138</div>
+      <div class="meta">Doppler effect &middot; muse-glimmer-30b &middot; rep 1 &middot; job 138</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep1_seq138/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep1_seq138">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep1_seq138/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_gemma-4-31b-it_rep1_seq139" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep1_seq139/video.mp4"></video>
+      <div class="name">armC_doppler_gemma-4-31b-it_rep1_seq139</div>
+      <div class="meta">Doppler effect &middot; gemma-4-31b-it &middot; rep 1 &middot; job 139</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep1_seq139/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep1_seq139">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep1_seq139/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_glm-5.3_rep2_seq281" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_glm-5.3_rep2_seq281/video.mp4"></video>
+      <div class="name">armC_doppler_glm-5.3_rep2_seq281</div>
+      <div class="meta">Doppler effect &middot; glm-5.3 &middot; rep 2 &middot; job 281</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_glm-5.3_rep2_seq281/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_glm-5.3_rep2_seq281">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_glm-5.3_rep2_seq281/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_kimi-k2.6_rep2_seq284" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_kimi-k2.6_rep2_seq284/video.mp4"></video>
+      <div class="name">armC_doppler_kimi-k2.6_rep2_seq284</div>
+      <div class="meta">Doppler effect &middot; kimi-k2.6 &middot; rep 2 &middot; job 284</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_kimi-k2.6_rep2_seq284/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_kimi-k2.6_rep2_seq284">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_kimi-k2.6_rep2_seq284/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_mimo-v2.5-pro_rep2_seq285" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep2_seq285/video.mp4"></video>
+      <div class="name">armC_doppler_mimo-v2.5-pro_rep2_seq285</div>
+      <div class="meta">Doppler effect &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 285</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep2_seq285/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep2_seq285">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_mimo-v2.5-pro_rep2_seq285/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_muse-glimmer-30b_rep2_seq288" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep2_seq288/video.mp4"></video>
+      <div class="name">armC_doppler_muse-glimmer-30b_rep2_seq288</div>
+      <div class="meta">Doppler effect &middot; muse-glimmer-30b &middot; rep 2 &middot; job 288</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep2_seq288/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep2_seq288">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_muse-glimmer-30b_rep2_seq288/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_gemma-4-31b-it_rep2_seq289" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep2_seq289/video.mp4"></video>
+      <div class="name">armC_doppler_gemma-4-31b-it_rep2_seq289</div>
+      <div class="meta">Doppler effect &middot; gemma-4-31b-it &middot; rep 2 &middot; job 289</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep2_seq289/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep2_seq289">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_gemma-4-31b-it_rep2_seq289/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_doppler_gpt-oss-120b_rep2_seq290" data-group="arm_C_doppler">
+      <video controls preload="none" src="artifacts/arm_C/armC_doppler_gpt-oss-120b_rep2_seq290/video.mp4"></video>
+      <div class="name">armC_doppler_gpt-oss-120b_rep2_seq290</div>
+      <div class="meta">Doppler effect &middot; gpt-oss-120b &middot; rep 2 &middot; job 290</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_doppler_gpt-oss-120b_rep2_seq290/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_doppler_gpt-oss-120b_rep2_seq290">job folder</a>
+        <a href="artifacts/arm_C/armC_doppler_gpt-oss-120b_rep2_seq290/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  <h3 data-head="arm_C_eigenvectors">eigenvectors <span class="count">(11)</span></h3>
+  <div class="grid">
+    <article class="card" data-key="armc_eigenvectors_kimi-k2.6_rep1_seq144" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep1_seq144/video.mp4"></video>
+      <div class="name">armC_eigenvectors_kimi-k2.6_rep1_seq144</div>
+      <div class="meta">eigenvectors &middot; kimi-k2.6 &middot; rep 1 &middot; job 144</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep1_seq144/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep1_seq144">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep1_seq144/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_mimo-v2.5-pro_rep1_seq145" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep1_seq145/video.mp4"></video>
+      <div class="name">armC_eigenvectors_mimo-v2.5-pro_rep1_seq145</div>
+      <div class="meta">eigenvectors &middot; mimo-v2.5-pro &middot; rep 1 &middot; job 145</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep1_seq145/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep1_seq145">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep1_seq145/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147/video.mp4"></video>
+      <div class="name">armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147</div>
+      <div class="meta">eigenvectors &middot; nemotron-3-ultra-550b-a55b &middot; rep 1 &middot; job 147</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_nemotron-3-ultra-550b-a55b_rep1_seq147/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_gemma-4-31b-it_rep1_seq149" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep1_seq149/video.mp4"></video>
+      <div class="name">armC_eigenvectors_gemma-4-31b-it_rep1_seq149</div>
+      <div class="meta">eigenvectors &middot; gemma-4-31b-it &middot; rep 1 &middot; job 149</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep1_seq149/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep1_seq149">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep1_seq149/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_gpt-oss-120b_rep1_seq150" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_gpt-oss-120b_rep1_seq150/video.mp4"></video>
+      <div class="name">armC_eigenvectors_gpt-oss-120b_rep1_seq150</div>
+      <div class="meta">eigenvectors &middot; gpt-oss-120b &middot; rep 1 &middot; job 150</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_gpt-oss-120b_rep1_seq150/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_gpt-oss-120b_rep1_seq150">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_gpt-oss-120b_rep1_seq150/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_glm-5.3_rep2_seq291" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_glm-5.3_rep2_seq291/video.mp4"></video>
+      <div class="name">armC_eigenvectors_glm-5.3_rep2_seq291</div>
+      <div class="meta">eigenvectors &middot; glm-5.3 &middot; rep 2 &middot; job 291</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_glm-5.3_rep2_seq291/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_glm-5.3_rep2_seq291">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_glm-5.3_rep2_seq291/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_deepseek-v4-flash_rep2_seq293" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_deepseek-v4-flash_rep2_seq293/video.mp4"></video>
+      <div class="name">armC_eigenvectors_deepseek-v4-flash_rep2_seq293</div>
+      <div class="meta">eigenvectors &middot; deepseek-v4-flash &middot; rep 2 &middot; job 293</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_deepseek-v4-flash_rep2_seq293/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_deepseek-v4-flash_rep2_seq293">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_deepseek-v4-flash_rep2_seq293/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_kimi-k2.6_rep2_seq294" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep2_seq294/video.mp4"></video>
+      <div class="name">armC_eigenvectors_kimi-k2.6_rep2_seq294</div>
+      <div class="meta">eigenvectors &middot; kimi-k2.6 &middot; rep 2 &middot; job 294</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep2_seq294/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep2_seq294">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_kimi-k2.6_rep2_seq294/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_mimo-v2.5-pro_rep2_seq295" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep2_seq295/video.mp4"></video>
+      <div class="name">armC_eigenvectors_mimo-v2.5-pro_rep2_seq295</div>
+      <div class="meta">eigenvectors &middot; mimo-v2.5-pro &middot; rep 2 &middot; job 295</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep2_seq295/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep2_seq295">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_mimo-v2.5-pro_rep2_seq295/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_muse-glimmer-30b_rep2_seq298" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_muse-glimmer-30b_rep2_seq298/video.mp4"></video>
+      <div class="name">armC_eigenvectors_muse-glimmer-30b_rep2_seq298</div>
+      <div class="meta">eigenvectors &middot; muse-glimmer-30b &middot; rep 2 &middot; job 298</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_muse-glimmer-30b_rep2_seq298/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_muse-glimmer-30b_rep2_seq298">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_muse-glimmer-30b_rep2_seq298/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+    <article class="card" data-key="armc_eigenvectors_gemma-4-31b-it_rep2_seq299" data-group="arm_C_eigenvectors">
+      <video controls preload="none" src="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep2_seq299/video.mp4"></video>
+      <div class="name">armC_eigenvectors_gemma-4-31b-it_rep2_seq299</div>
+      <div class="meta">eigenvectors &middot; gemma-4-31b-it &middot; rep 2 &middot; job 299</div>
+      <div class="links">
+        <a href="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep2_seq299/scene.py">scene.py</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep2_seq299">job folder</a>
+        <a href="artifacts/arm_C/armC_eigenvectors_gemma-4-31b-it_rep2_seq299/video.mp4">video.mp4</a>
+      </div>
+    </article>
+
+  </div>
+  </div>
+
+  <footer>
+    Players are lazy: nothing downloads until you press play. All 157 videos together
+    are about 184 MB.
+  </footer>
+</main>
+<script>
+  const input = document.getElementById('filter');
+  const cards = Array.from(document.querySelectorAll('.card'));
+  const count = document.getElementById('count');
+  const heads = Array.from(document.querySelectorAll('[data-head]'));
+  function apply() {
+    const q = input.value.trim().toLowerCase();
+    let shown = 0;
+    for (const c of cards) {
+      const hit = !q || c.dataset.key.includes(q);
+      c.classList.toggle('hidden', !hit);
+      if (hit) shown++;
+    }
+    for (const h of heads) {
+      const group = h.dataset.head;
+      const any = cards.some(c => c.dataset.group === group && !c.classList.contains('hidden'));
+      h.classList.toggle('hidden', !any);
+      const sect = h.nextElementSibling;
+      if (sect && sect.classList.contains('grid')) sect.classList.toggle('hidden', !any);
+    }
+    count.textContent = shown === cards.length
+      ? `${cards.length} jobs`
+      : `${shown} of ${cards.length} jobs`;
+  }
+  input.addEventListener('input', apply);
+  apply();
+</script>
+</body>
+</html>

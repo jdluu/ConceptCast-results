@@ -24,6 +24,7 @@ the completed run (`bench-20260913`).
 | `figures/` | Thesis figures rendered by `tools/figures.py` (300 DPI PNG). |
 | `tools/` | Schema-driven analysis scripts — see `tools/README.md`. |
 | `artifacts/` | Frozen per-arm outputs, one directory per arm and one directory per job. Each job folder is named `arm<A\|B\|C>_<topic>_<model>_rep<1\|2>_seq<NNN>` and holds that job's `scene.py` and the `video.mp4` rendered from it, so code and result stay together; a per-arm `manifest.json` records each job. Counts: `arm_A/` 36, `arm_B/` 68, `arm_C/` 53. `artifacts/index.csv` lists every recorded job against the files it produced, and bulk archives live on the [artifacts-v1 release](https://github.com/jdluu/ConceptCast-results/releases/tag/artifacts-v1) rather than in the tree. See `artifacts/README.md`. |
+| `index.html` | Generated gallery of every job that produced a video, grouped by arm and topic, with a player for each video beside a link to the script that produced it. GitHub's file view cannot play a committed `.mp4`, so this page is how the videos are watched. Regenerate with `python3 tools/gallery.py`; served at [jdluu.github.io/ConceptCast-results](https://jdluu.github.io/ConceptCast-results/). |
 
 ## Benchmark Design (summary)
 

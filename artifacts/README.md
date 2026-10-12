@@ -72,6 +72,14 @@ matched back to its job, and from there to the script inside that folder.
 
     tar xzf arm_C_videos.tar.gz -C some/dir
 
+## Playback
+
+GitHub renders images, PDFs, and 3D models in the browser, but not video, so opening a
+`video.mp4` on GitHub offers a download rather than a player. The gallery page at the
+repository root plays them instead, one card per job, generated from `index.csv` by
+`tools/gallery.py`. The videos are served straight from this repository by GitHub Pages,
+which sends the correct media type and honours range requests, so seeking works.
+
 ## What is not here
 
 `traces/renders/` in the repository root holds raw per-scene render work directories.
