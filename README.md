@@ -23,7 +23,7 @@ the completed run (`bench-20260913`).
 | `reports/` | Machine-readable result summaries (`benchmark_summary.json`, `figure_data.json`). |
 | `figures/` | Thesis figures rendered by `tools/figures.py` (300 DPI PNG). |
 | `tools/` | Schema-driven analysis scripts — see `tools/README.md`. |
-| `artifacts/` | Frozen per-arm outputs, one directory per arm: `code/` (generated Manim scripts), `videos/` (individual rendered videos), `videos.tar.gz` (the same videos for bulk download), and `manifest.json`. Files are named `arm<A\|B\|C>_<topic>_<model>_rep<1\|2>_seq<NNN>.<py\|mp4>`, so model, topic, and repetition are readable from the filename. Counts: `arm_A/` 36, `arm_B/` 68, `arm_C/` 53. `artifacts/index.csv` lists every recorded job against the files it produced; see `artifacts/README.md`. |
+| `artifacts/` | Frozen per-arm outputs, one directory per arm: `code/` (generated Manim scripts), `videos/` (individual rendered videos), and `manifest.json`. Bulk archives live on the [artifacts-v1 release](https://github.com/jdluu/ConceptCast-results/releases/tag/artifacts-v1) rather than in the tree. Files are named `arm<A\|B\|C>_<topic>_<model>_rep<1\|2>_seq<NNN>.<py\|mp4>`, so model, topic, and repetition are readable from the filename. Counts: `arm_A/` 36, `arm_B/` 68, `arm_C/` 53. `artifacts/index.csv` lists every recorded job against the files it produced; see `artifacts/README.md`. |
 
 ## Benchmark Design (summary)
 

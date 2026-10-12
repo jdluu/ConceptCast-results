@@ -10,7 +10,6 @@ that the model, topic, and repetition are readable from the filename alone.
       arm_A/
         code/              36 generated Manim scripts
         videos/            36 rendered videos, one per script
-        videos.tar.gz      the same 36 videos for bulk download
         manifest.json      per-job record for the arm
       arm_B/               same layout, 68 videos
       arm_C/               same layout, 53 videos
@@ -47,7 +46,24 @@ run state is recorded in `data/conceptcast.db`.
 
 ## Bulk download
 
-Each `videos.tar.gz` holds the same filenames as its `videos/` directory, with no path
-prefix, so a bulk download carries identical names to an individual one.
+The archives are published as release assets rather than committed, so the repository
+carries only the individual files:
 
-    tar xzf artifacts/arm_C/videos.tar.gz -C some/dir
+https://github.com/jdluu/ConceptCast-results/releases/tag/artifacts-v1
+
+| Asset | Contents |
+|-------|----------|
+| `arm_A_videos.tar.gz` | 36 videos |
+| `arm_B_videos.tar.gz` | 68 videos |
+| `arm_C_videos.tar.gz` | 53 videos |
+
+Each archive holds the same filenames as its `videos/` directory, with no path prefix, so
+a bulk download carries identical names to an individual one.
+
+    tar xzf arm_C_videos.tar.gz -C some/dir
+
+## What is not here
+
+`traces/renders/` in the repository root holds raw per-scene render work directories.
+They are transient and are not tracked, so they are absent from a clone. Every video that
+matters is under `artifacts/`.
