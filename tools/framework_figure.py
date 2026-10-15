@@ -40,7 +40,7 @@ REPO = Path(__file__).resolve().parent.parent
 OUT = REPO / "reports" / "figures"
 
 W, H = 620.0, 196.0          # pt; matches the deck's figure area 1:1
-FONT = "DejaVu Serif"
+FONT = "DejaVu Sans"      # matches the deck's sans typography and the chart figures
 
 PALETTES = {
     "dark": {
